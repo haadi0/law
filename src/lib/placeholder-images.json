@@ -1,0 +1,46 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-image",
+      "description": "Premium modern office building in Dar es Salaam",
+      "imageUrl": "https://images.unsplash.com/photo-1770965568850-6a4616d936cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmUlMjBsYXclMjBvZmZpY2V8ZW58MHx8fHwxNzcxOTA4ODYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern architecture law office"
+    },
+    {
+      "id": "about-firm",
+      "description": "Professional attorneys meeting in a conference room",
+      "imageUrl": "https://images.unsplash.com/photo-1684552389273-3928c8047ca8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxsYXd5ZXIlMjBtZWV0aW5nJTIwY29uZmVyZW5jZXxlbnwwfHx8fDE3NzE5MDg4NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "lawyer meeting conference"
+    },
+    {
+      "id": "practice-investment",
+      "description": "Business deal handshake and documents",
+      "imageUrl": "https://images.unsplash.com/photo-1763621550224-6ff277b8c754?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxidXNpbmVzcyUyMGNvbnRyYWN0JTIwaW52ZXN0bWVudHxlbnwwfHx8fDE3NzE5MDg4NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business contract investment"
+    },
+    {
+      "id": "practice-dispute",
+      "description": "Gavel and law books in a courtroom setting",
+      "imageUrl": "https://images.unsplash.com/photo-1593115057322-e94b77572f20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb3VydCUyMGdhdmVsJTIwbGl0aWdhdGlvbnxlbnwwfHx8fDE3NzE5MDg4NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "court gavel litigation"
+    },
+    {
+      "id": "practice-corporate",
+      "description": "Modern corporate cityscape",
+      "imageUrl": "https://images.unsplash.com/photo-1647654337839-aefb90cc15aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb3Jwb3JhdGUlMjBza3lzY3JhcGVyJTIwc2t5bGluZXxlbnwwfHx8fDE3NzE5MDg4NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "corporate skyscraper skyline"
+    },
+    {
+      "id": "industry-energy",
+      "description": "Sustainable energy infrastructure",
+      "imageUrl": "https://images.unsplash.com/photo-1638068109816-651dc602fe4c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxlbmVyZ3klMjBzb2xhciUyMHdpbmR8ZW58MHx8fHwxNzcxOTA4ODYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "energy solar wind"
+    },
+    {
+      "id": "industry-mining",
+      "description": "Mining operations in Tanzania",
+      "imageUrl": "https://images.unsplash.com/photo-1654461339456-66664ede67dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtaW5pbmclMjBleGNhdmF0b3IlMjBpbmR1c3RyaWFsfGVufDB8fHx8MTc3MTkwODg2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mining excavator industrial"
+    }
+  ]
+}
