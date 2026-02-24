@@ -2,10 +2,11 @@
 import React from 'react';
 import { Metadata } from 'next';
 import IndustryHero from '@/components/industries/IndustryHero';
+import IndustryFilter from '@/components/industries/IndustryFilter';
 import IndustryBentoGrid from '@/components/industries/IndustryBentoGrid';
-import RiskSignals from '@/components/industries/RiskSignals';
-import InvestorConcernsRail from '@/components/industries/InvestorConcernsRail';
-import FinalCTA from '@/components/practice-area/FinalCTA';
+import RiskTimeline from '@/components/industries/RiskTimeline';
+import RegionalStrategy from '@/components/industries/RegionalStrategy';
+import FinalCTA from '@/components/industries/FinalCTA';
 
 export const metadata: Metadata = {
   title: "Industries Served | G'Adroit Attorneys",
@@ -15,22 +16,23 @@ export const metadata: Metadata = {
 export default function IndustriesPage() {
   return (
     <div className="pt-20 min-h-screen bg-background text-foreground overflow-x-hidden">
-      {/* 1. Hero - Locked Style, Optimized Spacing */}
+      {/* 1. Hero - EXACTLY UNCHANGED */}
       <IndustryHero />
 
-      {/* 2. Bento Industry Tiles + Filter Bar + Intel Drawers */}
+      {/* 2. Industry Intelligence Filter - Animated Pill System */}
+      <IndustryFilter />
+
+      {/* 3. Industry Bento Grid - Triggering Detail Panels */}
       <IndustryBentoGrid />
 
-      {/* 3. Risk Signals - Compact Snap Scroll */}
-      <RiskSignals />
+      {/* 4. Risk Timeline - Sticky Split Layout */}
+      <RiskTimeline />
 
-      {/* 4. Cross-Industry Investor Concerns - Responsive Timeline Rail */}
-      <InvestorConcernsRail />
+      {/* 5. Regional Strategy - Visual Authority Block */}
+      <RegionalStrategy />
 
-      {/* 5. Final CTA */}
-      <div className="py-12 md:py-24">
-        <FinalCTA />
-      </div>
+      {/* 6. Final CTA - Navy + Gold Border Animation */}
+      <FinalCTA />
     </div>
   );
 }
