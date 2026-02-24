@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Mail, Phone, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import PracticeAreasAccordion from './PracticeAreasAccordion';
-import GIcon from '@/new-logo-G-alphabet.png';
+import GIcon from '@/new-logo-G-alphabet2.png';
 
 interface MobileDrawerProps {
   isOpen: boolean;

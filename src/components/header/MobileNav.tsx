@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { Menu, Phone } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import MobileDrawer from './MobileDrawer';
-import GIcon from '@/new-logo-G-alphabet.png';
+import GIcon from '@/new-logo-G-alphabet2.png';
 
 interface MobileNavProps {
   isScrolled: boolean;

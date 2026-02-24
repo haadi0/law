@@ -7,7 +7,7 @@ import DesktopNav from '@/components/header/DesktopNav';
 import MobileNav from '@/components/header/MobileNav';
 import Link from 'next/link';
 import Image from 'next/image';
-import GIcon from '@/new-logo-G-alphabet.png';
+import GIcon from '@/new-logo-G-alphabet2.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);

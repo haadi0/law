@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { PRACTICE_AREAS } from '@/lib/data';
-import GIcon from '@/new-logo-G-alphabet.png';
+import GIcon from '@/new-logo-G-alphabet2.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
