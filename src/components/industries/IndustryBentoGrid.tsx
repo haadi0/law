@@ -1,9 +1,9 @@
 
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowUpRight, ShieldCheck, AlertCircle, Scale, Gavel } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import IndustryDetailPanel from './IndustryDetailPanel';
 
@@ -110,55 +110,72 @@ const INDUSTRIES_INTEL: IndustryData[] = [
   }
 ];
 
-export default function IndustryBentoGrid() {
+interface IndustryBentoGridProps {
+  activeTab: string;
+}
+
+export default function IndustryBentoGrid({ activeTab }: IndustryBentoGridProps) {
   const [selectedIndustry, setSelectedIndustry] = useState<IndustryData | null>(null);
+
+  const filteredIndustries = useMemo(() => {
+    if (activeTab === 'All Sectors') return INDUSTRIES_INTEL;
+    return INDUSTRIES_INTEL.filter(ind => ind.name === activeTab);
+  }, [activeTab]);
 
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto">
-          {INDUSTRIES_INTEL.map((ind, idx) => (
-            <motion.div
-              key={ind.id}
-              layout
-              whileHover={{ scale: 1.01 }}
-              onClick={() => setSelectedIndustry(ind)}
-              className={cn(
-                "group relative bg-white border cursor-pointer p-8 lg:p-12 flex flex-col justify-between overflow-hidden transition-all duration-500 hover:border-accent",
-                ind.size === 'large' ? 'md:col-span-8 md:row-span-2 min-h-[400px]' : 
-                ind.size === 'medium' ? 'md:col-span-6 min-h-[300px]' : 
-                'md:col-span-4 min-h-[300px]'
-              )}
-            >
-              {/* Abstract Pattern Reveal */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-700 pointer-events-none">
-                <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
-              </div>
-
-              <div className="space-y-4 relative z-10">
-                <span className="text-[10px] font-bold text-accent uppercase tracking-widest block opacity-60 group-hover:opacity-100 transition-opacity">0{idx + 1} / Industry Sector</span>
-                <h3 className={cn(
-                  "font-headline font-bold text-primary group-hover:text-accent transition-colors leading-tight",
-                  ind.size === 'large' ? 'text-4xl lg:text-5xl' : 'text-2xl'
-                )}>
-                  {ind.name}
-                </h3>
-                <p className="text-muted-foreground text-sm font-light leading-relaxed max-w-sm">
-                  {ind.tagline}
-                </p>
-              </div>
-
-              <div className="flex justify-between items-end relative z-10">
-                <div className="flex items-center gap-2 text-[10px] font-bold text-primary/40 uppercase tracking-widest group-hover:text-primary transition-colors">
-                  Access Intelligence <ArrowUpRight className="w-3 h-3 text-accent" />
+        <motion.div 
+          layout
+          className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto"
+        >
+          <AnimatePresence mode="popLayout">
+            {filteredIndustries.map((ind, idx) => (
+              <motion.div
+                key={ind.id}
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                whileHover={{ y: -5 }}
+                onClick={() => setSelectedIndustry(ind)}
+                className={cn(
+                  "group relative bg-white border cursor-pointer p-8 lg:p-12 flex flex-col justify-between overflow-hidden transition-all duration-500 hover:border-accent shadow-sm",
+                  ind.size === 'large' ? 'md:col-span-8 md:row-span-2 min-h-[400px]' : 
+                  ind.size === 'medium' ? 'md:col-span-6 min-h-[300px]' : 
+                  'md:col-span-4 min-h-[300px]'
+                )}
+              >
+                {/* Abstract Pattern Reveal */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-700 pointer-events-none">
+                  <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
                 </div>
-                <div className="w-12 h-12 bg-secondary/50 flex items-center justify-center text-primary group-hover:bg-accent group-hover:text-white transition-all">
-                  <span className="text-xs font-bold">INTEL</span>
+
+                <div className="space-y-4 relative z-10">
+                  <span className="text-[10px] font-bold text-accent uppercase tracking-widest block opacity-60 group-hover:opacity-100 transition-opacity">0{idx + 1} / Industry Sector</span>
+                  <h3 className={cn(
+                    "font-headline font-bold text-primary group-hover:text-accent transition-colors leading-tight",
+                    ind.size === 'large' ? 'text-4xl lg:text-5xl' : 'text-2xl'
+                  )}>
+                    {ind.name}
+                  </h3>
+                  <p className="text-muted-foreground text-sm font-light leading-relaxed max-w-sm">
+                    {ind.tagline}
+                  </p>
                 </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+
+                <div className="flex justify-between items-end relative z-10">
+                  <div className="flex items-center gap-2 text-[10px] font-bold text-primary/40 uppercase tracking-widest group-hover:text-primary transition-colors">
+                    Access Intelligence <ArrowUpRight className="w-3 h-3 text-accent" />
+                  </div>
+                  <div className="w-12 h-12 bg-secondary/50 flex items-center justify-center text-primary group-hover:bg-accent group-hover:text-white transition-all">
+                    <span className="text-xs font-bold">INTEL</span>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
       </div>
 
       <AnimatePresence>

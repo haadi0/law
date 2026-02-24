@@ -1,6 +1,7 @@
 
-import React from 'react';
-import { Metadata } from 'next';
+'use client';
+
+import React, { useState } from 'react';
 import IndustryHero from '@/components/industries/IndustryHero';
 import IndustryFilter from '@/components/industries/IndustryFilter';
 import IndustryBentoGrid from '@/components/industries/IndustryBentoGrid';
@@ -8,30 +9,27 @@ import RiskTimeline from '@/components/industries/RiskTimeline';
 import RegionalStrategy from '@/components/industries/RegionalStrategy';
 import FinalCTA from '@/components/industries/FinalCTA';
 
-export const metadata: Metadata = {
-  title: "Industries Served | G'Adroit Attorneys",
-  description: 'Deep sector expertise across energy, mining, infrastructure, and the core growth industries of East Africa.',
-};
-
 export default function IndustriesPage() {
+  const [activeTab, setActiveTab] = useState('All Sectors');
+
   return (
     <div className="pt-20 min-h-screen bg-background text-foreground overflow-x-hidden">
-      {/* 1. Hero - EXACTLY UNCHANGED */}
+      {/* 1. Hero - UNCHANGED */}
       <IndustryHero />
 
-      {/* 2. Industry Intelligence Filter - Animated Pill System */}
-      <IndustryFilter />
+      {/* 2. Industry Intelligence Filter - State managed here for sync */}
+      <IndustryFilter activeTab={activeTab} setActiveTab={setActiveTab} />
 
-      {/* 3. Industry Bento Grid - Triggering Detail Panels */}
-      <IndustryBentoGrid />
+      {/* 3. Industry Bento Grid - Responds to activeTab */}
+      <IndustryBentoGrid activeTab={activeTab} />
 
-      {/* 4. Risk Timeline - Sticky Split Layout */}
+      {/* 4. Risk Timeline */}
       <RiskTimeline />
 
-      {/* 5. Regional Strategy - Visual Authority Block */}
+      {/* 5. Regional Strategy */}
       <RegionalStrategy />
 
-      {/* 6. Final CTA - Navy + Gold Border Animation */}
+      {/* 6. Final CTA */}
       <FinalCTA />
     </div>
   );
