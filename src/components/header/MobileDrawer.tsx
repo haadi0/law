@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Mail, Phone, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import PracticeAreasAccordion from './PracticeAreasAccordion';
-import logo from '@/Gadroit-Logo.png';
+import GIcon from '@/new-logo-G-alphabet.png';
 
 interface MobileDrawerProps {
   isOpen: boolean;
@@ -79,14 +79,18 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
           >
             <div className="flex min-h-[100dvh] flex-col pt-[calc(env(safe-area-inset-top)+16px)] pb-[calc(env(safe-area-inset-bottom)+16px)]">
               <div className="px-6 pb-6 flex justify-between items-center border-b border-white/10 shrink-0">
-                <Link href="/" onClick={onClose}>
+                <Link href="/" onClick={onClose} className="flex items-center gap-3">
                   <Image 
-                    src={logo} 
-                    alt="G'ADROIT ATTORNEYS" 
-                    width={160} 
-                    height={45} 
+                    src={GIcon} 
+                    alt="G" 
+                    width={40} 
+                    height={40} 
                     className="h-10 w-auto brightness-0 invert"
                   />
+                  <div className="flex flex-col leading-none text-accent">
+                    <span className="text-xl font-headline font-bold tracking-tighter">'ADROIT</span>
+                    <span className="text-[8px] font-bold tracking-[0.2em] uppercase opacity-80">Attorneys</span>
+                  </div>
                 </Link>
                 <button
                   onClick={onClose}

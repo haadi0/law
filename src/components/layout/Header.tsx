@@ -7,7 +7,7 @@ import DesktopNav from '@/components/header/DesktopNav';
 import MobileNav from '@/components/header/MobileNav';
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '@/Gadroit-Logo.png';
+import GIcon from '@/new-logo-G-alphabet.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,18 +34,25 @@ const Header = () => {
     >
       <nav className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo - Desktop Only */}
-        <Link href="/" className="hidden lg:flex items-center group">
+        <Link href="/" className="hidden lg:flex items-center gap-3 group">
           <Image 
-            src={logo} 
-            alt="G'ADROIT ATTORNEYS" 
-            width={180} 
-            height={50} 
+            src={GIcon} 
+            alt="G" 
+            width={45} 
+            height={45} 
             className={cn(
-              "h-10 md:h-12 w-auto transition-all duration-300",
+              "h-10 w-auto transition-all duration-300",
               !isScrolled && "brightness-0 invert opacity-90"
             )}
             priority
           />
+          <div className={cn(
+            "flex flex-col leading-none transition-colors duration-300",
+            isScrolled ? "text-primary" : "text-accent"
+          )}>
+            <span className="text-xl font-headline font-bold tracking-tighter">'ADROIT</span>
+            <span className="text-[9px] font-bold tracking-[0.3em] uppercase opacity-80">Attorneys</span>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
