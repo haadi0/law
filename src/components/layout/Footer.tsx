@@ -1,9 +1,10 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
-import { PRACTICE_AREAS, INDUSTRIES } from '@/lib/data';
+import { PRACTICE_AREAS } from '@/lib/data';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -14,13 +15,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand block */}
           <div className="space-y-6">
-            <Link href="/" className="flex flex-col">
-              <span className="font-headline text-3xl font-bold tracking-tight text-white leading-tight">
-                G&apos;ADROIT <span className="text-accent">.</span>
-              </span>
-              <span className="text-xs uppercase tracking-[0.2em] font-medium text-accent/80">
-                Attorneys
-              </span>
+            <Link href="/">
+              <Image 
+                src="/Gadroit-Logo.png" 
+                alt="G'ADROIT ATTORNEYS" 
+                width={200} 
+                height={55} 
+                className="h-12 w-auto brightness-0 invert"
+              />
             </Link>
             <p className="text-sm text-primary-foreground/60 leading-relaxed max-w-xs">
               Tanzania-based | East Africa-focused | International business & dispute specialists.

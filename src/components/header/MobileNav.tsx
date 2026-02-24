@@ -3,6 +3,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, Phone } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import MobileDrawer from './MobileDrawer';
@@ -17,19 +18,18 @@ export default function MobileNav({ isScrolled }: MobileNavProps) {
   return (
     <div className="lg:hidden flex items-center justify-between w-full">
       {/* Brand / Logo */}
-      <Link href="/" className="flex flex-col group">
-        <span className={cn(
-          "font-headline text-xl font-bold tracking-tight leading-tight transition-colors duration-300",
-          isScrolled ? "text-primary" : "text-accent"
-        )}>
-          G&apos;ADROIT <span className="text-accent">.</span>
-        </span>
-        <span className={cn(
-          "text-[8px] uppercase tracking-[0.2em] font-medium transition-colors duration-300",
-          isScrolled ? "text-muted-foreground" : "text-white/60"
-        )}>
-          Attorneys
-        </span>
+      <Link href="/" className="flex items-center group">
+        <Image 
+          src="/Gadroit-Logo.png" 
+          alt="G'ADROIT ATTORNEYS" 
+          width={140} 
+          height={40} 
+          className={cn(
+            "h-8 w-auto transition-all duration-300",
+            !isScrolled && "brightness-0 invert opacity-90"
+          )}
+          priority
+        />
       </Link>
 
       {/* Quick Actions */}

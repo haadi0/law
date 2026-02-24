@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils';
 import DesktopNav from '@/components/header/DesktopNav';
 import MobileNav from '@/components/header/MobileNav';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,7 +20,6 @@ const Header = () => {
   }, []);
 
   const linkTextColor = isScrolled ? 'text-foreground' : 'text-accent';
-  const headerTextColor = isScrolled ? 'text-primary' : 'text-accent';
 
   return (
     <header
@@ -32,19 +32,18 @@ const Header = () => {
     >
       <nav className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo - Desktop Only (MobileNav handles its own logo) */}
-        <Link href="/" className="hidden lg:flex flex-col group">
-          <span className={cn(
-            "font-headline text-2xl font-bold tracking-tight leading-tight transition-colors duration-300",
-            headerTextColor
-          )}>
-            G&apos;ADROIT <span className="text-accent">.</span>
-          </span>
-          <span className={cn(
-            "text-[10px] uppercase tracking-[0.2em] font-medium transition-colors duration-300",
-            isScrolled ? "text-muted-foreground" : "text-white/60"
-          )}>
-            Attorneys
-          </span>
+        <Link href="/" className="hidden lg:flex items-center group">
+          <Image 
+            src="/Gadroit-Logo.png" 
+            alt="G'ADROIT ATTORNEYS" 
+            width={180} 
+            height={50} 
+            className={cn(
+              "h-10 md:h-12 w-auto transition-all duration-300",
+              !isScrolled && "brightness-0 invert opacity-90"
+            )}
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}

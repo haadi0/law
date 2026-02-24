@@ -3,6 +3,7 @@
 
 import React, { useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Mail, Phone, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -82,13 +83,14 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
             <div className="flex min-h-[100dvh] flex-col pt-[calc(env(safe-area-inset-top)+16px)] pb-[calc(env(safe-area-inset-bottom)+16px)]">
               {/* Header Area */}
               <div className="px-6 pb-6 flex justify-between items-center border-b border-white/10 shrink-0">
-                <Link href="/" onClick={onClose} className="flex flex-col">
-                  <span className="font-headline text-2xl font-bold tracking-tight text-white leading-tight">
-                    G&apos;ADROIT <span className="text-accent">.</span>
-                  </span>
-                  <span className="text-[10px] uppercase tracking-[0.2em] font-medium text-accent">
-                    Attorneys
-                  </span>
+                <Link href="/" onClick={onClose}>
+                  <Image 
+                    src="/Gadroit-Logo.png" 
+                    alt="G'ADROIT ATTORNEYS" 
+                    width={160} 
+                    height={45} 
+                    className="h-10 w-auto brightness-0 invert"
+                  />
                 </Link>
                 <button
                   onClick={onClose}
