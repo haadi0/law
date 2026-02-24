@@ -34,16 +34,13 @@ const Header = () => {
     >
       <nav className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo - Desktop Only */}
-        <Link href="/" className="hidden lg:flex items-center gap-3 group">
+        <Link href="/" className="hidden lg:flex items-center gap-1.5 group">
           <Image 
             src={GIcon} 
             alt="G" 
             width={45} 
             height={45} 
-            className={cn(
-              "h-10 w-auto transition-all duration-300",
-              !isScrolled && "brightness-0 invert opacity-90"
-            )}
+            className="h-10 w-auto transition-all duration-300"
             priority
           />
           <div className={cn(

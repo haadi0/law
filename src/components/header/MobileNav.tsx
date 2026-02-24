@@ -19,16 +19,13 @@ export default function MobileNav({ isScrolled }: MobileNavProps) {
   return (
     <div className="lg:hidden flex items-center justify-between w-full">
       {/* Brand / Logo */}
-      <Link href="/" className="flex items-center gap-2 group">
+      <Link href="/" className="flex items-center gap-1 group">
         <Image 
           src={GIcon} 
           alt="G" 
           width={36} 
           height={36} 
-          className={cn(
-            "h-8 w-auto transition-all duration-300",
-            !isScrolled && "brightness-0 invert opacity-90"
-          )}
+          className="h-8 w-auto transition-all duration-300"
           priority
         />
         <div className={cn(
