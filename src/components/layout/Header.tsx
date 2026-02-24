@@ -7,6 +7,7 @@ import DesktopNav from '@/components/header/DesktopNav';
 import MobileNav from '@/components/header/MobileNav';
 import Link from 'next/link';
 import Image from 'next/image';
+import logo from '@/Gadroit-Logo.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,7 +20,8 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const linkTextColor = isScrolled ? 'text-foreground' : 'text-accent';
+  // Use accent (gold) when at top, primary (navy) when scrolled
+  const linkTextColor = isScrolled ? 'text-primary' : 'text-accent';
 
   return (
     <header
@@ -31,10 +33,10 @@ const Header = () => {
       )}
     >
       <nav className="max-w-7xl mx-auto flex items-center justify-between">
-        {/* Logo - Desktop Only (MobileNav handles its own logo) */}
+        {/* Logo - Desktop Only */}
         <Link href="/" className="hidden lg:flex items-center group">
           <Image 
-            src="/Gadroit-Logo.png" 
+            src={logo} 
             alt="G'ADROIT ATTORNEYS" 
             width={180} 
             height={50} 

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { PRACTICE_AREAS } from '@/lib/data';
+import logo from '@/Gadroit-Logo.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -17,7 +18,7 @@ const Footer = () => {
           <div className="space-y-6">
             <Link href="/">
               <Image 
-                src="/Gadroit-Logo.png" 
+                src={logo} 
                 alt="G'ADROIT ATTORNEYS" 
                 width={200} 
                 height={55} 

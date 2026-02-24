@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { Menu, Phone } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import MobileDrawer from './MobileDrawer';
+import logo from '@/Gadroit-Logo.png';
 
 interface MobileNavProps {
   isScrolled: boolean;
@@ -20,7 +21,7 @@ export default function MobileNav({ isScrolled }: MobileNavProps) {
       {/* Brand / Logo */}
       <Link href="/" className="flex items-center group">
         <Image 
-          src="/Gadroit-Logo.png" 
+          src={logo} 
           alt="G'ADROIT ATTORNEYS" 
           width={140} 
           height={40} 

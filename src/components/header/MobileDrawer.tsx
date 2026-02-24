@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Mail, Phone, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import PracticeAreasAccordion from './PracticeAreasAccordion';
+import logo from '@/Gadroit-Logo.png';
 
 interface MobileDrawerProps {
   isOpen: boolean;
@@ -15,7 +16,6 @@ interface MobileDrawerProps {
 }
 
 export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
-  // Advanced body scroll lock for iOS Safari
   useEffect(() => {
     if (isOpen) {
       const scrollY = window.scrollY;
@@ -38,7 +38,6 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
     };
   }, [isOpen]);
 
-  // ESC key to close
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
@@ -60,7 +59,6 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
     <AnimatePresence>
       {isOpen && (
         <>
-          {/* Backdrop (z-50) */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -69,7 +67,6 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
             className="fixed inset-0 bg-primary/60 backdrop-blur-sm z-50 lg:hidden"
           />
 
-          {/* Drawer Panel (z-60) */}
           <motion.div
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
@@ -81,11 +78,10 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
             style={{ WebkitOverflowScrolling: 'touch' }}
           >
             <div className="flex min-h-[100dvh] flex-col pt-[calc(env(safe-area-inset-top)+16px)] pb-[calc(env(safe-area-inset-bottom)+16px)]">
-              {/* Header Area */}
               <div className="px-6 pb-6 flex justify-between items-center border-b border-white/10 shrink-0">
                 <Link href="/" onClick={onClose}>
                   <Image 
-                    src="/Gadroit-Logo.png" 
+                    src={logo} 
                     alt="G'ADROIT ATTORNEYS" 
                     width={160} 
                     height={45} 
@@ -101,9 +97,7 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
                 </button>
               </div>
 
-              {/* Scrollable Content Area */}
               <div className="flex-1 p-6 space-y-12">
-                {/* Primary CTA */}
                 <div className="space-y-4">
                   <Button
                     asChild
@@ -131,38 +125,35 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
                   </div>
                 </div>
 
-                {/* Navigation List */}
                 <nav className="flex flex-col">
-                  <Link
-                    href="/"
-                    onClick={onClose}
-                    className="py-4 text-2xl font-headline font-bold text-white border-b border-white/10 hover:text-accent transition-all hover:translate-x-2"
-                  >
-                    Home
-                  </Link>
-                  <Link
-                    href="/about"
-                    onClick={onClose}
-                    className="py-4 text-2xl font-headline font-bold text-white border-b border-white/10 hover:text-accent transition-all hover:translate-x-2"
-                  >
-                    About the Firm
-                  </Link>
-                  
-                  <PracticeAreasAccordion onItemClick={onClose} />
-
-                  {navLinks.slice(2).map((link) => (
-                    <Link
-                      key={link.name}
-                      href={link.href}
-                      onClick={onClose}
-                      className="py-4 text-2xl font-headline font-bold text-white border-b border-white/10 hover:text-accent transition-all hover:translate-x-2"
-                    >
-                      {link.name}
-                    </Link>
-                  ))}
+                  {navLinks.map((link) => {
+                    if (link.name === 'About the Firm') {
+                      return (
+                        <React.Fragment key={link.name}>
+                          <Link
+                            href={link.href}
+                            onClick={onClose}
+                            className="py-4 text-2xl font-headline font-bold text-white border-b border-white/10 hover:text-accent transition-all hover:translate-x-2"
+                          >
+                            {link.name}
+                          </Link>
+                          <PracticeAreasAccordion onItemClick={onClose} />
+                        </React.Fragment>
+                      )
+                    }
+                    return (
+                      <Link
+                        key={link.name}
+                        href={link.href}
+                        onClick={onClose}
+                        className="py-4 text-2xl font-headline font-bold text-white border-b border-white/10 hover:text-accent transition-all hover:translate-x-2"
+                      >
+                        {link.name}
+                      </Link>
+                    )
+                  })}
                 </nav>
 
-                {/* Secondary Bottom CTA */}
                 <div className="pt-8 pb-12">
                   <Link 
                     href="/contact" 
