@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -10,6 +11,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { PRACTICE_AREAS, INDUSTRIES } from '@/lib/data';
+import AttorneysSection from '@/components/sections/AttorneysSection';
 
 export default function Home() {
   return (
@@ -45,7 +47,7 @@ export default function Home() {
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-white hover:text-primary rounded-none px-10 h-16 text-base font-bold transition-all shadow-xl shadow-black/20">
                 <Link href="/contact">Request Consultation</Link>
               </Button>
-              <Button asChild size="lg" className="bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 hover:border-accent/50 rounded-none px-10 h-16 text-base font-bold transition-all">
+              <Button asChild size="lg" className="bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 hover:border-accent/50 hover:text-primary rounded-none px-10 h-16 text-base font-bold transition-all">
                 <Link href="/practice-areas">Practice Areas</Link>
               </Button>
             </div>
@@ -170,6 +172,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Our Attorneys Section */}
+      <AttorneysSection />
 
       {/* Investor Challenges Accordion */}
       <section className="py-24 bg-secondary/30">
