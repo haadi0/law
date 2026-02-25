@@ -3,10 +3,8 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Menu, Phone } from 'lucide-react';
 import MobileDrawer from './MobileDrawer';
-import GadroitLogo from '@/Gadroit-Logo.png';
 
 interface MobileNavProps {
   isScrolled: boolean;
@@ -17,18 +15,10 @@ export default function MobileNav({ isScrolled }: MobileNavProps) {
 
   return (
     <div className="flex items-center justify-between w-full">
-      {/* Brand / Logo - Optimized for Circularity */}
-      <Link href="/" className="flex items-center group">
-        <div className="relative rounded-full overflow-hidden w-12 h-12 flex items-center justify-center bg-white shadow-md">
-          <Image 
-            src={GadroitLogo} 
-            alt="G'Adroit Attorneys" 
-            width={48} 
-            height={48} 
-            className="w-full h-full object-contain p-1 rounded-full"
-            priority
-          />
-        </div>
+      {/* Brand / Logo - Typography Based */}
+      <Link href="/" className="flex flex-col items-start group">
+        <span className="text-xl font-headline font-bold text-accent leading-none">G&apos;ADROIT</span>
+        <span className="text-[7px] font-bold text-white tracking-[0.3em] uppercase mt-1">Attorneys</span>
       </Link>
 
       {/* Quick Actions */}

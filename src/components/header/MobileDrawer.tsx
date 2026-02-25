@@ -3,12 +3,10 @@
 
 import React, { useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Mail, Phone, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import PracticeAreasAccordion from './PracticeAreasAccordion';
-import GadroitLogo from '@/Gadroit-Logo.png';
 
 interface MobileDrawerProps {
   isOpen: boolean;
@@ -79,16 +77,9 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
           >
             <div className="flex min-h-[100dvh] flex-col pt-[calc(env(safe-area-inset-top)+16px)] pb-[calc(env(safe-area-inset-bottom)+16px)]">
               <div className="px-6 pb-6 flex justify-between items-center border-b border-white/10 shrink-0">
-                <Link href="/" onClick={onClose} className="flex items-center">
-                  <div className="relative rounded-full overflow-hidden w-14 h-14 bg-white flex items-center justify-center shadow-md">
-                    <Image 
-                      src={GadroitLogo} 
-                      alt="G'Adroit Attorneys" 
-                      width={56} 
-                      height={56} 
-                      className="w-full h-full object-contain p-1 rounded-full"
-                    />
-                  </div>
+                <Link href="/" onClick={onClose} className="flex flex-col items-start">
+                  <span className="text-2xl font-headline font-bold text-accent leading-none">G&apos;ADROIT</span>
+                  <span className="text-[8px] font-bold text-white tracking-[0.3em] uppercase mt-1">Attorneys</span>
                 </Link>
                 <button
                   onClick={onClose}

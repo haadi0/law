@@ -6,9 +6,7 @@ import { cn } from '@/lib/utils';
 import DesktopNav from '@/components/header/DesktopNav';
 import MobileNav from '@/components/header/MobileNav';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Search, Globe, ChevronDown, MapPin, Clock } from 'lucide-react';
-import GadroitLogo from '@/Gadroit-Logo.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -57,18 +55,10 @@ const Header = () => {
             </a>
           </div>
 
-          {/* Center: Branding - Full Round Logo */}
-          <Link href="/" className="flex items-center justify-center group">
-            <div className="relative rounded-full overflow-hidden w-24 h-24 lg:w-28 lg:h-28 flex items-center justify-center bg-white shadow-sm border border-secondary/20">
-              <Image 
-                src={GadroitLogo} 
-                alt="G'Adroit Attorneys" 
-                width={120} 
-                height={120} 
-                className="w-full h-full object-contain p-2 rounded-full"
-                priority
-              />
-            </div>
+          {/* Center: Branding - Elite Typography Mark */}
+          <Link href="/" className="flex flex-col items-center justify-center group">
+            <span className="text-4xl lg:text-5xl font-headline font-bold text-accent leading-none">G&apos;ADROIT</span>
+            <span className="text-[10px] font-bold text-primary tracking-[0.5em] uppercase mt-2">Attorneys</span>
           </Link>
 
           {/* Right: Hours & Email */}
