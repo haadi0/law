@@ -142,52 +142,52 @@ export default function SectoralCommand() {
   const [selectedIndustry, setSelectedIndustry] = useState<IndustrySector | null>(null);
 
   return (
-    <section className="py-12 md:py-24 bg-white overflow-hidden relative border-y border-border">
+    <section className="py-10 md:py-20 bg-white overflow-hidden relative border-y border-border">
       <div className="container mx-auto px-4 md:px-6 lg:px-12 relative z-10">
-        {/* Compact Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-8 md:mb-12 gap-6">
-          <div className="max-w-2xl space-y-3">
-            <div className="flex items-center gap-3">
-              <div className="h-[1px] w-8 bg-accent"></div>
+        {/* Compact Institutional Header */}
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-6 md:mb-10 gap-4">
+          <div className="max-w-2xl space-y-2">
+            <div className="flex items-center gap-2">
+              <div className="h-[1px] w-6 bg-accent"></div>
               <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-accent">Sectoral Command</span>
             </div>
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-headline font-bold text-primary leading-tight">
               Tailored Legal <span className="text-accent italic font-normal">Strategies.</span>
             </h2>
-            <p className="text-sm md:text-lg text-muted-foreground font-light leading-relaxed">
-              Tailored legal strategies for the high-growth industries driving East African transformation.
+            <p className="text-xs md:text-base text-muted-foreground font-light leading-relaxed max-w-lg">
+              Precision counsel for high-growth sectors driving the East African economic transformation.
             </p>
           </div>
         </div>
 
-        {/* Dense Intelligence Grid - Mobile First */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 lg:gap-1 bg-white md:bg-border/10 md:border md:border-border">
+        {/* High-Density Interactive Bento Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-3 bg-border/5 p-2 border border-border shadow-inner">
           {INDUSTRIES.map((industry, idx) => (
             <motion.div
               key={industry.id}
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.05 }}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              transition={{ delay: idx * 0.03 }}
+              whileHover={{ scale: 1.01, zIndex: 10 }}
+              whileTap={{ scale: 0.99 }}
               onClick={() => setSelectedIndustry(industry)}
               className={cn(
-                "group relative bg-white p-6 md:p-8 flex flex-col justify-between cursor-pointer transition-all duration-500 border border-border md:border-none shadow-sm md:shadow-none hover:shadow-xl hover:z-20",
+                "group relative bg-white p-5 md:p-6 flex flex-col justify-between cursor-pointer transition-all duration-300 border border-border/50 hover:border-accent hover:shadow-2xl hover:bg-white",
                 industry.size === 'large' ? 'md:col-span-6 lg:col-span-4' : 
                 industry.size === 'medium' ? 'md:col-span-6 lg:col-span-4' : 
                 'md:col-span-6 lg:col-span-2'
               )}
             >
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <div className="flex justify-between items-start">
-                  <div className="w-12 h-12 bg-accent/5 rounded-full flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-500 shadow-sm border border-accent/10">
-                    <industry.icon className="w-6 h-6" />
+                  <div className="w-10 h-10 bg-secondary/50 rounded-none flex items-center justify-center text-primary group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                    <industry.icon className="w-5 h-5" />
                   </div>
                   <div className="flex flex-col items-end">
-                    <span className="text-[8px] uppercase tracking-widest text-muted-foreground font-bold">Risk Exposure</span>
+                    <span className="text-[7px] uppercase tracking-widest text-muted-foreground font-bold">Risk</span>
                     <span className={cn(
-                      "text-[9px] font-bold uppercase tracking-tighter",
+                      "text-[8px] font-bold uppercase",
                       industry.riskLevel === 'Critical' ? 'text-destructive' : 
                       industry.riskLevel === 'High' ? 'text-accent' : 'text-green-600'
                     )}>
@@ -196,41 +196,47 @@ export default function SectoralCommand() {
                   </div>
                 </div>
                 
-                <div className="space-y-2 text-center md:text-left">
-                  <h3 className="text-xl md:text-2xl font-headline font-bold text-primary group-hover:text-accent transition-colors leading-tight">
+                <div className="space-y-1">
+                  <h3 className="text-lg md:text-xl font-headline font-bold text-primary group-hover:text-accent transition-colors leading-tight">
                     {industry.name}
                   </h3>
-                  <p className="text-xs text-muted-foreground font-light leading-relaxed line-clamp-2">
+                  <p className="text-[10px] text-muted-foreground font-light leading-snug line-clamp-2">
                     {industry.tagline}
                   </p>
                 </div>
               </div>
 
-              {/* Reveal indicator on desktop, always visible on mobile */}
-              <div className="mt-8 pt-4 border-t border-border/50 flex justify-between items-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity">
-                <span className="text-[9px] font-bold uppercase tracking-[0.2em] flex items-center gap-2 text-primary">
-                  Access Intel <ArrowUpRight className="w-3 h-3 text-accent" />
+              {/* Interaction Call-to-Action */}
+              <div className="mt-6 pt-3 border-t border-border/30 flex justify-between items-center opacity-60 group-hover:opacity-100 transition-opacity">
+                <span className="text-[8px] font-bold uppercase tracking-[0.2em] flex items-center gap-1 text-primary">
+                  Intelligence <ArrowUpRight className="w-2.5 h-2.5 text-accent" />
                 </span>
-                <span className="text-[10px] font-headline italic text-accent/40">0{idx + 1}</span>
+                <span className="text-[9px] font-headline italic text-accent/30">0{idx + 1}</span>
               </div>
               
-              {/* Subtle hover underline */}
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-500 group-hover:w-full" />
+              {/* Subtle animated indicator */}
+              <motion.div 
+                className="absolute bottom-0 left-0 h-0.5 bg-accent w-0 group-hover:w-full"
+                transition={{ duration: 0.3 }}
+              />
             </motion.div>
           ))}
         </div>
 
-        {/* Final CTA */}
-        <div className="mt-12 md:mt-16 text-center">
-          <Button asChild size="lg" className="bg-primary text-white hover:bg-accent rounded-none h-14 md:h-16 px-8 md:px-12 text-sm md:text-base font-bold transition-all shadow-xl group">
-            <Link href="/industries" className="flex items-center gap-2">
-              LEARN MORE ABOUT OUR TAILORED SERVICES <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+        {/* Strategic Call to Action */}
+        <div className="mt-8 md:mt-12 flex flex-col md:flex-row items-center justify-center gap-6">
+          <Button asChild size="lg" className="bg-primary text-white hover:bg-accent rounded-none h-14 px-10 text-xs font-bold tracking-widest transition-all group w-full md:w-auto shadow-lg">
+            <Link href="/industries" className="flex items-center gap-3">
+              EXPLORE FULL SECTORAL ARCHIVE <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </Button>
+          <p className="text-[10px] text-muted-foreground font-medium uppercase tracking-[0.3em] text-center md:text-left">
+            Institutional Support for Multi-Sector Operations
+          </p>
         </div>
       </div>
 
-      {/* Side Intelligence Briefing Panel */}
+      {/* Modern Intelligence Briefing Side Panel */}
       <AnimatePresence>
         {selectedIndustry && (
           <>
@@ -239,7 +245,7 @@ export default function SectoralCommand() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedIndustry(null)}
-              className="fixed inset-0 bg-primary/40 backdrop-blur-sm z-[100]"
+              className="fixed inset-0 bg-primary/20 backdrop-blur-[2px] z-[100]"
             />
             
             <motion.div
@@ -247,45 +253,45 @@ export default function SectoralCommand() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 30, stiffness: 200 }}
-              className="fixed top-0 right-0 h-full w-full md:max-w-xl bg-white shadow-2xl z-[110] flex flex-col text-primary"
+              className="fixed top-0 right-0 h-full w-full md:max-w-md lg:max-w-lg bg-white shadow-2xl z-[110] flex flex-col border-l border-border"
             >
-              {/* Panel Header */}
-              <div className="p-6 md:p-8 border-b flex justify-between items-center bg-white sticky top-0 z-20">
+              {/* Compact Briefing Header */}
+              <div className="p-6 border-b flex justify-between items-center bg-white sticky top-0 z-20">
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
                     <TrendingUp className="w-3 h-3 text-accent" />
-                    <span className="text-accent font-bold text-[9px] tracking-[0.4em] uppercase">Sectoral Intelligence Briefing</span>
+                    <span className="text-accent font-bold text-[8px] tracking-[0.4em] uppercase">Intelligence Briefing</span>
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-headline font-bold leading-none">{selectedIndustry.name}</h3>
+                  <h3 className="text-2xl font-headline font-bold text-primary leading-none">{selectedIndustry.name}</h3>
                 </div>
                 <button 
                   onClick={() => setSelectedIndustry(null)}
-                  className="p-3 hover:bg-secondary rounded-full transition-colors border border-border"
-                  aria-label="Close Briefing"
+                  className="p-2 hover:bg-secondary rounded-none transition-colors border border-border"
+                  aria-label="Close Intelligence Briefing"
                 >
-                  <X className="w-5 h-5" />
+                  <X className="w-4 h-4 text-primary" />
                 </button>
               </div>
 
-              {/* Panel Content */}
-              <div className="flex-1 overflow-y-auto p-6 md:p-10 space-y-10">
+              {/* Panel Data Environment */}
+              <div className="flex-1 overflow-y-auto p-6 lg:p-8 space-y-8">
                 <section className="space-y-3">
-                  <h4 className="text-[9px] font-bold uppercase tracking-widest text-muted-foreground flex items-center gap-2">
-                    <div className="w-1 h-1 bg-accent rounded-full"></div> Executive Summary
+                  <h4 className="text-[8px] font-bold uppercase tracking-widest text-muted-foreground flex items-center gap-2">
+                    <div className="w-1 h-1 bg-accent"></div> Executive Overview
                   </h4>
-                  <p className="text-base md:text-lg text-primary font-light leading-relaxed">
+                  <p className="text-sm md:text-base text-primary font-light leading-relaxed">
                     {selectedIndustry.overview}
                   </p>
                 </section>
 
-                <div className="grid grid-cols-1 gap-8">
-                  <section className="p-6 bg-destructive/5 border border-destructive/10 space-y-4">
-                    <h4 className="text-[9px] font-bold uppercase tracking-widest text-destructive flex items-center gap-2">
-                      <AlertCircle className="w-3 h-3" /> Principal Legal Risks
+                <div className="space-y-6">
+                  <section className="p-5 bg-destructive/[0.02] border border-destructive/10 space-y-4">
+                    <h4 className="text-[8px] font-bold uppercase tracking-widest text-destructive flex items-center gap-2">
+                      <AlertCircle className="w-3 h-3" /> Principal Exposure
                     </h4>
-                    <div className="grid grid-cols-1 gap-3">
+                    <div className="grid grid-cols-1 gap-2">
                       {selectedIndustry.risks.map((risk, i) => (
-                        <div key={i} className="flex items-start gap-3 text-sm font-medium">
+                        <div key={i} className="flex items-start gap-3 text-xs font-medium text-primary/80">
                           <span className="text-destructive mt-0.5">•</span>
                           <span>{risk}</span>
                         </div>
@@ -294,12 +300,12 @@ export default function SectoralCommand() {
                   </section>
 
                   <section className="space-y-4">
-                    <h4 className="text-[9px] font-bold uppercase tracking-widest text-muted-foreground flex items-center gap-2">
-                      <Scale className="w-3 h-3 text-accent" /> Regulatory Thresholds
+                    <h4 className="text-[8px] font-bold uppercase tracking-widest text-muted-foreground flex items-center gap-2">
+                      <Scale className="w-3 h-3 text-accent" /> Regulatory Frameworks
                     </h4>
-                    <div className="space-y-3">
+                    <div className="space-y-2">
                       {selectedIndustry.considerations.map((item, i) => (
-                        <div key={i} className="flex items-center gap-3 text-sm font-light border-b border-border pb-2">
+                        <div key={i} className="flex items-center gap-3 text-xs font-light border-b border-border pb-2 text-primary/70">
                           <div className="w-1 h-1 bg-accent/40 rounded-full"></div>
                           <span>{item}</span>
                         </div>
@@ -307,15 +313,15 @@ export default function SectoralCommand() {
                     </div>
                   </section>
 
-                  <section className="p-6 bg-primary text-white space-y-4">
-                    <h4 className="text-[9px] font-bold uppercase tracking-widest text-accent flex items-center gap-2">
+                  <section className="p-5 bg-primary text-white space-y-4 shadow-xl">
+                    <h4 className="text-[8px] font-bold uppercase tracking-widest text-accent flex items-center gap-2">
                       <Gavel className="w-3 h-3" /> G&apos;Adroit Advantage
                     </h4>
                     <div className="space-y-3">
                       {selectedIndustry.support.map((item, i) => (
-                        <div key={i} className="flex items-start gap-3 text-sm font-bold">
-                          <ShieldCheck className="w-4 h-4 text-accent shrink-0" /> 
-                          <span>{item}</span>
+                        <div key={i} className="flex items-start gap-3 text-xs font-bold">
+                          <ShieldCheck className="w-3.5 h-3.5 text-accent shrink-0" /> 
+                          <span className="leading-tight">{item}</span>
                         </div>
                       ))}
                     </div>
@@ -323,18 +329,16 @@ export default function SectoralCommand() {
                 </div>
               </div>
 
-              {/* Panel Footer */}
-              <div className="p-6 md:p-8 border-t bg-secondary/10 flex flex-col gap-4">
-                <Button asChild className="w-full bg-primary text-white py-7 text-sm font-bold rounded-none hover:bg-accent transition-all group shadow-lg">
+              {/* Conversion Action */}
+              <div className="p-6 border-t bg-secondary/10 flex flex-col gap-3">
+                <Button asChild className="w-full bg-primary text-white py-6 text-xs font-bold rounded-none hover:bg-accent transition-all group">
                   <Link href="/contact" onClick={() => setSelectedIndustry(null)}>
-                    REQUEST CONFIDENTIAL BRIEFING <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    REQUEST SECTORAL AUDIT <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>
-                <div className="text-center">
-                   <Link href="/investor-resources" className="text-[10px] font-bold text-primary/40 hover:text-accent transition-colors uppercase tracking-widest">
-                     Access Archive Support Documents →
-                   </Link>
-                </div>
+                <p className="text-[8px] text-center text-muted-foreground font-bold tracking-[0.2em] uppercase">
+                  Confidential Priority Response Guaranteed
+                </p>
               </div>
             </motion.div>
           </>
