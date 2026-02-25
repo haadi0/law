@@ -17,15 +17,15 @@ export default function MobileNav({ isScrolled }: MobileNavProps) {
 
   return (
     <div className="flex items-center justify-between w-full">
-      {/* Brand / Logo */}
+      {/* Brand / Logo - Optimized for Circularity */}
       <Link href="/" className="flex items-center group">
-        <div className="relative rounded-full overflow-hidden w-auto h-auto">
+        <div className="relative rounded-full overflow-hidden w-12 h-12 flex items-center justify-center bg-white shadow-md">
           <Image 
             src={GadroitLogo} 
             alt="G'Adroit Attorneys" 
-            width={180} 
-            height={54} 
-            className="h-14 w-auto object-contain rounded-full"
+            width={48} 
+            height={48} 
+            className="w-full h-full object-contain p-1 rounded-full"
             priority
           />
         </div>
@@ -35,7 +35,7 @@ export default function MobileNav({ isScrolled }: MobileNavProps) {
       <div className="flex items-center gap-4">
         <a
           href="tel:+1238591263"
-          className="p-2 rounded-full bg-white/10 text-accent border border-accent/20 transition-all"
+          className="p-3 rounded-full bg-white/10 text-accent border border-accent/20 transition-all"
           aria-label="Call office"
         >
           <Phone className="w-4 h-4" />
@@ -46,7 +46,7 @@ export default function MobileNav({ isScrolled }: MobileNavProps) {
           aria-label="Open menu"
           aria-expanded={isDrawerOpen}
         >
-          <Menu className="w-6 h-6" />
+          <Menu className="w-7 h-7" />
         </button>
       </div>
 

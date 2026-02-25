@@ -57,15 +57,15 @@ const Header = () => {
             </a>
           </div>
 
-          {/* Center: Branding */}
+          {/* Center: Branding - Full Round Logo */}
           <Link href="/" className="flex items-center justify-center group">
-            <div className="relative rounded-full overflow-hidden w-auto h-auto">
+            <div className="relative rounded-full overflow-hidden w-24 h-24 lg:w-28 lg:h-28 flex items-center justify-center bg-white shadow-sm border border-secondary/20">
               <Image 
                 src={GadroitLogo} 
                 alt="G'Adroit Attorneys" 
-                width={320} 
-                height={100} 
-                className="h-24 w-auto object-contain rounded-full"
+                width={120} 
+                height={120} 
+                className="w-full h-full object-contain p-2 rounded-full"
                 priority
               />
             </div>

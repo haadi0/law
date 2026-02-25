@@ -14,16 +14,16 @@ const Footer = () => {
     <footer className="bg-primary text-primary-foreground pt-16 pb-8 px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          {/* Brand block */}
+          {/* Brand block - Improved Circular Logo */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center group">
-              <div className="relative rounded-full overflow-hidden w-auto h-auto">
+              <div className="relative rounded-full overflow-hidden w-20 h-20 bg-white flex items-center justify-center shadow-lg border border-white/5">
                 <Image 
                   src={GadroitLogo} 
                   alt="G'Adroit Attorneys" 
-                  width={280} 
-                  height={90} 
-                  className="h-24 w-auto object-contain rounded-full"
+                  width={80} 
+                  height={80} 
+                  className="w-full h-full object-contain p-2 rounded-full"
                 />
               </div>
             </Link>

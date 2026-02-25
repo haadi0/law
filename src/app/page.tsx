@@ -20,56 +20,56 @@ export default function Home() {
 
   return (
     <div className="w-full">
-      {/* Hero Section - Optimized for 3-tier header */}
-      <section className="relative min-h-[90vh] lg:min-h-screen flex items-center pt-64 md:pt-72 pb-24 overflow-hidden bg-primary text-white">
+      {/* Hero Section - Optimized for 3-tier header & Improved Mobile Compactness */}
+      <section className="relative min-h-[80vh] lg:min-h-screen flex items-center pt-32 md:pt-64 lg:pt-72 pb-16 lg:pb-24 overflow-hidden bg-primary text-white">
         {/* Background Subtle Pattern */}
         <div className="absolute inset-0 z-0 opacity-10">
           <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
         </div>
         
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
             {/* Left Content: The Strategy */}
-            <div className="lg:col-span-7 space-y-10 animate-in fade-in slide-in-from-left-8 duration-1000">
-              <div className="space-y-6">
+            <div className="lg:col-span-7 space-y-6 lg:space-y-10 animate-in fade-in slide-in-from-left-8 duration-1000">
+              <div className="space-y-4 lg:space-y-6">
                 <div className="flex items-center gap-4">
                   <div className="h-1 w-12 bg-accent"></div>
                   <span className="text-[10px] uppercase tracking-[0.5em] font-bold text-accent">Tanzania-Rooted Authority</span>
                 </div>
-                <h1 className="text-5xl md:text-8xl font-headline font-bold leading-[1.05]">
+                <h1 className="text-4xl md:text-6xl lg:text-8xl font-headline font-bold leading-[1.1] lg:leading-[1.05]">
                   International Strategy. <br />
                   <span className="text-accent italic font-normal">Local Authority.</span>
                 </h1>
-                <p className="text-lg md:text-2xl text-primary-foreground/70 max-w-2xl font-light leading-relaxed">
+                <p className="text-base md:text-xl lg:text-2xl text-primary-foreground/70 max-w-2xl font-light leading-relaxed">
                   We provide the elite legal architecture required for significant cross-border investment and complex dispute resolution in the East African region.
                 </p>
               </div>
               
-              <div className="flex flex-col sm:flex-row items-start gap-6 pt-4">
-                <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-white hover:text-primary rounded-none px-12 h-16 text-base font-bold transition-all shadow-2xl shadow-black/20 group">
+              <div className="flex flex-col sm:flex-row items-start gap-4 lg:gap-6 pt-2 lg:pt-4">
+                <Button asChild size="lg" className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-white hover:text-primary rounded-none px-10 lg:px-12 h-14 lg:h-16 text-sm lg:text-base font-bold transition-all shadow-2xl shadow-black/20 group">
                   <Link href="/contact" className="flex items-center gap-2">
                     Request Consultation <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>
-                <Button asChild size="lg" className="bg-white/5 backdrop-blur-sm border border-white/10 text-white hover:bg-white/10 hover:border-accent/50 rounded-none px-10 h-16 text-base font-bold transition-all">
+                <Button asChild size="lg" className="w-full sm:w-auto bg-white/5 backdrop-blur-sm border border-white/10 text-white hover:bg-white/10 hover:border-accent/50 rounded-none px-8 lg:px-10 h-14 lg:h-16 text-sm lg:text-base font-bold transition-all">
                   <Link href="/practice-areas">Practice Expertise</Link>
                 </Button>
               </div>
 
               {/* Quick Metrics */}
-              <div className="grid grid-cols-3 gap-8 pt-12 border-t border-white/10">
+              <div className="grid grid-cols-3 gap-4 lg:gap-8 pt-8 lg:pt-12 border-t border-white/10">
                 <div>
-                  <div className="text-2xl font-headline font-bold text-accent">40+</div>
-                  <div className="text-[10px] uppercase tracking-widest text-white/40 font-bold">Market Entries</div>
+                  <div className="text-xl lg:text-2xl font-headline font-bold text-accent">40+</div>
+                  <div className="text-[9px] lg:text-[10px] uppercase tracking-widest text-white/40 font-bold">Market Entries</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-headline font-bold text-accent">$2B+</div>
-                  <div className="text-[10px] uppercase tracking-widest text-white/40 font-bold">Assets Advised</div>
+                  <div className="text-xl lg:text-2xl font-headline font-bold text-accent">$2B+</div>
+                  <div className="text-[9px] lg:text-[10px] uppercase tracking-widest text-white/40 font-bold">Assets Advised</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-headline font-bold text-accent">100%</div>
-                  <div className="text-[10px] uppercase tracking-widest text-white/40 font-bold">Confidentiality</div>
+                  <div className="text-xl lg:text-2xl font-headline font-bold text-accent">100%</div>
+                  <div className="text-[9px] lg:text-[10px] uppercase tracking-widest text-white/40 font-bold">Confidentiality</div>
                 </div>
               </div>
             </div>
