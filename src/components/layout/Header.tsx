@@ -50,7 +50,7 @@ const Header = () => {
           <div className="flex flex-col gap-1">
             <div className="flex items-center gap-2 text-[10px] text-muted-foreground font-medium uppercase tracking-widest">
               <MapPin className="w-3 h-3 text-accent" />
-              <span>5648 VK 26th Lane - Florida 26154.</span>
+              <span>12th Floor, Elite Towers, Ohio Street, Dar es Salaam.</span>
             </div>
             <a href="tel:+1238591263" className="text-2xl font-headline font-bold text-accent hover:opacity-80 transition-opacity">
               +123.859.1263
@@ -63,9 +63,9 @@ const Header = () => {
               <Image 
                 src={GadroitLogo} 
                 alt="G'Adroit Attorneys" 
-                width={220} 
-                height={60} 
-                className="h-14 w-auto object-contain rounded-full"
+                width={280} 
+                height={80} 
+                className="h-20 w-auto object-contain rounded-full"
                 priority
               />
             </div>
