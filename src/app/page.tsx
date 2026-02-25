@@ -10,9 +10,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { PRACTICE_AREAS, INDUSTRIES } from '@/lib/data';
+import { PRACTICE_AREAS } from '@/lib/data';
 import AttorneysSection from '@/components/sections/AttorneysSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
+import SectoralCommand from '@/components/sections/SectoralCommand';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function Home() {
@@ -20,17 +21,14 @@ export default function Home() {
 
   return (
     <div className="w-full">
-      {/* Hero Section - Optimized for 3-tier header & Improved Mobile Compactness */}
+      {/* Hero Section */}
       <section className="relative min-h-[80vh] lg:min-h-screen flex items-center pt-32 md:pt-64 lg:pt-72 pb-16 lg:pb-24 overflow-hidden bg-primary text-white">
-        {/* Background Subtle Pattern */}
         <div className="absolute inset-0 z-0 opacity-10">
           <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
         </div>
         
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            
-            {/* Left Content: The Strategy */}
             <div className="lg:col-span-7 space-y-6 lg:space-y-10 animate-in fade-in slide-in-from-left-8 duration-1000">
               <div className="space-y-4 lg:space-y-6">
                 <div className="flex items-center gap-4">
@@ -57,7 +55,6 @@ export default function Home() {
                 </Button>
               </div>
 
-              {/* Quick Metrics */}
               <div className="grid grid-cols-3 gap-4 lg:gap-8 pt-8 lg:pt-12 border-t border-white/10">
                 <div>
                   <div className="text-xl lg:text-2xl font-headline font-bold text-accent">40+</div>
@@ -74,16 +71,12 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Visual: The Authority Mesh */}
             <div className="lg:col-span-5 relative hidden lg:block">
               <div className="relative aspect-square w-full">
-                {/* Main Composition Container */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  {/* Rotating Orbit rings */}
                   <div className="absolute inset-0 border border-accent/10 rounded-full animate-[spin_20s_linear_infinite]"></div>
                   <div className="absolute inset-8 border border-accent/5 rounded-full animate-[spin_15s_linear_infinite_reverse]"></div>
                   
-                  {/* The Anchor Image */}
                   <div className="relative w-full h-full rounded-full overflow-hidden border-8 border-white/5 shadow-2xl group">
                     <Image
                       src={heroImage}
@@ -97,7 +90,6 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-tr from-primary/60 via-transparent to-transparent"></div>
                   </div>
 
-                  {/* Floating Intel Tags */}
                   <div className="absolute -top-4 -right-4 bg-white text-primary p-4 shadow-2xl animate-bounce duration-[3000ms]">
                     <div className="flex items-center gap-3">
                       <Shield className="w-5 h-5 text-accent" />
@@ -118,12 +110,9 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-
-                {/* Decorative Elements */}
                 <div className="absolute -z-10 -bottom-10 -right-10 w-48 h-48 bg-accent/20 blur-3xl rounded-full"></div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -228,30 +217,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Industry Integration */}
-      <section className="py-24 bg-background border-b">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="flex flex-col md:flex-row gap-16 items-center">
-            <div className="md:w-1/3">
-               <h2 className="text-4xl font-headline font-bold text-primary mb-6 leading-tight">Sectoral <br /><span className="text-accent italic font-normal">Command.</span></h2>
-               <p className="text-muted-foreground font-light leading-relaxed">Tailored legal strategies for the high-growth industries driving East African transformation.</p>
-            </div>
-            <div className="md:w-2/3 grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
-              {INDUSTRIES.map((industry) => (
-                <div
-                  key={industry.name}
-                  className="p-8 bg-white border border-border flex flex-col items-center justify-center text-center group hover:border-accent transition-all duration-300"
-                >
-                  <div className="w-12 h-12 rounded-full bg-accent/5 flex items-center justify-center text-accent mb-4 group-hover:bg-accent group-hover:text-white transition-all duration-300">
-                    <CheckCircle2 className="w-6 h-6" />
-                  </div>
-                  <h4 className="font-headline font-bold text-primary text-sm tracking-tight">{industry.name}</h4>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Sectoral Command - NEW INTERACTIVE SECTION */}
+      <SectoralCommand />
 
       {/* Our Attorneys Section */}
       <AttorneysSection />
