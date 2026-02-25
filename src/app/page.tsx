@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -16,8 +15,8 @@ import AttorneysSection from '@/components/sections/AttorneysSection';
 export default function Home() {
   return (
     <div className="w-full">
-      {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-primary text-white">
+      {/* Hero Section - Increased padding for 3-tier header */}
+      <section className="relative min-h-screen flex items-center pt-56 md:pt-64 pb-24 overflow-hidden bg-primary text-white">
         <div className="absolute inset-0 z-0 opacity-20">
           <Image
             src="https://picsum.photos/seed/gadroit-hero/1920/1080"
@@ -199,7 +198,7 @@ export default function Home() {
                 {[
                   { q: 'Market Entry Risk', a: 'Navigating local content laws and structuring entities for maximum protection and efficiency.' },
                   { q: 'Regulatory Approvals', a: 'Managing multi-agency licensing requirements to ensure zero downtime in operations.' },
-                  { q: 'HR Compliance', a: 'Balancing international corporate standards with local labor laws and union dynamics.' },
+                  { q: 'HR Compliance', a: 'Balancing international corporate standards with local labor laws and work permit requirements.' },
                   { q: 'Dispute Protection', a: 'Securing robust arbitration clauses and protecting assets from judicial volatility.' },
                   { q: 'JV Structuring', a: 'Mitigating risks in local partnerships through ironclad shareholder agreements.' },
                 ].map((item, idx) => (

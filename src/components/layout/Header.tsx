@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -58,7 +57,7 @@ const Header = () => {
           </div>
 
           {/* Center: Branding */}
-          <Link href="/" className="flex items-center justify-center gap-2 group">
+          <Link href="/" className="flex items-center justify-center gap-4 group">
             <span className="text-2xl font-headline font-bold text-primary tracking-tighter">LAWYER</span>
             <div className="relative w-12 h-12 flex items-center justify-center">
               <Image 
@@ -89,7 +88,7 @@ const Header = () => {
       {/* Tier 3: Main Navigation Bar */}
       <div className={cn(
         "bg-primary transition-all duration-300 px-6 lg:px-12",
-        isScrolled ? "py-2" : "py-0 md:-mb-12"
+        isScrolled ? "py-2" : "py-0"
       )}>
         <nav className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Mobile View: Logo/Brand (Visible only on mobile) */}
