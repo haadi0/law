@@ -1,11 +1,10 @@
-
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { PRACTICE_AREAS } from '@/lib/data';
-import GIcon from '@/new-logo-G-alphabet2.png';
+import GadroitLogo from '@/Gadroit-Logo.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -16,18 +15,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand block */}
           <div className="space-y-6">
-            <Link href="/" className="flex items-center gap-1.5 group">
+            <Link href="/" className="flex items-center group">
               <Image 
-                src={GIcon} 
-                alt="G" 
-                width={50} 
+                src={GadroitLogo} 
+                alt="G'Adroit Attorneys" 
+                width={200} 
                 height={50} 
-                className="h-12 w-auto"
+                className="h-14 w-auto brightness-0 invert"
               />
-              <div className="flex flex-col leading-none text-accent">
-                <span className="text-2xl font-headline font-bold tracking-tighter">'ADROIT</span>
-                <span className="text-[10px] font-bold tracking-[0.3em] uppercase opacity-80">Attorneys</span>
-              </div>
             </Link>
             <p className="text-sm text-primary-foreground/60 leading-relaxed max-w-xs">
               Tanzania-based | East Africa-focused | International business & dispute specialists.

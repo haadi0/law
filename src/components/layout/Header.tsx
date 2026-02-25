@@ -7,7 +7,7 @@ import MobileNav from '@/components/header/MobileNav';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Search, Globe, ChevronDown, Phone, Mail, MapPin, Clock } from 'lucide-react';
-import GIcon from '@/new-logo-G-alphabet2.png';
+import GadroitLogo from '@/Gadroit-Logo.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -56,20 +56,16 @@ const Header = () => {
             </a>
           </div>
 
-          {/* Center: Branding */}
-          <Link href="/" className="flex items-center justify-center gap-2 group">
-            <span className="text-2xl font-headline font-bold text-primary tracking-tighter">LAWYER</span>
-            <div className="relative w-10 h-10 flex items-center justify-center">
-              <Image 
-                src={GIcon} 
-                alt="Logo" 
-                width={40} 
-                height={40} 
-                className="h-8 w-auto"
-                priority
-              />
-            </div>
-            <span className="text-2xl font-headline font-bold text-primary tracking-tighter">JUSTICE</span>
+          {/* Center: Branding (Logo replaces text) */}
+          <Link href="/" className="flex items-center justify-center group">
+            <Image 
+              src={GadroitLogo} 
+              alt="G'Adroit Attorneys" 
+              width={220} 
+              height={60} 
+              className="h-16 w-auto"
+              priority
+            />
           </Link>
 
           {/* Right: Hours & Email */}

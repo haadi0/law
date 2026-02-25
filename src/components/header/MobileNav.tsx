@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState } from 'react';
@@ -7,7 +6,7 @@ import Image from 'next/image';
 import { Menu, Phone } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import MobileDrawer from './MobileDrawer';
-import GIcon from '@/new-logo-G-alphabet2.png';
+import GadroitLogo from '@/Gadroit-Logo.png';
 
 interface MobileNavProps {
   isScrolled: boolean;
@@ -19,18 +18,15 @@ export default function MobileNav({ isScrolled }: MobileNavProps) {
   return (
     <div className="flex items-center justify-between w-full">
       {/* Brand / Logo */}
-      <Link href="/" className="flex items-center gap-1 group">
+      <Link href="/" className="flex items-center group">
         <Image 
-          src={GIcon} 
-          alt="G" 
-          width={36} 
-          height={36} 
-          className="h-8 w-auto"
+          src={GadroitLogo} 
+          alt="G'Adroit Attorneys" 
+          width={140} 
+          height={40} 
+          className="h-10 w-auto brightness-0 invert"
           priority
         />
-        <div className="flex flex-col leading-none text-white">
-          <span className="text-lg font-headline font-bold tracking-tighter">LAWYER JUSTICE</span>
-        </div>
       </Link>
 
       {/* Quick Actions */}
