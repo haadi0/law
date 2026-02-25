@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -58,14 +59,16 @@ const Header = () => {
 
           {/* Center: Branding (Logo replaces text) */}
           <Link href="/" className="flex items-center justify-center group">
-            <Image 
-              src={GadroitLogo} 
-              alt="G'Adroit Attorneys" 
-              width={220} 
-              height={60} 
-              className="h-16 w-auto"
-              priority
-            />
+            <div className="relative rounded-full overflow-hidden p-2 bg-white shadow-sm border border-border">
+              <Image 
+                src={GadroitLogo} 
+                alt="G'Adroit Attorneys" 
+                width={220} 
+                height={60} 
+                className="h-14 w-auto object-contain"
+                priority
+              />
+            </div>
           </Link>
 
           {/* Right: Hours & Email */}

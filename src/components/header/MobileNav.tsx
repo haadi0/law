@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState } from 'react';
@@ -17,16 +18,18 @@ export default function MobileNav({ isScrolled }: MobileNavProps) {
 
   return (
     <div className="flex items-center justify-between w-full">
-      {/* Brand / Logo */}
+      {/* Brand / Logo - Rounded Shape */}
       <Link href="/" className="flex items-center group">
-        <Image 
-          src={GadroitLogo} 
-          alt="G'Adroit Attorneys" 
-          width={140} 
-          height={40} 
-          className="h-10 w-auto brightness-0 invert"
-          priority
-        />
+        <div className="relative rounded-full overflow-hidden p-1 bg-white/10 backdrop-blur-sm border border-white/20">
+          <Image 
+            src={GadroitLogo} 
+            alt="G'Adroit Attorneys" 
+            width={120} 
+            height={36} 
+            className="h-8 w-auto brightness-0 invert"
+            priority
+          />
+        </div>
       </Link>
 
       {/* Quick Actions */}

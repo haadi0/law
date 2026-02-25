@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -13,16 +14,18 @@ const Footer = () => {
     <footer className="bg-primary text-primary-foreground pt-16 pb-8 px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          {/* Brand block */}
+          {/* Brand block - Rounded Shape */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center group">
-              <Image 
-                src={GadroitLogo} 
-                alt="G'Adroit Attorneys" 
-                width={200} 
-                height={50} 
-                className="h-14 w-auto brightness-0 invert"
-              />
+              <div className="relative rounded-full overflow-hidden p-2 bg-white/10 border border-white/20">
+                <Image 
+                  src={GadroitLogo} 
+                  alt="G'Adroit Attorneys" 
+                  width={200} 
+                  height={50} 
+                  className="h-14 w-auto brightness-0 invert"
+                />
+              </div>
             </Link>
             <p className="text-sm text-primary-foreground/60 leading-relaxed max-w-xs">
               Tanzania-based | East Africa-focused | International business & dispute specialists.
