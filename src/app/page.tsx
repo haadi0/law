@@ -15,8 +15,8 @@ import AttorneysSection from '@/components/sections/AttorneysSection';
 export default function Home() {
   return (
     <div className="w-full">
-      {/* Hero Section - Increased padding for 3-tier header */}
-      <section className="relative min-h-screen flex items-center pt-56 md:pt-64 pb-24 overflow-hidden bg-primary text-white">
+      {/* Hero Section - Optimized padding for 3-tier header */}
+      <section className="relative min-h-screen flex items-center pt-64 md:pt-72 pb-24 overflow-hidden bg-primary text-white">
         <div className="absolute inset-0 z-0 opacity-20">
           <Image
             src="https://picsum.photos/seed/gadroit-hero/1920/1080"

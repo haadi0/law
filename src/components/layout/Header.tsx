@@ -14,16 +14,16 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 40);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex flex-col w-full shadow-sm">
-      {/* Tier 1: Top Promise Bar */}
-      <div className="bg-accent text-white py-2 px-6 lg:px-12 hidden md:block">
+    <header className="absolute top-0 left-0 right-0 z-50 flex flex-col w-full">
+      {/* Tier 1: Top Promise Bar - NOT STICKY */}
+      <div className="bg-accent text-white py-2 px-6 lg:px-12 hidden md:block border-b border-white/10">
         <div className="max-w-7xl mx-auto flex justify-between items-center text-[11px] font-bold uppercase tracking-wider">
           <div className="flex items-center gap-1">
             <span>Our <span className="underline italic">No Fee Promise</span> Means, No Cost Until Your Case Is Won.</span>
@@ -34,15 +34,15 @@ const Header = () => {
               <Search className="w-3 h-3 text-white/80 group-hover:text-white" />
             </div>
             <div className="flex items-center gap-2 cursor-pointer">
-              <Globe className="w-3 h-3" />
+              <Globe className="w-3 h-3 text-white/80" />
               <span>English</span>
-              <ChevronDown className="w-3 h-3" />
+              <ChevronDown className="w-3 h-3 text-white/80" />
             </div>
           </div>
         </div>
       </div>
 
-      {/* Tier 2: Middle Contact Hub */}
+      {/* Tier 2: Middle Contact Hub - NOT STICKY */}
       <div className="bg-white py-6 px-6 lg:px-12 hidden md:block border-b border-secondary/50">
         <div className="max-w-7xl mx-auto grid grid-cols-3 items-center">
           {/* Left: Address & Phone */}
@@ -57,15 +57,15 @@ const Header = () => {
           </div>
 
           {/* Center: Branding */}
-          <Link href="/" className="flex items-center justify-center gap-4 group">
+          <Link href="/" className="flex items-center justify-center gap-2 group">
             <span className="text-2xl font-headline font-bold text-primary tracking-tighter">LAWYER</span>
-            <div className="relative w-12 h-12 flex items-center justify-center">
+            <div className="relative w-10 h-10 flex items-center justify-center">
               <Image 
                 src={GIcon} 
                 alt="Logo" 
-                width={48} 
-                height={48} 
-                className="h-10 w-auto"
+                width={40} 
+                height={40} 
+                className="h-8 w-auto"
                 priority
               />
             </div>
@@ -85,10 +85,10 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Tier 3: Main Navigation Bar */}
+      {/* Tier 3: Main Navigation Bar - STICKY */}
       <div className={cn(
-        "bg-primary transition-all duration-300 px-6 lg:px-12",
-        isScrolled ? "py-2" : "py-0"
+        "bg-primary transition-all duration-300 px-6 lg:px-12 w-full",
+        isScrolled ? "fixed top-0 left-0 right-0 shadow-xl py-2" : "relative py-0"
       )}>
         <nav className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Mobile View: Logo/Brand (Visible only on mobile) */}
