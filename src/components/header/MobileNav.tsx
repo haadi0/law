@@ -5,7 +5,6 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, Phone } from 'lucide-react';
-import { cn } from '@/lib/utils';
 import MobileDrawer from './MobileDrawer';
 import GadroitLogo from '@/Gadroit-Logo.png';
 
@@ -18,15 +17,15 @@ export default function MobileNav({ isScrolled }: MobileNavProps) {
 
   return (
     <div className="flex items-center justify-between w-full">
-      {/* Brand / Logo - Rounded Shape */}
+      {/* Brand / Logo */}
       <Link href="/" className="flex items-center group">
-        <div className="relative rounded-full overflow-hidden p-1 bg-white/10 backdrop-blur-sm border border-white/20">
+        <div className="relative rounded-full overflow-hidden">
           <Image 
             src={GadroitLogo} 
             alt="G'Adroit Attorneys" 
             width={120} 
             height={36} 
-            className="h-8 w-auto brightness-0 invert"
+            className="h-8 w-auto brightness-0 invert rounded-full"
             priority
           />
         </div>

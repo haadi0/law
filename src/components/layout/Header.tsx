@@ -7,7 +7,7 @@ import DesktopNav from '@/components/header/DesktopNav';
 import MobileNav from '@/components/header/MobileNav';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Search, Globe, ChevronDown, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Search, Globe, ChevronDown, MapPin, Clock } from 'lucide-react';
 import GadroitLogo from '@/Gadroit-Logo.png';
 
 const Header = () => {
@@ -57,15 +57,15 @@ const Header = () => {
             </a>
           </div>
 
-          {/* Center: Branding (Logo replaces text) */}
+          {/* Center: Branding */}
           <Link href="/" className="flex items-center justify-center group">
-            <div className="relative rounded-full overflow-hidden p-2 bg-white shadow-sm border border-border">
+            <div className="relative rounded-full overflow-hidden">
               <Image 
                 src={GadroitLogo} 
                 alt="G'Adroit Attorneys" 
                 width={220} 
                 height={60} 
-                className="h-14 w-auto object-contain"
+                className="h-14 w-auto object-contain rounded-full"
                 priority
               />
             </div>

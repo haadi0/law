@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -11,6 +12,7 @@ import {
 } from '@/components/ui/accordion';
 import { PRACTICE_AREAS, INDUSTRIES } from '@/lib/data';
 import AttorneysSection from '@/components/sections/AttorneysSection';
+import TestimonialsSection from '@/components/sections/TestimonialsSection';
 
 export default function Home() {
   return (
@@ -174,6 +176,9 @@ export default function Home() {
 
       {/* Our Attorneys Section */}
       <AttorneysSection />
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
 
       {/* Investor Challenges Accordion */}
       <section className="py-24 bg-secondary/30">

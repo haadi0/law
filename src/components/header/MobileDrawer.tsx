@@ -80,13 +80,13 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
             <div className="flex min-h-[100dvh] flex-col pt-[calc(env(safe-area-inset-top)+16px)] pb-[calc(env(safe-area-inset-bottom)+16px)]">
               <div className="px-6 pb-6 flex justify-between items-center border-b border-white/10 shrink-0">
                 <Link href="/" onClick={onClose} className="flex items-center">
-                  <div className="relative rounded-full overflow-hidden p-1 bg-white/10 border border-white/20">
+                  <div className="relative rounded-full overflow-hidden">
                     <Image 
                       src={GadroitLogo} 
                       alt="G'Adroit Attorneys" 
                       width={140} 
                       height={40} 
-                      className="h-10 w-auto brightness-0 invert"
+                      className="h-10 w-auto brightness-0 invert rounded-full"
                     />
                   </div>
                 </Link>
