@@ -19,13 +19,13 @@ export default function MobileNav({ isScrolled }: MobileNavProps) {
     <div className="flex items-center justify-between w-full">
       {/* Brand / Logo */}
       <Link href="/" className="flex items-center group">
-        <div className="relative rounded-full overflow-hidden bg-white/10 p-1">
+        <div className="relative rounded-full overflow-hidden w-auto h-auto">
           <Image 
             src={GadroitLogo} 
             alt="G'Adroit Attorneys" 
             width={180} 
             height={54} 
-            className="h-12 w-auto rounded-full"
+            className="h-14 w-auto object-contain rounded-full"
             priority
           />
         </div>

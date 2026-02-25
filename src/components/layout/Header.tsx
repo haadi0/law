@@ -59,13 +59,13 @@ const Header = () => {
 
           {/* Center: Branding */}
           <Link href="/" className="flex items-center justify-center group">
-            <div className="relative rounded-full overflow-hidden">
+            <div className="relative rounded-full overflow-hidden w-auto h-auto">
               <Image 
                 src={GadroitLogo} 
                 alt="G'Adroit Attorneys" 
-                width={280} 
-                height={80} 
-                className="h-20 w-auto object-contain rounded-full"
+                width={320} 
+                height={100} 
+                className="h-24 w-auto object-contain rounded-full"
                 priority
               />
             </div>

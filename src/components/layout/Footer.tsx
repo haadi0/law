@@ -17,13 +17,13 @@ const Footer = () => {
           {/* Brand block */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center group">
-              <div className="relative rounded-full overflow-hidden bg-white/5 p-1">
+              <div className="relative rounded-full overflow-hidden w-auto h-auto">
                 <Image 
                   src={GadroitLogo} 
                   alt="G'Adroit Attorneys" 
-                  width={240} 
-                  height={70} 
-                  className="h-20 w-auto rounded-full"
+                  width={280} 
+                  height={90} 
+                  className="h-24 w-auto object-contain rounded-full"
                 />
               </div>
             </Link>
