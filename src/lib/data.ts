@@ -1,4 +1,3 @@
-
 export const PRACTICE_AREAS = [
   {
     title: 'International Business & Investment Law',
@@ -71,13 +70,6 @@ export const INVESTOR_RESOURCES = [
 
 export const BLOG_POSTS = [
   {
-    title: 'New Termination Laws in Tanzania: What Employers Must Know',
-    date: 'Oct 24, 2024',
-    category: 'HR',
-    slug: 'termination-laws-tanzania',
-    excerpt: 'An in-depth look at the recent changes to labor regulations and their impact on international firms.'
-  },
-  {
     title: 'Investment Treaty Protections: Securing Your Assets',
     date: 'Sep 12, 2024',
     category: 'Investment',
@@ -88,7 +80,14 @@ export const BLOG_POSTS = [
     title: 'Arbitration vs Litigation in East Africa: Making the Choice',
     date: 'Aug 05, 2024',
     category: 'Disputes',
-    slug: 'arbitration-vs-litigation',
+    slug: 'arbitration-vs-litigation-east-africa',
     excerpt: 'Comparing the efficiency and enforceability of various dispute resolution mechanisms.'
+  },
+  {
+    title: 'New Termination Laws in Tanzania: What Employers Must Know',
+    date: 'Oct 24, 2024',
+    category: 'HR',
+    slug: 'termination-laws-tanzania',
+    excerpt: 'An in-depth look at the recent changes to labor regulations and their impact on international firms.'
   }
 ];

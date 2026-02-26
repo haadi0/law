@@ -120,7 +120,7 @@ export default function SectoralCommand() {
   const [selectedIndustry, setSelectedIndustry] = useState<IndustrySector | null>(null);
 
   return (
-    <section className="py-16 md:py-20 bg-white overflow-hidden border-y border-border">
+    <section className="py-12 md:py-20 bg-white overflow-hidden border-y border-border">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-6">
           <div className="max-w-2xl space-y-4 text-center md:text-left">

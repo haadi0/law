@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div className="w-full">
       {/* Hero Section - Optimized Padding */}
-      <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center pt-48 pb-12 overflow-hidden bg-primary text-white border-b border-white/5">
+      <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center pt-32 md:pt-40 pb-12 overflow-hidden bg-primary text-white border-b border-white/5">
         <div className="absolute inset-0 z-0 opacity-10">
           <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
         </div>
@@ -105,7 +105,7 @@ export default function Home() {
       <SectoralCommand />
 
       {/* Investor Friction - Compact & Optimized */}
-      <section className="py-16 md:py-20 bg-secondary/20 overflow-hidden border-b">
+      <section className="py-12 md:py-20 bg-secondary/20 overflow-hidden border-b">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-8 lg:sticky lg:top-40">
@@ -123,7 +123,7 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <div className="w-full bg-white/50 backdrop-blur-sm p-4 md:p-8">
+            <div className="w-full bg-white/50 backdrop-blur-sm p-4 md:p-8 border border-primary/5 shadow-inner">
               <Accordion type="single" collapsible className="w-full">
                 {[
                   { q: 'Market Entry & Structuring', a: 'Navigating local content laws and selecting business vehicles (TIC vs EPZ) for maximum protection.' },
@@ -151,7 +151,7 @@ export default function Home() {
       <TestimonialsSection />
 
       {/* Final Conversion Stage - Compact */}
-      <section className="py-16 md:py-24 bg-primary relative overflow-hidden">
+      <section className="py-12 md:py-20 bg-primary relative overflow-hidden">
         <div className="container mx-auto px-6 lg:px-12 text-center relative z-10">
           <div className="max-w-4xl mx-auto space-y-8">
             <h2 className="text-4xl md:text-7xl font-headline font-bold text-white leading-tight">Engage With <br /><span className="text-accent italic font-normal">Confidence.</span></h2>
