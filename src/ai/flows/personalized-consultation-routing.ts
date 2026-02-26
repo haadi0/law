@@ -46,13 +46,15 @@ const PersonalizedConsultationRoutingInputSchema = z.object({
   phone: z.string().optional().describe('The phone number of the potential client.'),
   company: z.string().optional().describe('The company of the potential client.'),
   message: z.string().describe('The inquiry message from the potential client.'),
-  // Added practiceAreas and attorneys to schema to prevent validation errors when passed to prompt
-  practiceAreas: z.array(z.string()).optional(),
-  attorneys: z.array(z.any()).optional(),
 });
 export type PersonalizedConsultationRoutingInput = z.infer<
   typeof PersonalizedConsultationRoutingInputSchema
 >;
+
+const PromptInputSchema = PersonalizedConsultationRoutingInputSchema.extend({
+  practiceAreas: z.array(z.string()),
+  attorneys: z.array(z.any()),
+});
 
 const PersonalizedConsultationRoutingOutputSchema = z.object({
   suggestedPracticeArea: z
@@ -82,7 +84,7 @@ export async function personalizeConsultationRouting(
 
 const prompt = ai.definePrompt({
   name: 'personalizedConsultationRoutingPrompt',
-  input: { schema: PersonalizedConsultationRoutingInputSchema },
+  input: { schema: PromptInputSchema },
   output: { schema: PersonalizedConsultationRoutingOutputSchema },
   prompt: `You are an expert legal assistant for G'ADROIT ATTORNEYS, a law firm specializing in international business and dispute resolution.
 Your task is to analyze a potential client's inquiry and suggest the most relevant practice area and a suitable attorney from our team.
@@ -113,7 +115,6 @@ const personalizedConsultationRoutingFlow = ai.defineFlow(
     outputSchema: PersonalizedConsultationRoutingOutputSchema,
   },
   async (input) => {
-    // Pass practiceAreas and attorneys as context to the prompt
     const { output } = await prompt({ ...input, practiceAreas, attorneys });
     if (!output) {
       throw new Error('Failed to get a response from the AI model.');

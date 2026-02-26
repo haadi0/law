@@ -137,7 +137,7 @@ export default function SectoralCommand() {
           </div>
         </div>
 
-        {/* Bento Grid - 20% Opacity Overlays for Clarity */}
+        {/* Bento Grid - Refined 20% Opacity Overlay */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
           {INDUSTRIES.map((industry) => (
             <motion.div

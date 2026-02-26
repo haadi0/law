@@ -13,7 +13,11 @@ export default function Error({
 }) {
   useEffect(() => {
     // Log the error to the console for debugging
-    console.error('SERVER_ERROR_DEBUG:', error);
+    console.error('SERVER_ERROR_DEBUG:', {
+      message: error.message,
+      digest: error.digest,
+      stack: error.stack
+    });
   }, [error]);
 
   return (
@@ -26,11 +30,12 @@ export default function Error({
         </div>
         <div className="space-y-4">
           <h1 className="text-3xl font-headline font-bold text-primary">Protocol Disruption</h1>
-          <p className="text-muted-foreground font-light leading-relaxed">
+          <p className="text-muted-foreground font-light leading-relaxed text-sm">
             An internal server error occurred while processing this request. Details have been logged for our technical unit.
           </p>
-          <div className="p-4 bg-secondary/30 rounded text-[10px] font-mono text-primary/60 break-all">
-            Digest: {error.digest || 'Internal system failure'}
+          <div className="p-4 bg-secondary/30 rounded text-[10px] font-mono text-primary/60 break-all text-left overflow-auto max-h-32">
+            Digest: {error.digest || 'Internal system failure'}<br />
+            Message: {error.message}
           </div>
         </div>
         <div className="pt-4">

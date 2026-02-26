@@ -127,7 +127,7 @@ export default function AttorneysPage() {
         </div>
       </section>
 
-      {/* Expertise Canvas - Clarity Optimized */}
+      {/* Expertise Canvas - 20% Overlay Optimized */}
       <section className="container mx-auto px-6 lg:px-12 pb-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <AnimatePresence mode='popLayout'>
@@ -150,7 +150,7 @@ export default function AttorneysPage() {
                     className="object-cover grayscale opacity-20 group-hover:opacity-30 group-hover:scale-105 transition-all duration-1000"
                     sizes="(max-width: 768px) 100vw, 25vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-primary/20 to-transparent"></div>
                 </div>
 
                 <div className="relative z-10 space-y-4">

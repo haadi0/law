@@ -19,8 +19,8 @@ export default function Home() {
 
   return (
     <div className="w-full">
-      {/* Hero Section - Optimized Density */}
-      <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center pt-24 md:pt-32 pb-8 overflow-hidden bg-primary text-white border-b border-white/5">
+      {/* Hero Section - Compacted Padding */}
+      <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center pt-24 md:pt-32 pb-12 overflow-hidden bg-primary text-white border-b border-white/5">
         <div className="absolute inset-0 z-0 opacity-10">
           <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
         </div>
@@ -104,7 +104,7 @@ export default function Home() {
       {/* Sectoral Command - High Density */}
       <SectoralCommand />
 
-      {/* Investor Friction - Compact & Optimized */}
+      {/* Investor Friction - Compacted Vertical Spacing */}
       <section className="py-12 md:py-20 bg-secondary/20 overflow-hidden border-b">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -150,7 +150,7 @@ export default function Home() {
       <AttorneysSection />
       <TestimonialsSection />
 
-      {/* Final Conversion Stage - Compact */}
+      {/* Final Conversion Stage - High Performance h-12 standard */}
       <section className="py-12 md:py-24 bg-primary relative overflow-hidden">
         <div className="container mx-auto px-6 lg:px-12 text-center relative z-10">
           <div className="max-w-4xl mx-auto space-y-6 md:space-y-8">
@@ -159,7 +159,7 @@ export default function Home() {
               Providing the legal authority required for institutional investment in Tanzania and across East Africa.
             </p>
             <div className="pt-2">
-              <Button asChild className="bg-accent text-accent-foreground hover:bg-white hover:text-primary h-12 md:h-14 px-10 md:px-12 text-[10px] font-bold tracking-widest rounded-none shadow-xl w-full md:w-auto uppercase">
+              <Button asChild className="bg-accent text-accent-foreground hover:bg-white hover:text-primary h-12 px-10 md:px-12 text-[10px] font-bold tracking-widest rounded-none shadow-xl w-full md:w-auto uppercase">
                 <Link href="/contact">Request Confidential Consultation</Link>
               </Button>
             </div>

@@ -10,14 +10,24 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+export async function generateStaticParams() {
+  return PRACTICE_AREAS.map((area) => ({
+    slug: area.slug,
+  }));
+}
+
 export async function generateMetadata({ params }: Props) {
-  const { slug } = await params;
-  const area = PRACTICE_AREAS.find((a) => a.slug === slug);
-  if (!area) return { title: 'Practice Area Not Found' };
-  return {
-    title: `${area.title} | G'Adroit Attorneys`,
-    description: area.description,
-  };
+  try {
+    const { slug } = await params;
+    const area = PRACTICE_AREAS.find((a) => a.slug === slug);
+    if (!area) return { title: 'Practice Area Not Found' };
+    return {
+      title: `${area.title} | G'Adroit Attorneys`,
+      description: area.description,
+    };
+  } catch (e) {
+    return { title: "Practice Area | G'Adroit Attorneys" };
+  }
 }
 
 export default async function PracticeAreaPage({ params }: Props) {
