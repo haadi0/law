@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -21,15 +20,15 @@ const Header = () => {
 
   return (
     <header className="absolute top-0 left-0 right-0 z-50 flex flex-col w-full">
-      {/* Tier 1: Top Promise Bar - NOT STICKY */}
+      {/* Tier 1: Top Promise Bar */}
       <div className="bg-accent text-white py-2 px-6 lg:px-12 hidden md:block border-b border-white/10">
         <div className="max-w-7xl mx-auto flex justify-between items-center text-[11px] font-bold uppercase tracking-wider">
           <div className="flex items-center gap-1">
-            <span>Our <span className="underline italic">No Fee Promise</span> Means, No Cost Until Your Case Is Won.</span>
+            <span>Precision counsel for <span className="underline italic">institutional investors</span> in East Africa.</span>
           </div>
           <div className="flex items-center gap-8">
             <div className="flex items-center gap-2 group cursor-pointer">
-              <span>Search Your Needs Here</span>
+              <span>Search Intelligence</span>
               <Search className="w-3 h-3 text-white/80 group-hover:text-white" />
             </div>
             <div className="flex items-center gap-2 cursor-pointer">
@@ -41,23 +40,23 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Tier 2: Middle Contact Hub - NOT STICKY */}
+      {/* Tier 2: Middle Contact Hub */}
       <div className="bg-white py-6 px-6 lg:px-12 hidden md:block border-b border-secondary/50">
         <div className="max-w-7xl mx-auto grid grid-cols-3 items-center">
           {/* Left: Address & Phone */}
           <div className="flex flex-col gap-1">
             <div className="flex items-center gap-2 text-[10px] text-muted-foreground font-medium uppercase tracking-widest">
               <MapPin className="w-3 h-3 text-accent" />
-              <span>12th Floor, Elite Towers, Ohio Street, Dar es Salaam.</span>
+              <span>Ohio Street, Elite Towers, Dar es Salaam.</span>
             </div>
-            <a href="tel:+1238591263" className="text-2xl font-headline font-bold text-accent hover:opacity-80 transition-opacity">
-              +123.859.1263
+            <a href="tel:+255222123456" className="text-xl font-headline font-bold text-accent hover:opacity-80 transition-opacity">
+              +255 (0) 222 123 456
             </a>
           </div>
 
-          {/* Center: Branding - Elite Typography Mark */}
+          {/* Center: Branding - Wordmark */}
           <Link href="/" className="flex flex-col items-center justify-center group">
-            <span className="text-4xl lg:text-5xl font-headline font-bold text-accent leading-none">G&apos;ADROIT</span>
+            <span className="text-4xl lg:text-5xl font-headline font-bold text-accent leading-none tracking-tight">G&apos;ADROIT</span>
             <span className="text-[10px] font-bold text-primary tracking-[0.5em] uppercase mt-2">Attorneys</span>
           </Link>
 
@@ -65,10 +64,10 @@ const Header = () => {
           <div className="flex flex-col items-end gap-1">
             <div className="flex items-center gap-2 text-[10px] text-muted-foreground font-medium uppercase tracking-widest">
               <Clock className="w-3 h-3 text-accent" />
-              <span>Office Hours: 09:00am - 17:00pm</span>
+              <span>Strategic Briefings: 09:00 - 17:00</span>
             </div>
-            <a href="mailto:info@domain.com" className="text-2xl font-headline font-bold text-accent hover:opacity-80 transition-opacity">
-              info@domain.com
+            <a href="mailto:consult@gadroit.com" className="text-xl font-headline font-bold text-accent hover:opacity-80 transition-opacity">
+              consult@gadroit.com
             </a>
           </div>
         </div>
@@ -80,12 +79,12 @@ const Header = () => {
         isScrolled ? "fixed top-0 left-0 right-0 shadow-xl py-2" : "relative py-0"
       )}>
         <nav className="max-w-7xl mx-auto flex items-center justify-between">
-          {/* Mobile View: Logo/Brand (Visible only on mobile) */}
+          {/* Mobile View */}
           <div className="md:hidden py-4 w-full">
             <MobileNav isScrolled={true} />
           </div>
 
-          {/* Desktop Navigation Link Container */}
+          {/* Desktop Navigation */}
           <div className="hidden md:flex w-full items-center justify-between">
             <DesktopNav isScrolled={true} linkTextColor="text-white" />
           </div>
