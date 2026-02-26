@@ -24,12 +24,11 @@ export default function DesktopNav({ isScrolled, linkTextColor }: DesktopNavProp
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about' },
+    { name: 'About the Firm', href: '/about' },
     { name: 'Practice Areas', href: '/practice-areas', hasDropdown: true },
-    { name: 'Attorneys', href: '#attorneys' },
-    { name: 'FAQ', href: '#faq' },
+    { name: 'Attorneys', href: '/attorneys' },
+    { name: 'Industries', href: '/industries' },
     { name: 'News', href: '/insights' },
-    { name: 'Shop', href: '#' },
     { name: 'Contact', href: '/contact' },
   ];
 

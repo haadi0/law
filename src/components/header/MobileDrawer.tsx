@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useEffect } from 'react';
@@ -47,6 +46,7 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About the Firm', href: '/about' },
+    { name: 'Attorneys', href: '/attorneys' },
     { name: 'Industries', href: '/industries' },
     { name: 'Investor Resources', href: '/investor-resources' },
     { name: 'Insights & News', href: '/insights' },
