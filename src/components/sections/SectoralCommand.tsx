@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState } from 'react';
@@ -138,7 +137,7 @@ export default function SectoralCommand() {
           </div>
         </div>
 
-        {/* Compact & High-Density Grid */}
+        {/* Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
           {INDUSTRIES.map((industry) => (
             <motion.div
@@ -152,7 +151,7 @@ export default function SectoralCommand() {
                 'md:col-span-6 lg:col-span-3 min-h-[220px]'
               )}
             >
-              {/* Image Overlay - Reduced opacity for clarity (20%) */}
+              {/* Image Overlay - 20% opacity */}
               <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-30 transition-opacity duration-700">
                 <Image 
                   src={industry.image} 
@@ -195,7 +194,7 @@ export default function SectoralCommand() {
           ))}
         </div>
 
-        {/* Global Action - Compact Button */}
+        {/* Global Action */}
         <div className="mt-12 flex items-center justify-center">
           <Button asChild className="bg-primary text-white hover:bg-accent rounded-none h-12 px-10 text-[10px] font-bold tracking-widest transition-all w-full md:w-auto">
             <Link href="/industries" className="flex items-center gap-2">
@@ -205,7 +204,7 @@ export default function SectoralCommand() {
         </div>
       </div>
 
-      {/* Sliding Intelligence Panel */}
+      {/* Intelligence Panel */}
       <AnimatePresence>
         {selectedIndustry && (
           <>

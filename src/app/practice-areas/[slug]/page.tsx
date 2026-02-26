@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -30,7 +29,7 @@ export default async function PracticeAreaPage({ params }: Props) {
   }
 
   return (
-    <div className="pt-32 md:pt-48 min-h-screen">
+    <div className="pt-24 min-h-screen">
       {/* Hero */}
       <section className="bg-primary text-white py-12 md:py-20">
         <div className="container mx-auto px-6 lg:px-12">

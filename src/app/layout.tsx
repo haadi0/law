@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ProjectNode;
 }>) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>

@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState, useMemo } from 'react';
@@ -88,9 +87,9 @@ export default function AttorneysPage() {
   const selectedAttorney = ATTORNEYS_DATA.find(a => a.id === selectedId);
 
   return (
-    <div className="pt-32 md:pt-48 min-h-screen bg-white overflow-x-hidden">
+    <div className="pt-24 min-h-screen bg-white overflow-x-hidden">
       {/* Editorial Hero */}
-      <section className="container mx-auto px-6 lg:px-12 mb-12">
+      <section className="container mx-auto px-6 lg:px-12 mb-12 py-16">
         <div className="max-w-4xl space-y-6">
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="flex items-center gap-3">
             <div className="h-[1px] w-8 bg-accent"></div>
@@ -142,16 +141,16 @@ export default function AttorneysPage() {
                 onClick={() => setSelectedId(attorney.id)}
                 className="group relative bg-primary p-8 flex flex-col justify-between cursor-pointer overflow-hidden min-h-[400px] border border-primary/5 hover:border-accent transition-all duration-500"
               >
-                {/* Visual Background - Increased clarity (60% opacity) */}
+                {/* Visual Background - 20% opacity */}
                 <div className="absolute inset-0 z-0">
                   <Image 
                     src={attorney.image} 
                     alt={attorney.name} 
                     fill 
-                    className="object-cover grayscale opacity-60 group-hover:opacity-80 transition-opacity duration-700"
+                    className="object-cover grayscale opacity-20 group-hover:opacity-40 transition-opacity duration-700"
                     sizes="(max-width: 768px) 100vw, 25vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-transparent"></div>
                 </div>
 
                 <div className="relative z-10 space-y-4">

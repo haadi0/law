@@ -1,12 +1,17 @@
+'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { PRACTICE_AREAS } from '@/lib/data';
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
+  const [year, setYear] = useState<number | null>(null);
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
 
   return (
     <footer className="bg-primary text-primary-foreground pt-16 pb-8 px-6 lg:px-12">
@@ -81,7 +86,7 @@ const Footer = () => {
         <Separator className="bg-white/10 mb-8" />
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-primary-foreground/40">
-          <p>© {currentYear} G&apos;ADROIT ATTORNEYS. All rights reserved.</p>
+          <p>© {year} G&apos;ADROIT ATTORNEYS. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link href="/privacy-policy" className="hover:text-accent transition-colors">Privacy Policy</Link>
             <Link href="/terms-of-engagement" className="hover:text-accent transition-colors">Terms of Engagement</Link>
