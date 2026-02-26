@@ -33,13 +33,15 @@ export default function Error({
             Digest: {error.digest || 'Internal system failure'}
           </div>
         </div>
-        <Button 
-          onClick={() => reset()}
-          className="w-full bg-primary hover:bg-accent text-white h-12 rounded-none font-bold uppercase tracking-widest transition-all group"
-        >
-          <RefreshCcw className="mr-2 w-4 h-4 group-hover:rotate-180 transition-transform duration-500" /> 
-          Attempt Protocol Reset
-        </Button>
+        <div className="pt-4">
+          <Button 
+            onClick={() => reset()}
+            className="w-full bg-primary hover:bg-accent text-white h-12 rounded-none font-bold uppercase tracking-widest transition-all group"
+          >
+            <RefreshCcw className="mr-2 w-4 h-4 group-hover:rotate-180 transition-transform duration-500" /> 
+            Attempt Protocol Reset
+          </Button>
+        </div>
       </div>
     </div>
   );
