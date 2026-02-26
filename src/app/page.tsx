@@ -11,6 +11,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import AttorneysSection from '@/components/sections/AttorneysSection';
+import FirmNarrative from '@/components/sections/FirmNarrative';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import SectoralCommand from '@/components/sections/SectoralCommand';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -147,8 +148,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Attorneys & Testimonials */}
+      {/* Attorneys & Firm Narrative */}
       <AttorneysSection />
+      <FirmNarrative />
+      
       <TestimonialsSection />
 
       {/* Final Conversion Stage - High Performance h-12 standard */}
