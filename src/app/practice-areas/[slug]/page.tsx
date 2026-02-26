@@ -31,7 +31,7 @@ export default async function PracticeAreaPage({ params }: Props) {
   return (
     <div className="pt-24 min-h-screen">
       {/* Hero */}
-      <section className="bg-primary text-white py-12 md:py-20">
+      <section className="bg-primary text-white py-12 md:py-16">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-4xl space-y-6">
             <Link href="/practice-areas" className="text-accent text-xs font-bold flex items-center gap-2 mb-6 hover:opacity-80 transition-opacity">

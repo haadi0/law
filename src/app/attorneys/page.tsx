@@ -88,8 +88,8 @@ export default function AttorneysPage() {
 
   return (
     <div className="pt-24 min-h-screen bg-white overflow-x-hidden">
-      {/* Editorial Hero */}
-      <section className="container mx-auto px-6 lg:px-12 mb-12 py-16">
+      {/* Editorial Hero - Compacted */}
+      <section className="container mx-auto px-6 lg:px-12 mb-8 py-12 md:py-16">
         <div className="max-w-4xl space-y-6">
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="flex items-center gap-3">
             <div className="h-[1px] w-8 bg-accent"></div>
@@ -104,11 +104,11 @@ export default function AttorneysPage() {
         </div>
       </section>
 
-      {/* Institutional Filters */}
-      <section className="container mx-auto px-6 lg:px-12 mb-12">
-        <div className="flex flex-wrap gap-2 items-center border-y py-6">
+      {/* Institutional Filters - Compacted */}
+      <section className="container mx-auto px-6 lg:px-12 mb-8">
+        <div className="flex flex-wrap gap-2 items-center border-y py-4 md:py-6">
           <span className="text-[9px] font-bold uppercase tracking-widest text-primary/40 mr-4 flex items-center gap-2">
-            <Filter className="w-3 h-3" /> Specialization
+            <Filter className="w-3 h-3" /> Filter Expertise
           </span>
           {['All', 'International Business', 'Litigation', 'Arbitration', 'HR & Compliance', 'Regulatory'].map((spec) => (
             <button
@@ -127,7 +127,7 @@ export default function AttorneysPage() {
         </div>
       </section>
 
-      {/* Expertise Canvas */}
+      {/* Expertise Canvas - Background Image Focus */}
       <section className="container mx-auto px-6 lg:px-12 pb-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <AnimatePresence mode='popLayout'>
@@ -135,13 +135,13 @@ export default function AttorneysPage() {
               <motion.div
                 key={attorney.id}
                 layoutId={attorney.id}
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
+                exit={{ opacity: 0, scale: 0.95 }}
                 onClick={() => setSelectedId(attorney.id)}
-                className="group relative bg-primary p-8 flex flex-col justify-between cursor-pointer overflow-hidden min-h-[400px] border border-primary/5 hover:border-accent transition-all duration-500"
+                className="group relative bg-primary p-8 flex flex-col justify-between cursor-pointer overflow-hidden min-h-[450px] border border-primary/5 hover:border-accent transition-all duration-500 shadow-xl"
               >
-                {/* Visual Background - 20% opacity */}
+                {/* Background Image - Lightened Overlay */}
                 <div className="absolute inset-0 z-0">
                   <Image 
                     src={attorney.image} 
@@ -150,7 +150,7 @@ export default function AttorneysPage() {
                     className="object-cover grayscale opacity-20 group-hover:opacity-40 transition-opacity duration-700"
                     sizes="(max-width: 768px) 100vw, 25vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent"></div>
                 </div>
 
                 <div className="relative z-10 space-y-4">
@@ -158,18 +158,18 @@ export default function AttorneysPage() {
                     <span className="text-[9px] uppercase tracking-[0.3em] text-accent font-bold group-hover:text-white transition-colors">
                       {attorney.role}
                     </span>
-                    <h3 className="text-2xl md:text-3xl font-headline font-bold text-white leading-tight mt-1">
+                    <h3 className="text-3xl md:text-4xl font-headline font-bold text-white leading-tight mt-1">
                       {attorney.name}
                     </h3>
                   </div>
-                  <p className="text-xs text-primary-foreground/80 leading-relaxed line-clamp-3">
+                  <p className="text-sm text-primary-foreground/80 leading-relaxed line-clamp-3 font-light">
                     {attorney.shortBio}
                   </p>
                 </div>
 
                 <div className="relative z-10 flex justify-between items-center opacity-60 group-hover:opacity-100 transition-opacity">
-                  <span className="text-[8px] font-bold uppercase tracking-widest text-accent">Access Intelligence</span>
-                  <ArrowRight className="w-4 h-4 text-accent" />
+                  <span className="text-[8px] font-bold uppercase tracking-widest text-accent">Access Strategic Intelligence</span>
+                  <ArrowRight className="w-4 h-4 text-accent group-hover:translate-x-2 transition-transform" />
                 </div>
               </motion.div>
             ))}
@@ -204,7 +204,7 @@ export default function AttorneysPage() {
                   <span className="text-accent font-bold text-[9px] tracking-[0.4em] uppercase">Intelligence Briefing</span>
                   <h3 className="text-3xl font-headline font-bold text-primary leading-none">{selectedAttorney.name}</h3>
                 </div>
-                <button onClick={() => setSelectedId(null)} className="p-3 border hover:bg-secondary">
+                <button onClick={() => setSelectedId(null)} className="p-3 border hover:bg-secondary rounded-none">
                   <X className="w-5 h-5 text-primary" />
                 </button>
               </div>
@@ -248,9 +248,9 @@ export default function AttorneysPage() {
               </div>
 
               <div className="p-8 border-t bg-secondary/10">
-                <Button asChild className="w-full bg-primary text-white h-12 text-xs font-bold rounded-none hover:bg-accent transition-all group">
+                <Button asChild className="w-full bg-primary text-white h-12 text-[10px] font-bold rounded-none hover:bg-accent transition-all group">
                   <Link href="/contact" onClick={() => setSelectedId(null)}>
-                    REQUEST CONFIDENTIAL BRIEFING <ChevronRight className="ml-2 w-4 h-4" />
+                    REQUEST CONFIDENTIAL BRIEFING <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>
               </div>

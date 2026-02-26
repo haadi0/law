@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 export default function FinalCTA() {
   return (
-    <section className="py-12 md:py-20 bg-background flex justify-center px-6 lg:px-12">
+    <section className="py-12 md:py-16 bg-background flex justify-center px-6 lg:px-12">
       <motion.div 
         whileHover={{ scale: 1.01 }}
         className="relative w-full max-w-6xl bg-primary text-white p-8 md:p-12 overflow-hidden shadow-2xl border border-white/5"

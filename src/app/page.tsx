@@ -19,8 +19,8 @@ export default function Home() {
 
   return (
     <div className="w-full">
-      {/* Hero Section - Reduced bottom padding & min-height */}
-      <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center pt-48 pb-8 overflow-hidden bg-primary text-white border-b border-white/5">
+      {/* Hero Section - Optimized Padding */}
+      <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center pt-48 pb-12 overflow-hidden bg-primary text-white border-b border-white/5">
         <div className="absolute inset-0 z-0 opacity-10">
           <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
         </div>
@@ -104,26 +104,26 @@ export default function Home() {
       {/* Sectoral Command - High Density */}
       <SectoralCommand />
 
-      {/* Investor Friction - Compact & Fluid */}
-      <section className="py-16 md:py-24 bg-secondary/20 overflow-hidden">
+      {/* Investor Friction - Compact & Optimized */}
+      <section className="py-16 md:py-20 bg-secondary/20 overflow-hidden border-b">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-8 lg:sticky lg:top-40">
               <div className="space-y-4">
                 <span className="text-accent font-bold text-xs tracking-[0.4em] uppercase">Investor Friction</span>
                 <h2 className="text-4xl md:text-6xl font-headline font-bold text-primary leading-tight">Common Market <br />Hurdles.</h2>
-                <p className="text-lg text-muted-foreground font-light leading-relaxed">
+                <p className="text-lg text-muted-foreground font-light leading-relaxed max-w-lg">
                   We provide the legal lubrication that ensures smooth operations through specific regional friction points.
                 </p>
               </div>
-              <div className="p-8 bg-primary text-white space-y-6 relative overflow-hidden">
+              <div className="p-8 bg-primary text-white space-y-6 relative overflow-hidden max-w-sm">
                 <h4 className="text-2xl font-headline font-bold leading-tight">Secure Your <br />Strategy</h4>
-                <Button asChild className="bg-accent text-accent-foreground hover:bg-white hover:text-primary rounded-none h-12 px-8 font-bold tracking-widest text-[9px] w-full md:w-auto">
+                <Button asChild className="bg-accent text-accent-foreground hover:bg-white hover:text-primary rounded-none h-12 px-8 font-bold tracking-widest text-[9px] w-full">
                   <Link href="/contact">BOOK STRATEGY SESSION</Link>
                 </Button>
               </div>
             </div>
-            <div className="w-full">
+            <div className="w-full bg-white/50 backdrop-blur-sm p-4 md:p-8">
               <Accordion type="single" collapsible className="w-full">
                 {[
                   { q: 'Market Entry & Structuring', a: 'Navigating local content laws and selecting business vehicles (TIC vs EPZ) for maximum protection.' },
@@ -163,7 +163,7 @@ export default function Home() {
                 <Link href="/contact">REQUEST CONFIDENTIAL CONSULTATION</Link>
               </Button>
             </div>
-            <p className="text-[9px] uppercase tracking-[0.5em] font-bold text-accent/50">Notice: Strict Professional Discretion Guaranteed</p>
+            <p className="text-[9px] uppercase tracking-[0.5em] font-bold text-accent/50 mt-6">Notice: Strict Professional Discretion Guaranteed</p>
           </div>
         </div>
       </section>

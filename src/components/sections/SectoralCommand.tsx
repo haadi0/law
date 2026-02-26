@@ -120,7 +120,7 @@ export default function SectoralCommand() {
   const [selectedIndustry, setSelectedIndustry] = useState<IndustrySector | null>(null);
 
   return (
-    <section className="py-16 md:py-24 bg-white overflow-hidden border-y border-border">
+    <section className="py-16 md:py-20 bg-white overflow-hidden border-y border-border">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-6">
           <div className="max-w-2xl space-y-4 text-center md:text-left">
@@ -137,7 +137,7 @@ export default function SectoralCommand() {
           </div>
         </div>
 
-        {/* Bento Grid */}
+        {/* Bento Grid - Lighter Overlays */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
           {INDUSTRIES.map((industry) => (
             <motion.div
@@ -145,31 +145,31 @@ export default function SectoralCommand() {
               whileHover={{ scale: 1.01 }}
               onClick={() => setSelectedIndustry(industry)}
               className={cn(
-                "group relative bg-white p-6 md:p-8 flex flex-col justify-between cursor-pointer transition-all duration-500 border border-border/50 hover:border-accent shadow-sm overflow-hidden",
-                industry.size === 'large' ? 'md:col-span-12 lg:col-span-6 min-h-[280px]' : 
-                industry.size === 'medium' ? 'md:col-span-6 min-h-[220px]' : 
-                'md:col-span-6 lg:col-span-3 min-h-[220px]'
+                "group relative bg-primary p-6 md:p-8 flex flex-col justify-between cursor-pointer transition-all duration-500 border border-border/10 hover:border-accent shadow-sm overflow-hidden",
+                industry.size === 'large' ? 'md:col-span-12 lg:col-span-6 min-h-[300px]' : 
+                industry.size === 'medium' ? 'md:col-span-6 min-h-[240px]' : 
+                'md:col-span-6 lg:col-span-3 min-h-[240px]'
               )}
             >
-              {/* Image Overlay - 20% opacity */}
-              <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-30 transition-opacity duration-700">
+              {/* Background Image - Light Navy Overlay (20%) */}
+              <div className="absolute inset-0 z-0">
                 <Image 
                   src={industry.image} 
                   alt={industry.name} 
                   fill 
-                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
+                  className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 opacity-20"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-transparent"></div>
               </div>
 
               <div className="relative z-10 space-y-4">
                 <div className="flex justify-between items-start">
-                  <div className="w-10 h-10 bg-secondary/50 flex items-center justify-center text-primary group-hover:bg-accent group-hover:text-white transition-colors duration-500">
+                  <div className="w-10 h-10 bg-accent/10 border border-accent/20 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-colors duration-500">
                     <industry.icon className="w-5 h-5" />
                   </div>
                   <span className={cn(
-                    "text-[8px] font-bold uppercase tracking-widest",
+                    "text-[8px] font-bold uppercase tracking-widest px-2 py-1 bg-white/5",
                     industry.riskLevel === 'Critical' ? 'text-destructive' : 'text-accent'
                   )}>
                     {industry.riskLevel} Risk
@@ -177,17 +177,17 @@ export default function SectoralCommand() {
                 </div>
                 
                 <div className="space-y-1">
-                  <h3 className="text-xl font-headline font-bold text-primary group-hover:text-accent transition-colors leading-tight">
+                  <h3 className="text-xl md:text-2xl font-headline font-bold text-white group-hover:text-accent transition-colors leading-tight">
                     {industry.name}
                   </h3>
-                  <p className="text-[9px] text-muted-foreground font-bold leading-relaxed uppercase tracking-wider">
+                  <p className="text-[10px] text-white/60 font-bold leading-relaxed uppercase tracking-wider">
                     {industry.tagline}
                   </p>
                 </div>
               </div>
 
-              <div className="relative z-10 mt-6 pt-4 border-t border-primary/5 flex justify-between items-center opacity-60 group-hover:opacity-100 transition-opacity">
-                <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-primary">Intelligence Access</span>
+              <div className="relative z-10 mt-6 pt-4 border-t border-white/5 flex justify-between items-center opacity-60 group-hover:opacity-100 transition-opacity">
+                <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-accent">Access Briefing</span>
                 <ArrowUpRight className="w-3 h-3 text-accent" />
               </div>
             </motion.div>
@@ -277,7 +277,7 @@ export default function SectoralCommand() {
 
                   <section className="p-6 bg-primary text-white space-y-4 shadow-xl">
                     <h4 className="text-[9px] font-bold uppercase tracking-widest text-accent flex items-center gap-2">
-                      <ShieldCheck className="w-4 h-4" /> G&apos;Adroit Support
+                      <ShieldCheck className="w-4 h-4 text-accent" /> G&apos;Adroit Support
                     </h4>
                     <div className="space-y-3">
                       {selectedIndustry.support.map((item, i) => (

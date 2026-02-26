@@ -86,7 +86,7 @@ const Footer = () => {
         <Separator className="bg-white/10 mb-8" />
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-primary-foreground/40">
-          <p>© {year} G&apos;ADROIT ATTORNEYS. All rights reserved.</p>
+          <p>© {year || '2024'} G&apos;ADROIT ATTORNEYS. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link href="/privacy-policy" className="hover:text-accent transition-colors">Privacy Policy</Link>
             <Link href="/terms-of-engagement" className="hover:text-accent transition-colors">Terms of Engagement</Link>
