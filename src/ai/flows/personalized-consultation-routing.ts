@@ -18,7 +18,6 @@ const practiceAreas = [
   'Corporate & Regulatory Compliance',
 ];
 
-// Mock attorney data, in a real app this would come from a database or service.
 const attorneys = [
   {
     name: 'Aisha Juma',
@@ -47,6 +46,9 @@ const PersonalizedConsultationRoutingInputSchema = z.object({
   phone: z.string().optional().describe('The phone number of the potential client.'),
   company: z.string().optional().describe('The company of the potential client.'),
   message: z.string().describe('The inquiry message from the potential client.'),
+  // Added practiceAreas and attorneys to schema to prevent validation errors when passed to prompt
+  practiceAreas: z.array(z.string()).optional(),
+  attorneys: z.array(z.any()).optional(),
 });
 export type PersonalizedConsultationRoutingInput = z.infer<
   typeof PersonalizedConsultationRoutingInputSchema
@@ -111,6 +113,7 @@ const personalizedConsultationRoutingFlow = ai.defineFlow(
     outputSchema: PersonalizedConsultationRoutingOutputSchema,
   },
   async (input) => {
+    // Pass practiceAreas and attorneys as context to the prompt
     const { output } = await prompt({ ...input, practiceAreas, attorneys });
     if (!output) {
       throw new Error('Failed to get a response from the AI model.');

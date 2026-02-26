@@ -40,8 +40,8 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Tier 2: Middle Contact Hub - Tyopgraphic Wordmark Focus */}
-      <div className="bg-white py-2 px-6 lg:px-12 hidden md:block border-b border-secondary/50 shadow-sm">
+      {/* Tier 2: Middle Contact Hub - Refined Footprint */}
+      <div className="bg-white py-1.5 px-6 lg:px-12 hidden md:block border-b border-secondary/50 shadow-sm">
         <div className="max-w-7xl mx-auto grid grid-cols-3 items-center">
           {/* Left: Address & Phone */}
           <div className="flex flex-col gap-0.5">
@@ -49,15 +49,15 @@ const Header = () => {
               <MapPin className="w-2 h-2 text-accent" />
               <span>Elite Towers, Dar es Salaam.</span>
             </div>
-            <a href="tel:+255222123456" className="text-xs font-headline font-bold text-accent hover:opacity-80 transition-opacity">
+            <a href="tel:+255222123456" className="text-[11px] font-headline font-bold text-accent hover:opacity-80 transition-opacity">
               +255 (0) 222 123 456
             </a>
           </div>
 
           {/* Center: Bespoke Typographic Mark */}
           <Link href="/" className="flex flex-col items-center justify-center group">
-            <span className="text-xl lg:text-3xl font-headline font-bold text-primary leading-none tracking-tight">G&apos;ADROIT</span>
-            <span className="text-[7px] font-bold text-accent tracking-[0.5em] uppercase mt-1">Attorneys</span>
+            <span className="text-xl lg:text-2xl font-headline font-bold text-primary leading-none tracking-tight">G&apos;ADROIT</span>
+            <span className="text-[7px] font-bold text-accent tracking-[0.5em] uppercase mt-0.5">Attorneys</span>
           </Link>
 
           {/* Right: Hours & Email */}
@@ -66,7 +66,7 @@ const Header = () => {
               <Clock className="w-2 h-2 text-accent" />
               <span>Briefings: 09:00 - 17:00 EAT</span>
             </div>
-            <a href="mailto:consult@gadroit.com" className="text-xs font-headline font-bold text-accent hover:opacity-80 transition-opacity">
+            <a href="mailto:consult@gadroit.com" className="text-[11px] font-headline font-bold text-accent hover:opacity-80 transition-opacity">
               consult@gadroit.com
             </a>
           </div>
@@ -78,7 +78,7 @@ const Header = () => {
         "bg-primary transition-all duration-300 px-6 lg:px-12 w-full border-b border-white/5",
         isScrolled ? "fixed top-0 left-0 right-0 shadow-xl" : "relative"
       )}>
-        <nav className="max-w-7xl mx-auto flex items-center justify-between h-12">
+        <nav className="max-w-7xl mx-auto flex items-center justify-between h-11">
           <div className="md:hidden py-1 w-full">
             <MobileNav isScrolled={true} />
           </div>

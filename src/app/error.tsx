@@ -35,7 +35,7 @@ export default function Error({
         </div>
         <Button 
           onClick={() => reset()}
-          className="w-full bg-primary hover:bg-accent text-white h-14 rounded-none font-bold uppercase tracking-widest transition-all group"
+          className="w-full bg-primary hover:bg-accent text-white h-12 rounded-none font-bold uppercase tracking-widest transition-all group"
         >
           <RefreshCcw className="mr-2 w-4 h-4 group-hover:rotate-180 transition-transform duration-500" /> 
           Attempt Protocol Reset
