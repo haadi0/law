@@ -120,9 +120,9 @@ export default function SectoralCommand() {
   const [selectedIndustry, setSelectedIndustry] = useState<IndustrySector | null>(null);
 
   return (
-    <section className="py-12 md:py-20 bg-white overflow-hidden border-y border-border">
+    <section className="py-12 md:py-16 bg-white overflow-hidden border-y border-border">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-10 gap-6">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-8 gap-6">
           <div className="max-w-2xl space-y-3">
             <div className="flex items-center gap-3">
               <div className="h-[1px] w-8 bg-accent"></div>
@@ -161,7 +161,7 @@ export default function SectoralCommand() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                   data-ai-hint="industrial sector"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-primary/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-primary/10 to-transparent"></div>
               </div>
 
               <div className="relative z-10 space-y-4">

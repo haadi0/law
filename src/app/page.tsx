@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div className="w-full">
       {/* Hero Section - Compacted Padding */}
-      <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center pt-24 md:pt-32 pb-12 overflow-hidden bg-primary text-white border-b border-white/5">
+      <section className="relative min-h-[40vh] md:min-h-[50vh] flex items-center pt-20 md:pt-24 pb-8 overflow-hidden bg-primary text-white border-b border-white/5">
         <div className="absolute inset-0 z-0 opacity-10">
           <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
         </div>
@@ -70,7 +70,7 @@ export default function Home() {
             </div>
 
             <div className="lg:col-span-5 relative hidden lg:block">
-              <div className="relative aspect-square w-full max-w-[400px] mx-auto">
+              <div className="relative aspect-square w-full max-w-[350px] mx-auto">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="absolute inset-0 border border-accent/10 rounded-full animate-[spin_25s_linear_infinite]"></div>
                   <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/5 shadow-2xl group">
@@ -105,7 +105,7 @@ export default function Home() {
       <SectoralCommand />
 
       {/* Investor Friction - Compacted Vertical Spacing */}
-      <section className="py-12 md:py-20 bg-secondary/20 overflow-hidden border-b">
+      <section className="py-12 md:py-16 bg-secondary/20 overflow-hidden border-b">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6 lg:sticky lg:top-32">

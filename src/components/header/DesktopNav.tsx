@@ -33,7 +33,7 @@ export default function DesktopNav({ isScrolled, linkTextColor }: DesktopNavProp
   ];
 
   return (
-    <div className="relative flex items-center w-full h-16">
+    <div className="relative flex items-center w-full h-11">
       {/* Centered Links */}
       <div className="flex-1 flex justify-center items-center gap-8">
         {navLinks.map((link) => {
@@ -41,7 +41,7 @@ export default function DesktopNav({ isScrolled, linkTextColor }: DesktopNavProp
             return (
               <DropdownMenu key={link.name}>
                 <DropdownMenuTrigger className={cn(
-                  "flex items-center gap-1 text-[11px] font-bold uppercase tracking-widest transition-colors outline-none group",
+                  "flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest transition-colors outline-none group",
                   linkTextColor,
                   "hover:text-accent"
                 )}>
@@ -50,7 +50,7 @@ export default function DesktopNav({ isScrolled, linkTextColor }: DesktopNavProp
                 <DropdownMenuContent align="start" className="w-64 p-2 bg-background border shadow-xl rounded-none">
                   {PRACTICE_AREAS.map((area) => (
                     <DropdownMenuItem key={area.slug} asChild>
-                      <Link href={`/practice-areas/${area.slug}`} className="py-2 text-[11px] font-medium">
+                      <Link href={`/practice-areas/${area.slug}`} className="py-2 text-[10px] font-bold uppercase tracking-widest">
                         {area.title}
                       </Link>
                     </DropdownMenuItem>
@@ -64,7 +64,7 @@ export default function DesktopNav({ isScrolled, linkTextColor }: DesktopNavProp
               key={link.name}
               href={link.href}
               className={cn(
-                'text-[11px] font-bold uppercase tracking-widest transition-colors',
+                'text-[10px] font-bold uppercase tracking-widest transition-colors',
                 pathname === link.href ? 'text-accent' : linkTextColor,
                 'hover:text-accent'
               )}
@@ -75,9 +75,9 @@ export default function DesktopNav({ isScrolled, linkTextColor }: DesktopNavProp
         })}
       </div>
 
-      {/* Right Aligned CTA */}
+      {/* Right Aligned CTA - Compacted h-12 Equivalent for Nav */}
       <div className="shrink-0">
-        <Button asChild size="sm" className="rounded-none px-8 h-10 bg-accent text-white hover:bg-white hover:text-primary font-bold uppercase tracking-widest text-[11px] transition-all duration-300">
+        <Button asChild size="sm" className="rounded-none px-6 h-8 bg-accent text-white hover:bg-white hover:text-primary font-bold uppercase tracking-widest text-[9px] transition-all duration-300 shadow-lg">
           <Link href="/contact">Free Consultation</Link>
         </Button>
       </div>

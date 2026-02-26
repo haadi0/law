@@ -89,7 +89,7 @@ export default function AttorneysPage() {
   return (
     <div className="pt-24 min-h-screen bg-white overflow-x-hidden">
       {/* Editorial Hero - Compacted */}
-      <section className="container mx-auto px-6 lg:px-12 py-12 md:py-20">
+      <section className="container mx-auto px-6 lg:px-12 py-12 md:py-16">
         <div className="max-w-4xl space-y-4">
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="flex items-center gap-3">
             <div className="h-[1px] w-8 bg-accent"></div>
@@ -150,7 +150,7 @@ export default function AttorneysPage() {
                     className="object-cover grayscale opacity-20 group-hover:opacity-30 group-hover:scale-105 transition-all duration-1000"
                     sizes="(max-width: 768px) 100vw, 25vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-primary/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-primary/10 to-transparent"></div>
                 </div>
 
                 <div className="relative z-10 space-y-4">
@@ -248,7 +248,7 @@ export default function AttorneysPage() {
               </div>
 
               <div className="p-8 border-t bg-secondary/10">
-                <Button asChild className="w-full bg-primary text-white h-12 text-[10px] font-bold rounded-none hover:bg-accent transition-all group uppercase tracking-widest">
+                <Button asChild className="w-full bg-primary text-white h-12 text-[10px] font-bold rounded-none hover:bg-accent transition-all group uppercase tracking-widest shadow-xl">
                   <Link href="/contact" onClick={() => setSelectedId(null)}>
                     REQUEST CONFIDENTIAL BRIEFING <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>

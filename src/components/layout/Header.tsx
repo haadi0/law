@@ -20,9 +20,9 @@ const Header = () => {
 
   return (
     <header className="absolute top-0 left-0 right-0 z-50 flex flex-col w-full">
-      {/* Tier 1: Top Promise Bar - Compact */}
+      {/* Tier 1: Top Promise Bar - Highly Compact */}
       <div className="bg-accent text-white py-1 px-6 lg:px-12 hidden md:block border-b border-white/10">
-        <div className="max-w-7xl mx-auto flex justify-between items-center text-[8px] font-bold uppercase tracking-wider">
+        <div className="max-w-7xl mx-auto flex justify-between items-center text-[8px] font-bold uppercase tracking-[0.2em]">
           <div className="flex items-center gap-1">
             <span>Precision counsel for <span className="underline italic">institutional investors</span> in East Africa.</span>
           </div>
@@ -40,8 +40,8 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Tier 2: Middle Contact Hub - Refined Footprint */}
-      <div className="bg-white py-1.5 px-6 lg:px-12 hidden md:block border-b border-secondary/50 shadow-sm">
+      {/* Tier 2: Middle Contact Hub - Refined Visual Footprint */}
+      <div className="bg-white py-1 px-6 lg:px-12 hidden md:block border-b border-secondary/50 shadow-sm">
         <div className="max-w-7xl mx-auto grid grid-cols-3 items-center">
           {/* Left: Address & Phone */}
           <div className="flex flex-col gap-0.5">
@@ -49,13 +49,13 @@ const Header = () => {
               <MapPin className="w-2 h-2 text-accent" />
               <span>Elite Towers, Dar es Salaam.</span>
             </div>
-            <a href="tel:+255222123456" className="text-[11px] font-headline font-bold text-accent hover:opacity-80 transition-opacity">
-              +255 (0) 222 123 456
+            <a href="tel:+255222123456" className="text-[10px] font-headline font-bold text-accent hover:opacity-80 transition-opacity uppercase tracking-widest">
+              +255 222 123 456
             </a>
           </div>
 
           {/* Center: Bespoke Typographic Mark */}
-          <Link href="/" className="flex flex-col items-center justify-center group">
+          <Link href="/" className="flex flex-col items-center justify-center group py-1">
             <span className="text-xl lg:text-2xl font-headline font-bold text-primary leading-none tracking-tight">G&apos;ADROIT</span>
             <span className="text-[7px] font-bold text-accent tracking-[0.5em] uppercase mt-0.5">Attorneys</span>
           </Link>
@@ -66,7 +66,7 @@ const Header = () => {
               <Clock className="w-2 h-2 text-accent" />
               <span>Briefings: 09:00 - 17:00 EAT</span>
             </div>
-            <a href="mailto:consult@gadroit.com" className="text-[11px] font-headline font-bold text-accent hover:opacity-80 transition-opacity">
+            <a href="mailto:consult@gadroit.com" className="text-[10px] font-headline font-bold text-accent hover:opacity-80 transition-opacity uppercase tracking-widest">
               consult@gadroit.com
             </a>
           </div>

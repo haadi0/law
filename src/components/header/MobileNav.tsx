@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState } from 'react';
@@ -21,14 +20,15 @@ export default function MobileNav({ isScrolled }: MobileNavProps) {
         <span className="text-[7px] font-bold text-white tracking-[0.3em] uppercase mt-1">Attorneys</span>
       </Link>
 
-      {/* Quick Actions */}
-      <div className="flex items-center gap-4">
+      {/* Quick Actions - Compacted CTA */}
+      <div className="flex items-center gap-3">
         <a
-          href="tel:+1238591263"
-          className="p-3 rounded-full bg-white/10 text-accent border border-accent/20 transition-all"
+          href="tel:+255222123456"
+          className="flex items-center gap-2 px-3 py-1.5 rounded-none bg-accent text-white border border-accent transition-all text-[9px] font-bold uppercase tracking-widest hover:bg-white hover:text-accent shadow-lg"
           aria-label="Call office"
         >
-          <Phone className="w-4 h-4" />
+          <Phone className="w-3 h-3" />
+          <span>Call</span>
         </a>
         <button
           onClick={() => setIsDrawerOpen(true)}
