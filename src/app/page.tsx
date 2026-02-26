@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -14,6 +13,7 @@ import AttorneysSection from '@/components/sections/AttorneysSection';
 import FirmNarrative from '@/components/sections/FirmNarrative';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import SectoralCommand from '@/components/sections/SectoralCommand';
+import NewsUpdatesSection from '@/components/sections/NewsUpdatesSection';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function Home() {
@@ -153,6 +153,9 @@ export default function Home() {
       <FirmNarrative />
       
       <TestimonialsSection />
+
+      {/* News & Updates Section - From Reference Image */}
+      <NewsUpdatesSection />
 
       {/* Final Conversion Stage - High Performance h-12 standard */}
       <section className="py-12 md:py-24 bg-primary relative overflow-hidden">
