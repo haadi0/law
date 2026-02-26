@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState } from 'react';
@@ -9,13 +10,10 @@ import {
   Construction, 
   Sprout, 
   Factory, 
-  Palmtree, 
-  Rss,
   X,
   ShieldCheck,
   AlertCircle,
   Scale,
-  Gavel,
   ChevronRight,
   ArrowUpRight
 } from 'lucide-react';
@@ -142,20 +140,19 @@ export default function SectoralCommand() {
 
         {/* Compact & High-Density Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
-          {INDUSTRIES.map((industry, idx) => (
+          {INDUSTRIES.map((industry) => (
             <motion.div
               key={industry.id}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              whileHover={{ scale: 1.01 }}
               onClick={() => setSelectedIndustry(industry)}
               className={cn(
                 "group relative bg-white p-6 md:p-8 flex flex-col justify-between cursor-pointer transition-all duration-500 border border-border/50 hover:border-accent shadow-sm overflow-hidden",
-                industry.size === 'large' ? 'md:col-span-12 lg:col-span-6 min-h-[300px]' : 
-                industry.size === 'medium' ? 'md:col-span-6 min-h-[250px]' : 
-                'md:col-span-6 lg:col-span-3 min-h-[250px]'
+                industry.size === 'large' ? 'md:col-span-12 lg:col-span-6 min-h-[280px]' : 
+                industry.size === 'medium' ? 'md:col-span-6 min-h-[220px]' : 
+                'md:col-span-6 lg:col-span-3 min-h-[220px]'
               )}
             >
-              {/* Image Overlay - Reduced Opacity for Cleanliness */}
+              {/* Image Overlay - Reduced opacity for clarity (20%) */}
               <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-30 transition-opacity duration-700">
                 <Image 
                   src={industry.image} 
@@ -164,7 +161,7 @@ export default function SectoralCommand() {
                   className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/90 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent"></div>
               </div>
 
               <div className="relative z-10 space-y-4">
@@ -181,10 +178,10 @@ export default function SectoralCommand() {
                 </div>
                 
                 <div className="space-y-1">
-                  <h3 className="text-xl md:text-2xl font-headline font-bold text-primary group-hover:text-accent transition-colors">
+                  <h3 className="text-xl font-headline font-bold text-primary group-hover:text-accent transition-colors leading-tight">
                     {industry.name}
                   </h3>
-                  <p className="text-[10px] text-muted-foreground font-light leading-relaxed uppercase tracking-wider">
+                  <p className="text-[9px] text-muted-foreground font-bold leading-relaxed uppercase tracking-wider">
                     {industry.tagline}
                   </p>
                 </div>
@@ -198,9 +195,9 @@ export default function SectoralCommand() {
           ))}
         </div>
 
-        {/* Global Action */}
-        <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-6">
-          <Button asChild size="lg" className="bg-primary text-white hover:bg-accent rounded-none h-12 px-8 text-xs font-bold tracking-widest transition-all w-full md:w-auto">
+        {/* Global Action - Compact Button */}
+        <div className="mt-12 flex items-center justify-center">
+          <Button asChild className="bg-primary text-white hover:bg-accent rounded-none h-12 px-10 text-[10px] font-bold tracking-widest transition-all w-full md:w-auto">
             <Link href="/industries" className="flex items-center gap-2">
               ACCESS SECTORAL ARCHIVE <ChevronRight className="w-4 h-4" />
             </Link>
@@ -230,11 +227,11 @@ export default function SectoralCommand() {
               <div className="p-6 md:p-8 border-b flex justify-between items-center bg-white sticky top-0 z-20">
                 <div className="space-y-1">
                   <span className="text-accent font-bold text-[9px] tracking-[0.4em] uppercase">Intelligence Briefing</span>
-                  <h3 className="text-2xl md:text-3xl font-headline font-bold text-primary">{selectedIndustry.name}</h3>
+                  <h3 className="text-2xl md:text-3xl font-headline font-bold text-primary leading-none">{selectedIndustry.name}</h3>
                 </div>
                 <button 
                   onClick={() => setSelectedIndustry(null)}
-                  className="p-2 hover:bg-secondary rounded-none transition-colors border border-border"
+                  className="p-2 border hover:bg-secondary rounded-none transition-colors border-border"
                 >
                   <X className="w-5 h-5 text-primary" />
                 </button>
@@ -296,14 +293,11 @@ export default function SectoralCommand() {
               </div>
 
               <div className="p-6 md:p-8 border-t bg-secondary/10 flex flex-col gap-3">
-                <Button asChild className="w-full bg-primary text-white h-12 text-xs font-bold rounded-none hover:bg-accent transition-all group">
+                <Button asChild className="w-full bg-primary text-white h-12 text-[10px] font-bold tracking-widest rounded-none hover:bg-accent transition-all group">
                   <Link href="/contact" onClick={() => setSelectedIndustry(null)}>
-                    REQUEST SECTORAL AUDIT <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    REQUEST SECTORAL AUDIT <ChevronRight className="ml-2 w-4 h-4" />
                   </Link>
                 </Button>
-                <p className="text-[8px] text-center text-muted-foreground font-bold tracking-[0.2em] uppercase">
-                  Confidential Response within 24 Hours
-                </p>
               </div>
             </motion.div>
           </>

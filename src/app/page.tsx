@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -19,8 +20,8 @@ export default function Home() {
 
   return (
     <div className="w-full">
-      {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center pt-48 pb-12 overflow-hidden bg-primary text-white">
+      {/* Hero Section - Reduced bottom padding & min-height */}
+      <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center pt-48 pb-8 overflow-hidden bg-primary text-white border-b border-white/5">
         <div className="absolute inset-0 z-0 opacity-10">
           <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
         </div>
@@ -43,13 +44,13 @@ export default function Home() {
               </div>
               
               <div className="flex flex-col sm:flex-row items-start gap-4 pt-4">
-                <Button asChild size="lg" className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-white hover:text-primary rounded-none px-10 h-12 text-xs font-bold transition-all group">
+                <Button asChild className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-white hover:text-primary rounded-none px-10 h-12 text-[10px] font-bold tracking-widest transition-all group">
                   <Link href="/contact" className="flex items-center gap-2">
-                    Request Consultation <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    REQUEST CONSULTATION <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>
-                <Button asChild size="lg" className="w-full sm:w-auto bg-white/5 backdrop-blur-sm border border-white/10 text-white hover:bg-white/10 hover:border-accent/50 rounded-none px-8 h-12 text-xs font-bold transition-all">
-                  <Link href="/practice-areas">Practice Expertise</Link>
+                <Button asChild className="w-full sm:w-auto bg-white/5 backdrop-blur-sm border border-white/10 text-white hover:bg-white/10 hover:border-accent/50 rounded-none px-8 h-12 text-[10px] font-bold tracking-widest transition-all">
+                  <Link href="/practice-areas">PRACTICE EXPERTISE</Link>
                 </Button>
               </div>
 
@@ -101,55 +102,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Philosophy Section */}
-      <section className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <span className="text-accent font-bold text-xs tracking-[0.4em] uppercase">Firm Narrative</span>
-                <h2 className="text-4xl md:text-5xl font-headline font-bold text-primary leading-tight">Navigating Complexity <br />with Precision.</h2>
-              </div>
-              <p className="text-lg text-muted-foreground font-light leading-relaxed">
-                G&apos;Adroit Attorneys bridges the gap between global institutional requirements and local regulatory precision in East Africa.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {[
-                  { title: 'Predictive Intel', desc: 'Identifying regulatory shifts before impact.' },
-                  { title: 'Asset Shielding', desc: 'Utilizing treaties to safeguard capital.' },
-                ].map((pillar) => (
-                  <div key={pillar.title} className="space-y-2 p-6 bg-white border border-primary/5 shadow-sm hover:border-accent transition-all">
-                    <h4 className="font-headline font-bold text-primary text-lg">{pillar.title}</h4>
-                    <p className="text-[10px] text-muted-foreground font-light leading-relaxed">{pillar.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="relative aspect-[4/5] shadow-2xl overflow-hidden group">
-              <Image
-                src="https://picsum.photos/seed/gadroit-office/800/1000"
-                alt="Elite Law Office"
-                fill
-                className="object-cover transition-transform duration-1000 group-hover:scale-105"
-                sizes="(max-width: 1200px) 50vw, 33vw"
-              />
-              <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-primary via-primary/60 to-transparent text-white">
-                 <div className="text-xl md:text-2xl font-headline italic font-normal mb-2">"Absolute discretion is our baseline."</div>
-                 <div className="text-[9px] uppercase tracking-widest font-bold text-accent">Founding Principle</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Sectoral Command */}
+      {/* Sectoral Command - High Density */}
       <SectoralCommand />
 
-      {/* Attorneys & Testimonials */}
-      <AttorneysSection />
-      <TestimonialsSection />
-
-      {/* Investor Challenges Accordion */}
+      {/* Investor Friction - Compact & Fluid */}
       <section className="py-16 md:py-24 bg-secondary/20 overflow-hidden">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -162,8 +118,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="p-8 bg-primary text-white space-y-6 relative overflow-hidden">
-                <h4 className="text-2xl font-headline font-bold">Secure Your Strategy</h4>
-                <p className="text-xs text-primary-foreground/60 font-light">Schedule a session to map your regulatory path.</p>
+                <h4 className="text-2xl font-headline font-bold leading-tight">Secure Your <br />Strategy</h4>
                 <Button asChild className="bg-accent text-accent-foreground hover:bg-white hover:text-primary rounded-none h-12 px-8 font-bold tracking-widest text-[9px] w-full md:w-auto">
                   <Link href="/contact">BOOK STRATEGY SESSION</Link>
                 </Button>
@@ -181,7 +136,7 @@ export default function Home() {
                     <AccordionTrigger className="text-xl font-headline font-bold text-primary py-6 hover:no-underline text-left group">
                       <span className="group-hover:text-accent transition-colors">{item.q}</span>
                     </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground text-base font-light leading-relaxed pb-6">
+                    <AccordionContent className="text-muted-foreground text-sm font-light leading-relaxed pb-6">
                       {item.a}
                     </AccordionContent>
                   </AccordionItem>
@@ -192,17 +147,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Final Conversion Stage */}
+      {/* Attorneys & Testimonials */}
+      <AttorneysSection />
+      <TestimonialsSection />
+
+      {/* Final Conversion Stage - Compact */}
       <section className="py-16 md:py-24 bg-primary relative overflow-hidden">
         <div className="container mx-auto px-6 lg:px-12 text-center relative z-10">
-          <div className="max-w-4xl mx-auto space-y-10">
+          <div className="max-w-4xl mx-auto space-y-8">
             <h2 className="text-4xl md:text-7xl font-headline font-bold text-white leading-tight">Engage With <br /><span className="text-accent italic font-normal">Confidence.</span></h2>
             <p className="text-lg text-primary-foreground/60 font-light leading-relaxed max-w-2xl mx-auto">
               Providing the legal authority required for institutional investment in Tanzania and across East Africa.
             </p>
             <div className="pt-4">
-              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-white hover:text-primary h-12 md:h-14 px-12 text-xs font-bold rounded-none shadow-xl w-full md:w-auto">
-                <Link href="/contact">Request Confidential Consultation</Link>
+              <Button asChild className="bg-accent text-accent-foreground hover:bg-white hover:text-primary h-12 md:h-14 px-12 text-[10px] font-bold tracking-widest rounded-none shadow-xl w-full md:w-auto">
+                <Link href="/contact">REQUEST CONFIDENTIAL CONSULTATION</Link>
               </Button>
             </div>
             <p className="text-[9px] uppercase tracking-[0.5em] font-bold text-accent/50">Notice: Strict Professional Discretion Guaranteed</p>

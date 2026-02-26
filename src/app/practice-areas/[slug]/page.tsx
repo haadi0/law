@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -29,13 +30,13 @@ export default async function PracticeAreaPage({ params }: Props) {
   }
 
   return (
-    <div className="pt-48 md:pt-64 min-h-screen">
+    <div className="pt-32 md:pt-48 min-h-screen">
       {/* Hero */}
-      <section className="bg-primary text-white py-16 md:py-20">
+      <section className="bg-primary text-white py-12 md:py-20">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-4xl space-y-6">
-            <Link href="/practice-areas" className="text-accent text-sm font-bold flex items-center gap-2 mb-8 hover:opacity-80 transition-opacity">
-              <ArrowRight className="rotate-180 w-4 h-4" /> All Practice Areas
+            <Link href="/practice-areas" className="text-accent text-xs font-bold flex items-center gap-2 mb-6 hover:opacity-80 transition-opacity">
+              <ArrowRight className="rotate-180 w-3 h-3" /> ALL PRACTICE AREAS
             </Link>
             <h1 className="text-4xl md:text-6xl font-headline font-bold leading-tight">{area.title}</h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 font-light max-w-2xl leading-relaxed">
@@ -48,27 +49,27 @@ export default async function PracticeAreaPage({ params }: Props) {
       {/* Content */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
-            <div className="lg:col-span-2 space-y-16">
-              {/* What We Do */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
+            <div className="lg:col-span-2 space-y-12">
+              {/* Scope of Expertise */}
               <div>
-                <h2 className="text-2xl md:text-3xl font-headline font-bold text-primary mb-8 pb-4 border-b">Scope of Expertise</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <h2 className="text-xl md:text-2xl font-headline font-bold text-primary mb-8 pb-4 border-b">Scope of Expertise</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {area.process.map((step) => (
                     <div key={step} className="flex items-start gap-4 p-6 bg-white border shadow-sm group hover:border-accent transition-colors duration-300">
-                      <CheckCircle2 className="w-6 h-6 text-accent shrink-0" />
-                      <span className="font-semibold text-primary">{step}</span>
+                      <CheckCircle2 className="w-5 h-5 text-accent shrink-0" />
+                      <span className="font-bold text-sm text-primary">{step}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               {/* Scenarios */}
-              <div className="bg-secondary/20 p-8 rounded-none border border-primary/5">
-                <h3 className="text-xl font-headline font-bold text-primary mb-6">Common Strategic Scenarios</h3>
+              <div className="bg-secondary/20 p-8 border border-primary/5">
+                <h3 className="text-lg font-headline font-bold text-primary mb-6 uppercase tracking-wider">Strategic Scenarios</h3>
                 <ul className="space-y-4">
                   {area.scenarios.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-3 italic text-muted-foreground text-sm md:text-base">
+                    <li key={idx} className="flex items-start gap-3 italic text-muted-foreground text-sm">
                       <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0"></div>
                       <span>&quot;{item}&quot;</span>
                     </li>
@@ -77,15 +78,15 @@ export default async function PracticeAreaPage({ params }: Props) {
               </div>
 
               {/* Risks */}
-              <div className="space-y-8">
-                <h3 className="text-2xl font-headline font-bold text-primary flex items-center gap-3">
-                  <Shield className="text-accent" /> Mitigating Investor Risk
+              <div className="space-y-6">
+                <h3 className="text-xl font-headline font-bold text-primary flex items-center gap-3">
+                  <Shield className="w-5 h-5 text-accent" /> Mitigating Investor Risk
                 </h3>
-                <div className="space-y-4">
+                <div className="space-y-3">
                   {area.risks.map((risk) => (
-                    <div key={risk} className="flex items-center gap-4 p-6 bg-destructive/5 border border-destructive/10">
-                      <AlertTriangle className="w-6 h-6 text-destructive shrink-0" />
-                      <span className="text-primary font-medium">{risk}</span>
+                    <div key={risk} className="flex items-center gap-4 p-5 bg-destructive/5 border border-destructive/10">
+                      <AlertTriangle className="w-5 h-5 text-destructive shrink-0" />
+                      <span className="text-primary text-sm font-medium">{risk}</span>
                     </div>
                   ))}
                 </div>
@@ -93,24 +94,24 @@ export default async function PracticeAreaPage({ params }: Props) {
             </div>
 
             {/* Sidebar CTA */}
-            <div className="space-y-8">
+            <div className="space-y-6">
               <Card className="bg-primary text-white border-none rounded-none shadow-2xl">
                 <CardHeader>
-                  <CardTitle className="font-headline text-2xl">Need Expert Guidance?</CardTitle>
+                  <CardTitle className="font-headline text-xl">Request Expert Counsel</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                  <p className="text-sm text-primary-foreground/60 leading-relaxed">
+                  <p className="text-xs text-primary-foreground/60 leading-relaxed">
                     Our specialized team is ready to analyze your specific operational challenges and map your regulatory path.
                   </p>
-                  <Button asChild className="w-full bg-accent text-accent-foreground rounded-none h-12 font-bold hover:bg-white hover:text-primary transition-all">
-                    <Link href="/contact">Request Consultation</Link>
+                  <Button asChild className="w-full bg-accent text-accent-foreground rounded-none h-12 text-xs font-bold hover:bg-white hover:text-primary transition-all">
+                    <Link href="/contact">START CONSULTATION</Link>
                   </Button>
                 </CardContent>
               </Card>
 
               <div className="p-8 border border-accent/20 bg-accent/5">
-                <h4 className="font-headline font-bold text-primary mb-4">Related Resources</h4>
-                <ul className="space-y-3 text-sm">
+                <h4 className="font-headline font-bold text-primary text-sm mb-4 uppercase tracking-widest">Resources</h4>
+                <ul className="space-y-3 text-xs">
                   <li><Link href="/investor-resources" className="text-accent hover:underline font-bold">Investor Market Entry Guide</Link></li>
                   <li><Link href="/insights" className="text-accent hover:underline font-bold">Recent Regulatory Updates</Link></li>
                 </ul>
