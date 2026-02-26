@@ -10,8 +10,8 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
-export async function generateMetadata(props: Props) {
-  const { slug } = await props.params;
+export async function generateMetadata({ params }: Props) {
+  const { slug } = await params;
   const area = PRACTICE_AREAS.find((a) => a.slug === slug);
   if (!area) return { title: 'Practice Area Not Found' };
   return {
@@ -20,8 +20,8 @@ export async function generateMetadata(props: Props) {
   };
 }
 
-export default async function PracticeAreaPage(props: Props) {
-  const { slug } = await props.params;
+export default async function PracticeAreaPage({ params }: Props) {
+  const { slug } = await params;
   const area = PRACTICE_AREAS.find((a) => a.slug === slug);
 
   if (!area) {
@@ -30,11 +30,11 @@ export default async function PracticeAreaPage(props: Props) {
 
   return (
     <div className="pt-24 min-h-screen">
-      {/* Hero */}
+      {/* Hero - Compacted */}
       <section className="bg-primary text-white py-12 md:py-16">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-4xl space-y-6">
-            <Link href="/practice-areas" className="text-accent text-xs font-bold flex items-center gap-2 mb-6 hover:opacity-80 transition-opacity">
+            <Link href="/practice-areas" className="text-accent text-[10px] font-bold flex items-center gap-2 mb-4 hover:opacity-80 transition-opacity uppercase tracking-widest">
               <ArrowRight className="rotate-180 w-3 h-3" /> ALL PRACTICE AREAS
             </Link>
             <h1 className="text-4xl md:text-6xl font-headline font-bold leading-tight">{area.title}</h1>
@@ -99,10 +99,10 @@ export default async function PracticeAreaPage(props: Props) {
                   <CardTitle className="font-headline text-xl">Request Expert Counsel</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                  <p className="text-xs text-primary-foreground/60 leading-relaxed">
-                    Our specialized team is ready to analyze your specific operational challenges and map your regulatory path.
+                  <p className="text-[10px] uppercase tracking-widest font-bold text-primary-foreground/40 leading-relaxed">
+                    Analyzing specialized operational challenges & mapping regulatory paths.
                   </p>
-                  <Button asChild className="w-full bg-accent text-accent-foreground rounded-none h-12 text-xs font-bold hover:bg-white hover:text-primary transition-all">
+                  <Button asChild className="w-full bg-accent text-accent-foreground rounded-none h-12 text-[10px] font-bold tracking-widest hover:bg-white hover:text-primary transition-all uppercase">
                     <Link href="/contact">START CONSULTATION</Link>
                   </Button>
                 </CardContent>

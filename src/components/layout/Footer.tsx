@@ -17,7 +17,7 @@ const Footer = () => {
     <footer className="bg-primary text-primary-foreground pt-12 pb-6 px-6 lg:px-12 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-          {/* Brand block - Typography Mark */}
+          {/* Brand block - Typographic Mark */}
           <div className="space-y-4">
             <Link href="/" className="flex flex-col items-start group">
               <span className="text-2xl font-headline font-bold text-accent leading-none">G&apos;ADROIT</span>

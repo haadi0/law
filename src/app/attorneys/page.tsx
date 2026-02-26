@@ -87,7 +87,7 @@ export default function AttorneysPage() {
   const selectedAttorney = ATTORNEYS_DATA.find(a => a.id === selectedId);
 
   return (
-    <div className="pt-20 min-h-screen bg-white overflow-x-hidden">
+    <div className="pt-24 min-h-screen bg-white overflow-x-hidden">
       {/* Editorial Hero - Compacted */}
       <section className="container mx-auto px-6 lg:px-12 py-12 md:py-20">
         <div className="max-w-4xl space-y-4">
