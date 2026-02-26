@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 export default function FinalCTA() {
   return (
-    <section className="py-32 bg-primary relative overflow-hidden">
+    <section className="py-20 md:py-32 bg-primary relative overflow-hidden px-6 lg:px-12">
       {/* Animated SVG Border */}
       <div className="absolute inset-0 pointer-events-none opacity-20">
         <svg width="100%" height="100%" className="absolute inset-0">
@@ -24,20 +24,20 @@ export default function FinalCTA() {
         </svg>
       </div>
 
-      <div className="container mx-auto px-6 lg:px-12 relative z-10 text-center space-y-12">
+      <div className="container mx-auto relative z-10 text-center space-y-8 md:space-y-12">
         <div className="space-y-6">
-          <h2 className="text-5xl md:text-7xl font-headline font-bold text-white">Engage With Confidence.</h2>
-          <p className="text-xl text-primary-foreground/60 max-w-2xl mx-auto font-light leading-relaxed">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold text-white">Engage With Confidence.</h2>
+          <p className="text-lg md:text-xl text-primary-foreground/60 max-w-2xl mx-auto font-light leading-relaxed">
             G&apos;Adroit Attorneys provides the legal authority and international perspective required for significant institutional investment in Tanzania and across East Africa.
           </p>
         </div>
 
-        <div className="space-y-8">
-          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-white hover:text-primary rounded-none px-12 h-20 text-xl font-bold transition-all shadow-2xl">
+        <div className="space-y-6 md:space-y-8">
+          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-white hover:text-primary rounded-none px-10 md:px-12 h-16 md:h-20 text-lg md:text-xl font-bold transition-all shadow-2xl w-full md:w-auto">
             <Link href="/contact">Request Confidential Consultation</Link>
           </Button>
           
-          <div className="pt-4">
+          <div className="pt-2 md:pt-4">
             <p className="text-[10px] uppercase tracking-[0.4em] font-bold text-accent/50">
               Notice: All inquiries are treated with strict confidentiality.
             </p>

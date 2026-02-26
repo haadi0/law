@@ -8,10 +8,10 @@ import Link from 'next/link';
 
 export default function FinalCTA() {
   return (
-    <section className="py-40 bg-background flex justify-center px-6 lg:px-12">
+    <section className="py-20 md:py-32 bg-background flex justify-center px-6 lg:px-12">
       <motion.div 
         whileHover={{ scale: 1.01 }}
-        className="relative w-full max-w-6xl bg-primary text-white p-16 lg:p-32 overflow-hidden"
+        className="relative w-full max-w-6xl bg-primary text-white p-10 md:p-20 lg:p-24 overflow-hidden shadow-2xl"
       >
         {/* Animated Gold Border (Inner) */}
         <div className="absolute inset-4 border border-accent/20 pointer-events-none">
@@ -23,16 +23,16 @@ export default function FinalCTA() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 text-center space-y-12">
+        <div className="relative z-10 text-center space-y-8 md:space-y-12">
           <div className="space-y-4">
-            <h2 className="text-5xl md:text-7xl font-headline font-bold">Engage With Confidence.</h2>
-            <p className="text-primary-foreground/60 text-lg lg:text-xl font-light max-w-2xl mx-auto leading-relaxed">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold">Engage With Confidence.</h2>
+            <p className="text-primary-foreground/60 text-base md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
               Initiate a partner-led strategic review of your investment objectives. Our response protocols ensure absolute discretion.
             </p>
           </div>
 
-          <div className="space-y-8">
-            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-white hover:text-primary rounded-none h-20 px-12 text-xl font-bold transition-all duration-500 shadow-2xl">
+          <div className="space-y-6">
+            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-white hover:text-primary rounded-none h-14 md:h-16 px-10 md:px-12 text-sm md:text-lg font-bold transition-all duration-500 shadow-2xl w-full md:w-auto">
               <Link href="/contact">Request Confidential Consultation</Link>
             </Button>
             

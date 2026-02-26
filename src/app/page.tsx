@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, ChevronRight, CheckCircle2, Globe, Shield, Scale } from 'lucide-react';
+import { ArrowRight, ChevronRight, Globe, Shield, Scale } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Accordion,
@@ -45,12 +45,12 @@ export default function Home() {
               </div>
               
               <div className="flex flex-col sm:flex-row items-start gap-4 lg:gap-6 pt-2 lg:pt-4">
-                <Button asChild size="lg" className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-white hover:text-primary rounded-none px-10 lg:px-12 h-14 lg:h-16 text-sm lg:text-base font-bold transition-all shadow-2xl shadow-black/20 group">
+                <Button asChild size="lg" className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-white hover:text-primary rounded-none px-10 h-14 text-sm font-bold transition-all shadow-2xl shadow-black/20 group">
                   <Link href="/contact" className="flex items-center gap-2">
                     Request Consultation <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>
-                <Button asChild size="lg" className="w-full sm:w-auto bg-white/5 backdrop-blur-sm border border-white/10 text-white hover:bg-white/10 hover:border-accent/50 rounded-none px-8 lg:px-10 h-14 lg:h-16 text-sm lg:text-base font-bold transition-all">
+                <Button asChild size="lg" className="w-full sm:w-auto bg-white/5 backdrop-blur-sm border border-white/10 text-white hover:bg-white/10 hover:border-accent/50 rounded-none px-8 h-14 text-sm font-bold transition-all">
                   <Link href="/practice-areas">Practice Expertise</Link>
                 </Button>
               </div>
@@ -118,13 +118,13 @@ export default function Home() {
       </section>
 
       {/* Authority Marquee Strip */}
-      <section className="py-10 border-b bg-white overflow-hidden">
+      <section className="py-8 md:py-12 border-b bg-white overflow-hidden">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="flex flex-wrap justify-between items-center gap-8 opacity-40 hover:opacity-100 transition-opacity duration-500">
             {['Tanzania-rooted', 'International-standard', 'Investor-focused', 'Dispute-ready', 'Regulatory-intelligence'].map((item) => (
               <div key={item} className="flex items-center gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-accent"></div>
-                <span className="text-[11px] uppercase tracking-[0.3em] font-bold text-primary">{item}</span>
+                <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-primary">{item}</span>
               </div>
             ))}
           </div>
@@ -132,25 +132,25 @@ export default function Home() {
       </section>
 
       {/* Firm Philosophy */}
-      <section className="py-24 bg-background">
+      <section className="py-16 md:py-32 bg-background">
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
                 <span className="text-accent font-bold text-xs tracking-[0.4em] uppercase">Firm Narrative</span>
                 <h2 className="text-4xl md:text-5xl font-headline font-bold text-primary leading-tight">Navigating Complexity <br />with Precision.</h2>
               </div>
-              <p className="text-xl text-muted-foreground font-light leading-relaxed">
+              <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed">
                 G&apos;Adroit Attorneys is an elite legal practice serving as the preferred counsel for international corporations entering the East African market. We bridge the gap between global requirements and local regulatory precision.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
                 {[
                   { title: 'Predictive Intelligence', desc: 'Identifying regulatory shifts before they impact operations.' },
                   { title: 'Sovereign Recourse', desc: 'Utilizing international treaties to safeguard foreign capital.' },
                 ].map((pillar) => (
                   <div key={pillar.title} className="space-y-3 p-6 bg-white border border-primary/5 shadow-sm group hover:border-accent transition-all">
                     <h4 className="font-headline font-bold text-primary text-lg">{pillar.title}</h4>
-                    <p className="text-sm text-muted-foreground font-light">{pillar.desc}</p>
+                    <p className="text-xs text-muted-foreground font-light">{pillar.desc}</p>
                   </div>
                 ))}
               </div>
@@ -170,54 +170,15 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-primary/10"></div>
               <div className="absolute bottom-0 left-0 right-0 p-12 bg-gradient-to-t from-primary via-primary/40 to-transparent text-white">
-                 <div className="text-3xl font-headline italic font-normal mb-2">"Absolute professional discretion is our baseline."</div>
-                 <div className="text-xs uppercase tracking-widest font-bold text-accent">Founding Principle</div>
+                 <div className="text-2xl md:text-3xl font-headline italic font-normal mb-2">"Absolute professional discretion is our baseline."</div>
+                 <div className="text-[10px] uppercase tracking-widest font-bold text-accent">Founding Principle</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Practice Areas Snapshot */}
-      <section className="py-32 bg-primary text-white">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
-            <div className="space-y-4">
-              <div className="inline-block h-1 w-12 bg-accent"></div>
-              <h2 className="text-4xl md:text-6xl font-headline font-bold">Specialized Expertise.</h2>
-              <p className="text-primary-foreground/60 max-w-xl text-lg font-light">
-                Our practice is built around the specific high-stakes requirements of cross-border commerce and industrial operations.
-              </p>
-            </div>
-            <Button asChild variant="outline" className="border-accent text-accent hover:bg-accent hover:text-white rounded-none px-10 h-14 font-bold tracking-widest text-xs">
-              <Link href="/practice-areas">ALL PRACTICES</Link>
-            </Button>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1px bg-white/10 border border-white/10">
-            {PRACTICE_AREAS.map((area) => (
-              <Link
-                key={area.slug}
-                href={`/practice-areas/${area.slug}`}
-                className="group relative p-12 bg-primary hover:bg-white/5 transition-all duration-500 overflow-hidden"
-              >
-                <div className="absolute top-0 right-0 p-8 text-accent font-bold opacity-10 text-6xl group-hover:opacity-20 transition-opacity">
-                  {PRACTICE_AREAS.indexOf(area) + 1}
-                </div>
-                <h3 className="text-2xl font-headline font-bold mb-6 group-hover:text-accent transition-colors">{area.title}</h3>
-                <p className="text-sm text-primary-foreground/50 mb-8 leading-relaxed font-light">
-                  {area.description}
-                </p>
-                <span className="text-[10px] font-bold text-accent uppercase tracking-[0.3em] flex items-center">
-                  Access Intelligence <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Sectoral Command - NEW INTERACTIVE SECTION */}
+      {/* Sectoral Command - Interactive Bento */}
       <SectoralCommand />
 
       {/* Our Attorneys Section */}
@@ -226,28 +187,28 @@ export default function Home() {
       {/* Testimonials Section */}
       <TestimonialsSection />
 
-      {/* Investor Challenges Accordion */}
-      <section className="py-32 bg-secondary/20">
+      {/* Investor Challenges Accordion - OPTIMIZED RESPONSIVENESS */}
+      <section className="py-16 md:py-32 bg-secondary/20 overflow-hidden">
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
-            <div className="space-y-10 sticky top-40">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+            <div className="space-y-10 lg:sticky lg:top-40">
               <div className="space-y-6">
                 <span className="text-accent font-bold text-xs tracking-[0.4em] uppercase">Investor Friction</span>
                 <h2 className="text-4xl md:text-6xl font-headline font-bold text-primary leading-tight">Common Market <br />Hurdles.</h2>
-                <p className="text-xl text-muted-foreground font-light leading-relaxed">
+                <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed">
                   We understand the specific friction points of foreign direct investment. Our role is to provide the legal lubrication that ensures smooth operations.
                 </p>
               </div>
-              <div className="p-10 bg-primary text-white space-y-6 relative overflow-hidden">
+              <div className="p-8 md:p-10 bg-primary text-white space-y-6 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-48 h-48 bg-accent/5 -mr-24 -mt-24 rounded-full"></div>
                 <h4 className="text-2xl font-headline font-bold">Secure Your Entry Strategy</h4>
                 <p className="text-sm text-primary-foreground/60 font-light leading-relaxed">Schedule a partner-led session to map your regulatory path in Tanzania.</p>
-                <Button asChild className="bg-accent text-accent-foreground hover:bg-white hover:text-primary rounded-none px-8 h-14 font-bold tracking-widest text-xs">
+                <Button asChild className="bg-accent text-accent-foreground hover:bg-white hover:text-primary rounded-none px-8 h-12 md:h-14 font-bold tracking-widest text-[10px] md:text-xs w-full md:w-auto">
                   <Link href="/contact">BOOK STRATEGY SESSION</Link>
                 </Button>
               </div>
             </div>
-            <div>
+            <div className="w-full">
               <Accordion type="single" collapsible className="w-full">
                 {[
                   { q: 'Market Entry & Structuring Risk', a: 'Navigating local content laws and selecting optimal business vehicles (TIC vs EPZ) for maximum asset protection and operational efficiency.' },
@@ -257,10 +218,10 @@ export default function Home() {
                   { q: 'JV Governance & Local Partnerships', a: 'Mitigating risks in local joint ventures through ironclad shareholder agreements that define clear exit and control mechanisms.' },
                 ].map((item, idx) => (
                   <AccordionItem key={idx} value={`item-${idx}`} className="border-b-primary/10">
-                    <AccordionTrigger className="text-xl font-headline font-bold text-primary py-8 hover:no-underline text-left group">
-                      <span className="group-hover:text-accent transition-colors">{item.q}</span>
+                    <AccordionTrigger className="text-lg md:text-xl font-headline font-bold text-primary py-6 md:py-8 hover:no-underline text-left group">
+                      <span className="group-hover:text-accent transition-colors pr-4">{item.q}</span>
                     </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground text-lg font-light leading-relaxed pb-8 pr-12">
+                    <AccordionContent className="text-muted-foreground text-base md:text-lg font-light leading-relaxed pb-8 pr-4 md:pr-12">
                       {item.a}
                     </AccordionContent>
                   </AccordionItem>
@@ -271,19 +232,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Final Conversion Stage */}
-      <section className="py-40 bg-primary relative overflow-hidden">
+      {/* Final Conversion Stage - COMPACTED & OPTIMIZED */}
+      <section className="py-20 md:py-32 bg-primary relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 pointer-events-none">
            <div className="absolute top-0 left-0 w-full h-full" style={{ backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
         </div>
         <div className="container mx-auto px-6 lg:px-12 text-center relative z-10">
-          <div className="max-w-4xl mx-auto space-y-12">
-            <h2 className="text-5xl md:text-8xl font-headline font-bold text-white leading-tight">Engage With <br /><span className="text-accent italic font-normal">Confidence.</span></h2>
-            <p className="text-xl md:text-2xl text-primary-foreground/60 font-light leading-relaxed max-w-2xl mx-auto">
+          <div className="max-w-4xl mx-auto space-y-8 md:space-y-12">
+            <h2 className="text-4xl md:text-7xl lg:text-8xl font-headline font-bold text-white leading-tight">Engage With <br /><span className="text-accent italic font-normal">Confidence.</span></h2>
+            <p className="text-lg md:text-2xl text-primary-foreground/60 font-light leading-relaxed max-w-2xl mx-auto">
               Providing the legal authority and international perspective required for significant institutional investment in Tanzania and beyond.
             </p>
-            <div className="pt-8">
-              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-white hover:text-primary py-10 px-16 text-2xl rounded-none transition-all duration-500 shadow-2xl font-bold">
+            <div className="pt-4 md:pt-8">
+              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-white hover:text-primary h-16 md:h-20 px-10 md:px-16 text-lg md:text-2xl rounded-none transition-all duration-500 shadow-2xl font-bold w-full md:w-auto">
                 <Link href="/contact">Request Confidential Consultation</Link>
               </Button>
             </div>
