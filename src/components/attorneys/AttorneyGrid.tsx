@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState } from 'react';
@@ -39,6 +38,7 @@ export default function AttorneyGrid({ attorneys }: AttorneyGridProps) {
                   alt={attorney.name} 
                   fill 
                   className="object-cover grayscale opacity-20 group-hover:opacity-40 group-hover:scale-110 transition-all duration-1000"
+                  sizes="(max-width: 768px) 100vw, 25vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/80 to-transparent"></div>
               </div>
@@ -121,6 +121,7 @@ export default function AttorneyGrid({ attorneys }: AttorneyGridProps) {
                     alt={selectedAttorney.name} 
                     fill 
                     className="object-cover grayscale"
+                    sizes="(max-width: 768px) 100vw, 500px"
                   />
                   <div className="absolute inset-0 bg-primary/10"></div>
                 </div>
@@ -178,7 +179,7 @@ export default function AttorneyGrid({ attorneys }: AttorneyGridProps) {
 
               {/* Action Row */}
               <div className="p-8 border-t bg-secondary/10 flex flex-col gap-4">
-                <Button asChild className="w-full bg-primary text-white h-14 text-xs font-bold rounded-none hover:bg-accent transition-all group">
+                <Button asChild className="w-full bg-primary text-white h-12 text-xs font-bold rounded-none hover:bg-accent transition-all group">
                   <Link href="/contact" onClick={() => setSelectedId(null)}>
                     REQUEST CONFIDENTIAL BRIEFING <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Globe, Shield, Scale } from 'lucide-react';
+import { ArrowRight, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Accordion,
@@ -20,13 +20,13 @@ export default function Home() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center pt-48 md:pt-64 pb-16 lg:pb-24 overflow-hidden bg-primary text-white">
+      <section className="relative min-h-[70vh] flex items-center pt-48 pb-12 overflow-hidden bg-primary text-white">
         <div className="absolute inset-0 z-0 opacity-10">
           <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
         </div>
         
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 space-y-8 animate-in fade-in slide-in-from-left-8 duration-1000">
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
@@ -37,7 +37,7 @@ export default function Home() {
                   International Strategy. <br />
                   <span className="text-accent italic font-normal">Local Authority.</span>
                 </h1>
-                <p className="text-lg md:text-xl lg:text-2xl text-primary-foreground/70 max-w-2xl font-light leading-relaxed">
+                <p className="text-lg md:text-xl text-primary-foreground/70 max-w-2xl font-light leading-relaxed">
                   Elite legal architecture for high-stakes cross-border investment and complex dispute resolution in East Africa.
                 </p>
               </div>
@@ -53,18 +53,18 @@ export default function Home() {
                 </Button>
               </div>
 
-              <div className="grid grid-cols-3 gap-8 pt-12 border-t border-white/10">
+              <div className="grid grid-cols-3 gap-8 pt-8 border-t border-white/10">
                 <div>
-                  <div className="text-2xl font-headline font-bold text-accent">40+</div>
-                  <div className="text-[10px] uppercase tracking-widest text-white/40 font-bold">Market Entries</div>
+                  <div className="text-xl font-headline font-bold text-accent">40+</div>
+                  <div className="text-[8px] uppercase tracking-widest text-white/40 font-bold">Market Entries</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-headline font-bold text-accent">$2B+</div>
-                  <div className="text-[10px] uppercase tracking-widest text-white/40 font-bold">Assets Advised</div>
+                  <div className="text-xl font-headline font-bold text-accent">$2B+</div>
+                  <div className="text-[8px] uppercase tracking-widest text-white/40 font-bold">Assets Advised</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-headline font-bold text-accent">100%</div>
-                  <div className="text-[10px] uppercase tracking-widest text-white/40 font-bold">Discretion</div>
+                  <div className="text-xl font-headline font-bold text-accent">100%</div>
+                  <div className="text-[8px] uppercase tracking-widest text-white/40 font-bold">Discretion</div>
                 </div>
               </div>
             </div>
@@ -85,12 +85,12 @@ export default function Home() {
                     <div className="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
                   </div>
 
-                  <div className="absolute -top-4 -right-4 bg-white text-primary p-4 shadow-2xl animate-bounce duration-[3000ms]">
+                  <div className="absolute -top-4 -right-4 bg-white text-primary p-4 shadow-2xl">
                     <div className="flex items-center gap-3">
                       <Shield className="w-5 h-5 text-accent" />
                       <div>
-                        <div className="text-[10px] font-bold uppercase tracking-widest">Protocol</div>
-                        <div className="text-xs font-bold">BIT Protected</div>
+                        <div className="text-[9px] font-bold uppercase tracking-widest leading-none">Protocol</div>
+                        <div className="text-[10px] font-bold">BIT Protected</div>
                       </div>
                     </div>
                   </div>
@@ -104,23 +104,23 @@ export default function Home() {
       {/* Philosophy Section */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
                 <span className="text-accent font-bold text-xs tracking-[0.4em] uppercase">Firm Narrative</span>
                 <h2 className="text-4xl md:text-5xl font-headline font-bold text-primary leading-tight">Navigating Complexity <br />with Precision.</h2>
               </div>
-              <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed">
+              <p className="text-lg text-muted-foreground font-light leading-relaxed">
                 G&apos;Adroit Attorneys bridges the gap between global institutional requirements and local regulatory precision in East Africa.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {[
                   { title: 'Predictive Intel', desc: 'Identifying regulatory shifts before impact.' },
                   { title: 'Asset Shielding', desc: 'Utilizing treaties to safeguard capital.' },
                 ].map((pillar) => (
-                  <div key={pillar.title} className="space-y-3 p-6 bg-white border border-primary/5 shadow-sm hover:border-accent transition-all">
+                  <div key={pillar.title} className="space-y-2 p-6 bg-white border border-primary/5 shadow-sm hover:border-accent transition-all">
                     <h4 className="font-headline font-bold text-primary text-lg">{pillar.title}</h4>
-                    <p className="text-xs text-muted-foreground font-light leading-relaxed">{pillar.desc}</p>
+                    <p className="text-[10px] text-muted-foreground font-light leading-relaxed">{pillar.desc}</p>
                   </div>
                 ))}
               </div>
@@ -133,17 +133,16 @@ export default function Home() {
                 className="object-cover transition-transform duration-1000 group-hover:scale-105"
                 sizes="(max-width: 1200px) 50vw, 33vw"
               />
-              <div className="absolute inset-0 bg-primary/10"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-12 bg-gradient-to-t from-primary via-primary/40 to-transparent text-white">
-                 <div className="text-2xl md:text-3xl font-headline italic font-normal mb-2">"Absolute discretion is our baseline."</div>
-                 <div className="text-[10px] uppercase tracking-widest font-bold text-accent">Founding Principle</div>
+              <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-primary via-primary/60 to-transparent text-white">
+                 <div className="text-xl md:text-2xl font-headline italic font-normal mb-2">"Absolute discretion is our baseline."</div>
+                 <div className="text-[9px] uppercase tracking-widest font-bold text-accent">Founding Principle</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Sectoral Command - High-Density Bento */}
+      {/* Sectoral Command */}
       <SectoralCommand />
 
       {/* Attorneys & Testimonials */}
@@ -153,9 +152,9 @@ export default function Home() {
       {/* Investor Challenges Accordion */}
       <section className="py-16 md:py-24 bg-secondary/20 overflow-hidden">
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-            <div className="space-y-10 lg:sticky lg:top-40">
-              <div className="space-y-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div className="space-y-8 lg:sticky lg:top-40">
+              <div className="space-y-4">
                 <span className="text-accent font-bold text-xs tracking-[0.4em] uppercase">Investor Friction</span>
                 <h2 className="text-4xl md:text-6xl font-headline font-bold text-primary leading-tight">Common Market <br />Hurdles.</h2>
                 <p className="text-lg text-muted-foreground font-light leading-relaxed">
@@ -164,8 +163,8 @@ export default function Home() {
               </div>
               <div className="p-8 bg-primary text-white space-y-6 relative overflow-hidden">
                 <h4 className="text-2xl font-headline font-bold">Secure Your Strategy</h4>
-                <p className="text-sm text-primary-foreground/60 font-light">Schedule a session to map your regulatory path.</p>
-                <Button asChild className="bg-accent text-accent-foreground hover:bg-white hover:text-primary rounded-none h-12 px-8 font-bold tracking-widest text-[10px] w-full md:w-auto">
+                <p className="text-xs text-primary-foreground/60 font-light">Schedule a session to map your regulatory path.</p>
+                <Button asChild className="bg-accent text-accent-foreground hover:bg-white hover:text-primary rounded-none h-12 px-8 font-bold tracking-widest text-[9px] w-full md:w-auto">
                   <Link href="/contact">BOOK STRATEGY SESSION</Link>
                 </Button>
               </div>
@@ -179,10 +178,10 @@ export default function Home() {
                   { q: 'Dispute & Asset Protection', a: 'Securing robust arbitration clauses to shield capital from judicial volatility.' },
                 ].map((item, idx) => (
                   <AccordionItem key={idx} value={`item-${idx}`} className="border-b-primary/10">
-                    <AccordionTrigger className="text-xl font-headline font-bold text-primary py-8 hover:no-underline text-left group">
+                    <AccordionTrigger className="text-xl font-headline font-bold text-primary py-6 hover:no-underline text-left group">
                       <span className="group-hover:text-accent transition-colors">{item.q}</span>
                     </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground text-lg font-light leading-relaxed pb-8">
+                    <AccordionContent className="text-muted-foreground text-base font-light leading-relaxed pb-6">
                       {item.a}
                     </AccordionContent>
                   </AccordionItem>
@@ -198,15 +197,15 @@ export default function Home() {
         <div className="container mx-auto px-6 lg:px-12 text-center relative z-10">
           <div className="max-w-4xl mx-auto space-y-10">
             <h2 className="text-4xl md:text-7xl font-headline font-bold text-white leading-tight">Engage With <br /><span className="text-accent italic font-normal">Confidence.</span></h2>
-            <p className="text-lg md:text-xl text-primary-foreground/60 font-light leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg text-primary-foreground/60 font-light leading-relaxed max-w-2xl mx-auto">
               Providing the legal authority required for institutional investment in Tanzania and across East Africa.
             </p>
             <div className="pt-4">
-              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-white hover:text-primary h-14 px-12 text-sm font-bold rounded-none shadow-2xl w-full md:w-auto">
+              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-white hover:text-primary h-12 md:h-14 px-12 text-xs font-bold rounded-none shadow-xl w-full md:w-auto">
                 <Link href="/contact">Request Confidential Consultation</Link>
               </Button>
             </div>
-            <p className="text-[10px] uppercase tracking-[0.5em] font-bold text-accent/50">Notice: Strict Professional Discretion Guaranteed</p>
+            <p className="text-[9px] uppercase tracking-[0.5em] font-bold text-accent/50">Notice: Strict Professional Discretion Guaranteed</p>
           </div>
         </div>
       </section>
