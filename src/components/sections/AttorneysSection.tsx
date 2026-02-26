@@ -1,10 +1,8 @@
-
 'use client';
 
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const attorneys = [
   {
@@ -57,7 +55,8 @@ export default function AttorneysSection() {
                   className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105 opacity-80 group-hover:opacity-100"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-60"></div>
+                {/* 20% Opacity Overlay for Clarity */}
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-primary/20 to-transparent opacity-100"></div>
               </div>
 
               <div className="space-y-2">

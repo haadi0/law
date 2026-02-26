@@ -120,24 +120,24 @@ export default function SectoralCommand() {
   const [selectedIndustry, setSelectedIndustry] = useState<IndustrySector | null>(null);
 
   return (
-    <section className="py-12 md:py-20 bg-white overflow-hidden border-y border-border">
+    <section className="py-12 md:py-24 bg-white overflow-hidden border-y border-border">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-6">
-          <div className="max-w-2xl space-y-4 text-center md:text-left">
-            <div className="flex items-center justify-center md:justify-start gap-3">
+          <div className="max-w-2xl space-y-4">
+            <div className="flex items-center gap-3">
               <div className="h-[1px] w-8 bg-accent"></div>
               <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-accent">Sectoral Command</span>
             </div>
             <h2 className="text-4xl md:text-6xl font-headline font-bold text-primary leading-tight">
               Tailored Legal <span className="text-accent italic font-normal">Strategies.</span>
             </h2>
-            <p className="text-sm md:text-lg text-muted-foreground font-light leading-relaxed max-w-lg mx-auto md:mx-0">
+            <p className="text-base text-muted-foreground font-light leading-relaxed max-w-lg">
               Precision counsel for high-growth sectors driving the East African economic transformation.
             </p>
           </div>
         </div>
 
-        {/* Bento Grid - Lighter Overlays */}
+        {/* Bento Grid - 20% Opacity Overlays for Clarity */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
           {INDUSTRIES.map((industry) => (
             <motion.div
@@ -151,16 +151,18 @@ export default function SectoralCommand() {
                 'md:col-span-6 lg:col-span-3 min-h-[240px]'
               )}
             >
-              {/* Background Image - Light Navy Overlay (20%) */}
+              {/* Background Image - Lightened Overlay (20%) */}
               <div className="absolute inset-0 z-0">
                 <Image 
                   src={industry.image} 
                   alt={industry.name} 
                   fill 
-                  className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 opacity-20"
+                  className="object-cover grayscale opacity-20 group-hover:opacity-30 group-hover:scale-105 transition-all duration-1000"
                   sizes="(max-width: 768px) 100vw, 50vw"
+                  data-ai-hint="industrial sector"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-transparent"></div>
+                {/* 20% Opacity Navy Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-primary/20 to-transparent"></div>
               </div>
 
               <div className="relative z-10 space-y-4">
@@ -196,7 +198,7 @@ export default function SectoralCommand() {
 
         {/* Global Action */}
         <div className="mt-12 flex items-center justify-center">
-          <Button asChild className="bg-primary text-white hover:bg-accent rounded-none h-12 px-10 text-[10px] font-bold tracking-widest transition-all w-full md:w-auto">
+          <Button asChild className="bg-primary text-white hover:bg-accent rounded-none h-12 px-10 text-[10px] font-bold tracking-widest transition-all w-full md:w-auto uppercase">
             <Link href="/industries" className="flex items-center gap-2">
               ACCESS SECTORAL ARCHIVE <ChevronRight className="w-4 h-4" />
             </Link>
@@ -292,7 +294,7 @@ export default function SectoralCommand() {
               </div>
 
               <div className="p-6 md:p-8 border-t bg-secondary/10 flex flex-col gap-3">
-                <Button asChild className="w-full bg-primary text-white h-12 text-[10px] font-bold tracking-widest rounded-none hover:bg-accent transition-all group">
+                <Button asChild className="w-full bg-primary text-white h-12 text-[10px] font-bold tracking-widest rounded-none hover:bg-accent transition-all group uppercase">
                   <Link href="/contact" onClick={() => setSelectedIndustry(null)}>
                     REQUEST SECTORAL AUDIT <ChevronRight className="ml-2 w-4 h-4" />
                   </Link>

@@ -3,7 +3,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import { X, ArrowRight, ShieldCheck, Award, Globe, ChevronRight, Filter } from 'lucide-react';
+import { X, ArrowRight, ShieldCheck, Award, ChevronRight, Filter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
@@ -87,18 +87,18 @@ export default function AttorneysPage() {
   const selectedAttorney = ATTORNEYS_DATA.find(a => a.id === selectedId);
 
   return (
-    <div className="pt-24 min-h-screen bg-white overflow-x-hidden">
+    <div className="pt-20 min-h-screen bg-white overflow-x-hidden">
       {/* Editorial Hero - Compacted */}
-      <section className="container mx-auto px-6 lg:px-12 mb-8 py-12 md:py-16">
-        <div className="max-w-4xl space-y-6">
+      <section className="container mx-auto px-6 lg:px-12 py-12 md:py-20">
+        <div className="max-w-4xl space-y-4">
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="flex items-center gap-3">
             <div className="h-[1px] w-8 bg-accent"></div>
-            <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-accent">The Human Capital</span>
+            <span className="text-[9px] uppercase tracking-[0.4em] font-bold text-accent">The Human Capital</span>
           </motion.div>
-          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-5xl md:text-8xl font-headline font-bold text-primary leading-tight">
+          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-4xl md:text-7xl font-headline font-bold text-primary leading-tight">
             Our <span className="text-accent italic font-normal">Experts.</span>
           </motion.h1>
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed max-w-2xl">
+          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed max-w-2xl">
             Trusted advisors providing unparalleled authority across East Africa’s complex regulatory and commercial landscape.
           </motion.p>
         </div>
@@ -107,7 +107,7 @@ export default function AttorneysPage() {
       {/* Institutional Filters - Compacted */}
       <section className="container mx-auto px-6 lg:px-12 mb-8">
         <div className="flex flex-wrap gap-2 items-center border-y py-4 md:py-6">
-          <span className="text-[9px] font-bold uppercase tracking-widest text-primary/40 mr-4 flex items-center gap-2">
+          <span className="text-[8px] font-bold uppercase tracking-widest text-primary/40 mr-4 flex items-center gap-2">
             <Filter className="w-3 h-3" /> Filter Expertise
           </span>
           {['All', 'International Business', 'Litigation', 'Arbitration', 'HR & Compliance', 'Regulatory'].map((spec) => (
@@ -115,9 +115,9 @@ export default function AttorneysPage() {
               key={spec}
               onClick={() => setActiveSpec(spec as Specialization)}
               className={cn(
-                "px-4 py-2 text-[10px] font-bold uppercase tracking-widest transition-all border",
+                "px-4 py-2 text-[9px] font-bold uppercase tracking-widest transition-all border rounded-none",
                 activeSpec === spec 
-                  ? "bg-primary text-white border-primary" 
+                  ? "bg-primary text-white border-primary shadow-lg" 
                   : "bg-white text-primary/60 border-primary/10 hover:border-accent hover:text-accent"
               )}
             >
@@ -127,7 +127,7 @@ export default function AttorneysPage() {
         </div>
       </section>
 
-      {/* Expertise Canvas - Background Image Focus */}
+      {/* Expertise Canvas - Clarity Optimized */}
       <section className="container mx-auto px-6 lg:px-12 pb-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <AnimatePresence mode='popLayout'>
@@ -141,28 +141,28 @@ export default function AttorneysPage() {
                 onClick={() => setSelectedId(attorney.id)}
                 className="group relative bg-primary p-8 flex flex-col justify-between cursor-pointer overflow-hidden min-h-[450px] border border-primary/5 hover:border-accent transition-all duration-500 shadow-xl"
               >
-                {/* Background Image - Lightened Overlay */}
+                {/* Background Image - Lightened Overlay (20%) */}
                 <div className="absolute inset-0 z-0">
                   <Image 
                     src={attorney.image} 
                     alt={attorney.name} 
                     fill 
-                    className="object-cover grayscale opacity-20 group-hover:opacity-40 transition-opacity duration-700"
+                    className="object-cover grayscale opacity-20 group-hover:opacity-30 group-hover:scale-105 transition-all duration-1000"
                     sizes="(max-width: 768px) 100vw, 25vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/20 to-transparent"></div>
                 </div>
 
                 <div className="relative z-10 space-y-4">
                   <div>
-                    <span className="text-[9px] uppercase tracking-[0.3em] text-accent font-bold group-hover:text-white transition-colors">
+                    <span className="text-[8px] uppercase tracking-[0.3em] text-accent font-bold group-hover:text-white transition-colors">
                       {attorney.role}
                     </span>
-                    <h3 className="text-3xl md:text-4xl font-headline font-bold text-white leading-tight mt-1">
+                    <h3 className="text-3xl font-headline font-bold text-white leading-tight mt-1">
                       {attorney.name}
                     </h3>
                   </div>
-                  <p className="text-sm text-primary-foreground/80 leading-relaxed line-clamp-3 font-light">
+                  <p className="text-xs text-primary-foreground/80 leading-relaxed line-clamp-3 font-light">
                     {attorney.shortBio}
                   </p>
                 </div>
@@ -201,46 +201,46 @@ export default function AttorneysPage() {
             >
               <div className="p-6 md:p-8 border-b flex justify-between items-center bg-white sticky top-0 z-20">
                 <div className="space-y-1">
-                  <span className="text-accent font-bold text-[9px] tracking-[0.4em] uppercase">Intelligence Briefing</span>
-                  <h3 className="text-3xl font-headline font-bold text-primary leading-none">{selectedAttorney.name}</h3>
+                  <span className="text-accent font-bold text-[8px] tracking-[0.4em] uppercase">Intelligence Briefing</span>
+                  <h3 className="text-2xl md:text-3xl font-headline font-bold text-primary leading-none">{selectedAttorney.name}</h3>
                 </div>
                 <button onClick={() => setSelectedId(null)} className="p-3 border hover:bg-secondary rounded-none">
                   <X className="w-5 h-5 text-primary" />
                 </button>
               </div>
 
-              <div className="flex-1 overflow-y-auto p-8 md:p-12 space-y-12">
-                <div className="relative aspect-[16/10] w-full bg-secondary/20 grayscale shadow-inner">
-                  <Image src={selectedAttorney.image} alt={selectedAttorney.name} fill className="object-cover" sizes="(max-width: 768px) 100vw, 500px" />
+              <div className="flex-1 overflow-y-auto p-8 md:p-12 space-y-10">
+                <div className="relative aspect-[16/10] w-full bg-secondary/20 grayscale shadow-inner overflow-hidden border border-primary/5">
+                  <Image src={selectedAttorney.image} alt={selectedAttorney.name} fill className="object-cover opacity-80" sizes="(max-width: 768px) 100vw, 500px" />
                 </div>
 
                 <section className="space-y-4">
-                  <h4 className="text-[9px] font-bold uppercase tracking-widest text-muted-foreground flex items-center gap-2">
+                  <h4 className="text-[8px] font-bold uppercase tracking-widest text-muted-foreground flex items-center gap-2">
                     <div className="w-1 h-1 bg-accent"></div> Professional Narrative
                   </h4>
-                  <p className="text-lg text-primary font-light leading-relaxed italic">
+                  <p className="text-base md:text-lg text-primary font-light leading-relaxed italic">
                     "{selectedAttorney.fullBio}"
                   </p>
                 </section>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                   <section className="space-y-4">
-                    <h4 className="text-[9px] font-bold uppercase tracking-widest text-muted-foreground flex items-center gap-2">
+                    <h4 className="text-[8px] font-bold uppercase tracking-widest text-muted-foreground flex items-center gap-2">
                       <ShieldCheck className="w-3 h-3 text-accent" /> Expertise
                     </h4>
                     <div className="space-y-2">
                       {selectedAttorney.expertise.map(exp => (
-                        <div key={exp} className="text-xs font-bold text-primary border-b pb-2 uppercase tracking-wide">{exp}</div>
+                        <div key={exp} className="text-[10px] font-bold text-primary border-b pb-2 uppercase tracking-wide">{exp}</div>
                       ))}
                     </div>
                   </section>
                   <section className="space-y-4">
-                    <h4 className="text-[9px] font-bold uppercase tracking-widest text-muted-foreground flex items-center gap-2">
+                    <h4 className="text-[8px] font-bold uppercase tracking-widest text-muted-foreground flex items-center gap-2">
                       <Award className="w-3 h-3 text-accent" /> Recognition
                     </h4>
                     <div className="space-y-2">
                       {selectedAttorney.achievements.map(award => (
-                        <div key={award} className="text-xs text-primary/70 leading-tight">{award}</div>
+                        <div key={award} className="text-[10px] text-primary/70 leading-tight">{award}</div>
                       ))}
                     </div>
                   </section>
@@ -248,7 +248,7 @@ export default function AttorneysPage() {
               </div>
 
               <div className="p-8 border-t bg-secondary/10">
-                <Button asChild className="w-full bg-primary text-white h-12 text-[10px] font-bold rounded-none hover:bg-accent transition-all group">
+                <Button asChild className="w-full bg-primary text-white h-12 text-[10px] font-bold rounded-none hover:bg-accent transition-all group uppercase tracking-widest">
                   <Link href="/contact" onClick={() => setSelectedId(null)}>
                     REQUEST CONFIDENTIAL BRIEFING <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>

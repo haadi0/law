@@ -10,8 +10,8 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
-export async function generateMetadata({ params }: Props) {
-  const { slug } = await params;
+export async function generateMetadata(props: Props) {
+  const { slug } = await props.params;
   const area = PRACTICE_AREAS.find((a) => a.slug === slug);
   if (!area) return { title: 'Practice Area Not Found' };
   return {
@@ -20,8 +20,8 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-export default async function PracticeAreaPage({ params }: Props) {
-  const { slug } = await params;
+export default async function PracticeAreaPage(props: Props) {
+  const { slug } = await props.params;
   const area = PRACTICE_AREAS.find((a) => a.slug === slug);
 
   if (!area) {
