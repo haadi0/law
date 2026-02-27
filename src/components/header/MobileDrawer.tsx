@@ -101,10 +101,10 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
                   </Button>
                   <div className="p-4 bg-white/5 border border-white/10 space-y-3">
                     <a
-                      href="mailto:consult@gadroit.com"
+                      href="mailto:info@gadroitattorneys.co.tz"
                       className="flex items-center gap-3 text-sm text-white/80 hover:text-accent transition-colors"
                     >
-                      <Mail className="w-4 h-4 text-accent" /> consult@gadroit.com
+                      <Mail className="w-4 h-4 text-accent" /> info@gadroitattorneys.co.tz
                     </a>
                     <a
                       href="tel:+255222123456"

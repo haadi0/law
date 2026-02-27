@@ -37,8 +37,9 @@ export default function ContactPage() {
                       <MapPin />
                     </div>
                     <div>
-                      <h4 className="font-bold text-primary">Dar es Salaam Headquarters</h4>
-                      <p className="text-muted-foreground text-sm">12th Floor, Elite Towers, Ohio Street, P.O. Box 7772, Dar es Salaam, Tanzania</p>
+                      <h4 className="font-bold text-primary">Regional Headquarters</h4>
+                      <p className="text-muted-foreground text-sm font-medium">Dar es Salaam, Tanzania</p>
+                      <p className="text-muted-foreground text-xs italic">Physical address available upon inquiry</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
@@ -54,9 +55,12 @@ export default function ContactPage() {
                     <div className="w-12 h-12 bg-accent/10 flex items-center justify-center text-accent shrink-0">
                       <Mail />
                     </div>
-                    <div>
+                    <div className="space-y-1">
                       <h4 className="font-bold text-primary">Electronic Correspondence</h4>
-                      <p className="text-muted-foreground text-sm">consult@gadroit.com</p>
+                      <p className="text-muted-foreground text-sm flex flex-col gap-1">
+                        <span className="font-medium">General: info@gadroitattorneys.co.tz</span>
+                        <span className="font-medium text-accent">Discretion: confidential@gadroitattorneys.co.tz</span>
+                      </p>
                     </div>
                   </div>
                 </div>

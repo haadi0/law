@@ -64,11 +64,14 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-start gap-3 text-xs text-primary-foreground/60">
                 <MapPin className="w-4 h-4 text-accent shrink-0" />
-                <span>12th Floor, Elite Towers, Dar es Salaam</span>
+                <div className="flex flex-col">
+                  <span>Dar es Salaam, Tanzania</span>
+                  <span className="text-[10px] text-white/40">Address available upon inquiry</span>
+                </div>
               </div>
               <div className="flex items-center gap-3 text-xs text-primary-foreground/60">
                 <Mail className="w-4 h-4 text-accent shrink-0" />
-                <a href="mailto:consult@gadroit.com" className="hover:text-accent">consult@gadroit.com</a>
+                <a href="mailto:info@gadroitattorneys.co.tz" className="hover:text-accent">info@gadroitattorneys.co.tz</a>
               </div>
               <div className="flex items-center gap-3 text-xs text-primary-foreground/60">
                 <Phone className="w-4 h-4 text-accent shrink-0" />

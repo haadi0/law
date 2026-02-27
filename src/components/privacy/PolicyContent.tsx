@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -102,7 +101,10 @@ export default function PolicyContent() {
           </div>
           <div className="space-y-2">
             <h4 className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground">Electronic Inquiry</h4>
-            <a href="mailto:consult@gadroit.com" className="text-accent font-bold hover:underline">consult@gadroit.com</a>
+            <div className="flex flex-col gap-1">
+              <a href="mailto:info@gadroitattorneys.co.tz" className="text-accent font-bold hover:underline">info@gadroitattorneys.co.tz</a>
+              <a href="mailto:confidential@gadroitattorneys.co.tz" className="text-accent/70 text-xs font-bold hover:underline">confidential@gadroitattorneys.co.tz</a>
+            </div>
           </div>
         </div>
       </section>

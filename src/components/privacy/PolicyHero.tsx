@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -13,7 +12,6 @@ export default function PolicyHero() {
   const handleCopyLink = () => {
     if (typeof window !== 'undefined') {
       navigator.clipboard.writeText(window.location.href);
-      // Optional: Add toast notification here
     }
   };
 
@@ -51,8 +49,8 @@ export default function PolicyHero() {
                 <span className="text-white">Oct 20, 2024</span>
               </div>
               <div className="w-px h-4 bg-white/10"></div>
-              <a href="mailto:consult@gadroit.com" className="flex items-center gap-2 hover:text-accent transition-colors">
-                <Mail className="w-4 h-4" /> consult@gadroit.com
+              <a href="mailto:info@gadroitattorneys.co.tz" className="flex items-center gap-2 hover:text-accent transition-colors">
+                <Mail className="w-4 h-4" /> info@gadroitattorneys.co.tz
               </a>
             </motion.div>
           </div>

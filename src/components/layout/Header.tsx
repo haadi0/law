@@ -47,7 +47,7 @@ const Header = () => {
           <div className="flex flex-col gap-0.5">
             <div className="flex items-center gap-2 text-[7px] text-muted-foreground font-medium uppercase tracking-widest">
               <MapPin className="w-2 h-2 text-accent" />
-              <span>Elite Towers, Dar es Salaam.</span>
+              <span>Dar es Salaam, Tanzania.</span>
             </div>
             <a href="tel:+255222123456" className="text-[10px] font-headline font-bold text-accent hover:opacity-80 transition-opacity uppercase tracking-widest">
               +255 222 123 456
@@ -66,8 +66,8 @@ const Header = () => {
               <Clock className="w-2 h-2 text-accent" />
               <span>Briefings: 09:00 - 17:00 EAT</span>
             </div>
-            <a href="mailto:consult@gadroit.com" className="text-[10px] font-headline font-bold text-accent hover:opacity-80 transition-opacity uppercase tracking-widest">
-              consult@gadroit.com
+            <a href="mailto:info@gadroitattorneys.co.tz" className="text-[10px] font-headline font-bold text-accent hover:opacity-80 transition-opacity lowercase tracking-widest">
+              info@gadroitattorneys.co.tz
             </a>
           </div>
         </div>

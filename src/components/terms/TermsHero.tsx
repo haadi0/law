@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -42,8 +41,8 @@ export default function TermsHero() {
                 <span className="text-white">Jan 01, 2024</span>
               </div>
               <div className="w-px h-4 bg-white/10"></div>
-              <a href="mailto:consult@gadroit.com" className="flex items-center gap-2 hover:text-accent transition-colors">
-                <Mail className="w-4 h-4 text-accent/50" /> consult@gadroit.com
+              <a href="mailto:info@gadroitattorneys.co.tz" className="flex items-center gap-2 hover:text-accent transition-colors">
+                <Mail className="w-4 h-4 text-accent/50" /> info@gadroitattorneys.co.tz
               </a>
             </motion.div>
           </div>
