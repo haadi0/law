@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useMemo } from 'react';
@@ -127,7 +128,7 @@ export default function AttorneysPage() {
         </div>
       </section>
 
-      {/* Expertise Canvas - 20% Overlay Optimized */}
+      {/* Expertise Canvas - Enhanced 60% Image Visibility */}
       <section className="container mx-auto px-6 lg:px-12 pb-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <AnimatePresence mode='popLayout'>
@@ -141,34 +142,35 @@ export default function AttorneysPage() {
                 onClick={() => setSelectedId(attorney.id)}
                 className="group relative bg-primary p-8 flex flex-col justify-between cursor-pointer overflow-hidden min-h-[450px] border border-primary/5 hover:border-accent transition-all duration-500 shadow-xl"
               >
-                {/* Background Image - Lightened Overlay (20%) */}
+                {/* Background Image - Enhanced Visibility (60%) */}
                 <div className="absolute inset-0 z-0">
                   <Image 
                     src={attorney.image} 
                     alt={attorney.name} 
                     fill 
-                    className="object-cover grayscale opacity-20 group-hover:opacity-30 group-hover:scale-105 transition-all duration-1000"
+                    className="object-cover grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-1000"
                     sizes="(max-width: 768px) 100vw, 25vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-primary/10 to-transparent"></div>
+                  {/* Subtle 20% Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-primary/10 to-transparent"></div>
                 </div>
 
                 <div className="relative z-10 space-y-4">
                   <div>
-                    <span className="text-[8px] uppercase tracking-[0.3em] text-accent font-bold group-hover:text-white transition-colors">
+                    <span className="text-[8px] uppercase tracking-[0.3em] text-accent font-bold group-hover:text-white transition-colors bg-primary/20 backdrop-blur-sm px-2 py-0.5 inline-block">
                       {attorney.role}
                     </span>
-                    <h3 className="text-3xl font-headline font-bold text-white leading-tight mt-1">
+                    <h3 className="text-3xl font-headline font-bold text-white leading-tight mt-1 drop-shadow-md">
                       {attorney.name}
                     </h3>
                   </div>
-                  <p className="text-xs text-primary-foreground/80 leading-relaxed line-clamp-3 font-light">
+                  <p className="text-xs text-white/90 leading-relaxed line-clamp-3 font-light drop-shadow-sm">
                     {attorney.shortBio}
                   </p>
                 </div>
 
-                <div className="relative z-10 flex justify-between items-center opacity-60 group-hover:opacity-100 transition-opacity">
-                  <span className="text-[8px] font-bold uppercase tracking-widest text-accent">Access Strategic Intelligence</span>
+                <div className="relative z-10 flex justify-between items-center opacity-80 group-hover:opacity-100 transition-opacity">
+                  <span className="text-[8px] font-bold uppercase tracking-widest text-accent bg-primary/40 backdrop-blur-sm px-2 py-1">Access Strategic Intelligence</span>
                   <ArrowRight className="w-4 h-4 text-accent group-hover:translate-x-2 transition-transform" />
                 </div>
               </motion.div>

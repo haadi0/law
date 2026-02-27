@@ -1,3 +1,4 @@
+
 'use client';
 
 import React from 'react';
@@ -47,16 +48,16 @@ export default function AttorneysSection() {
               transition={{ duration: 0.8, delay: idx * 0.15 }}
               className="group"
             >
-              <div className="relative aspect-[4/5] overflow-hidden mb-6 shadow-2xl">
+              <div className="relative aspect-[4/5] overflow-hidden mb-6 shadow-2xl bg-primary">
                 <Image
                   src={attorney.image}
                   alt={attorney.name}
                   fill
-                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105 opacity-80 group-hover:opacity-100"
+                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105 opacity-60 group-hover:opacity-100"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
-                {/* 20% Opacity Overlay for Clarity */}
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-primary/20 to-transparent opacity-100"></div>
+                {/* Refined 20% Opacity Overlay for Clarity */}
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-primary/10 to-transparent opacity-100"></div>
               </div>
 
               <div className="space-y-2">

@@ -138,7 +138,7 @@ export default function SectoralCommand() {
           </div>
         </div>
 
-        {/* Bento Grid - Refined 20% Opacity Overlay */}
+        {/* Bento Grid - Enhanced Image Visibility (60% Opacity) */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
           {INDUSTRIES.map((industry) => (
             <motion.div
@@ -152,17 +152,18 @@ export default function SectoralCommand() {
                 'md:col-span-6 lg:col-span-3 min-h-[220px]'
               )}
             >
-              {/* Background Image - Lightened Overlay (20%) */}
+              {/* Background Image - Enhanced Visibility (60%) */}
               <div className="absolute inset-0 z-0">
                 <Image 
                   src={industry.image} 
                   alt={industry.name} 
                   fill 
-                  className="object-cover grayscale opacity-20 group-hover:opacity-30 group-hover:scale-105 transition-all duration-1000"
+                  className="object-cover grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-1000"
                   sizes="(max-width: 768px) 100vw, 50vw"
                   data-ai-hint="industrial sector"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-primary/10 to-transparent"></div>
+                {/* Minimal Overlay (10-20%) for Text Contrast */}
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-primary/10 to-transparent"></div>
               </div>
 
               <div className="relative z-10 space-y-4">
@@ -171,7 +172,7 @@ export default function SectoralCommand() {
                     <industry.icon className="w-5 h-5" />
                   </div>
                   <span className={cn(
-                    "text-[8px] font-bold uppercase tracking-widest px-2 py-1 bg-white/5",
+                    "text-[8px] font-bold uppercase tracking-widest px-2 py-1 bg-primary/20 backdrop-blur-sm border border-white/5",
                     industry.riskLevel === 'Critical' ? 'text-destructive' : 'text-accent'
                   )}>
                     {industry.riskLevel} Risk
@@ -179,16 +180,16 @@ export default function SectoralCommand() {
                 </div>
                 
                 <div className="space-y-1">
-                  <h3 className="text-xl md:text-2xl font-headline font-bold text-white group-hover:text-accent transition-colors leading-tight">
+                  <h3 className="text-xl md:text-2xl font-headline font-bold text-white group-hover:text-accent transition-colors leading-tight drop-shadow-sm">
                     {industry.name}
                   </h3>
-                  <p className="text-[10px] text-white/60 font-bold leading-relaxed uppercase tracking-wider">
+                  <p className="text-[10px] text-white/80 font-bold leading-relaxed uppercase tracking-wider">
                     {industry.tagline}
                   </p>
                 </div>
               </div>
 
-              <div className="relative z-10 mt-6 pt-4 border-t border-white/5 flex justify-between items-center opacity-60 group-hover:opacity-100 transition-opacity">
+              <div className="relative z-10 mt-6 pt-4 border-t border-white/5 flex justify-between items-center opacity-80 group-hover:opacity-100 transition-opacity">
                 <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-accent">Access Briefing</span>
                 <ArrowUpRight className="w-3 h-3 text-accent" />
               </div>
