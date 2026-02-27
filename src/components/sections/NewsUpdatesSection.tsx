@@ -28,7 +28,7 @@ const NEWS_DATA = [
     date: 'August 20, 2021',
     comments: 0,
     title: 'Keep In Mind When Design Transportation Map',
-    image: 'https://images.unsplash.com/photo-1521791136064-7986c2959210?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1449156003053-c3d8c0f18a44?auto=format&fit=crop&q=80&w=800',
     type: 'featured',
   },
 ];
@@ -68,7 +68,7 @@ export default function NewsUpdatesSection() {
                     src={news.image}
                     alt={news.title}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
                     sizes="(max-width: 768px) 100vw, 30vw"
                   />
                 </div>
@@ -104,16 +104,16 @@ export default function NewsUpdatesSection() {
               transition={{ duration: 0.8 }}
               className="lg:col-span-5 relative group cursor-pointer"
             >
-              <div className="relative h-[450px] lg:h-full min-h-[400px] overflow-hidden shadow-2xl border border-primary/5">
+              <div className="relative h-[450px] lg:h-full min-h-[400px] overflow-hidden shadow-2xl border border-primary/5 bg-primary">
                 <Image
                   src={featured.image}
                   alt={featured.title}
                   fill
-                  className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                  className="object-cover transition-transform duration-1000 group-hover:scale-105 opacity-60 group-hover:opacity-80"
                   sizes="(max-width: 1200px) 100vw, 40vw"
                 />
                 {/* 20% Opacity Overlay - Following site standard */}
-                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-primary/10 to-transparent"></div>
 
                 <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12 space-y-4">
                   <div className="flex items-center gap-4 text-[10px] font-bold text-white/60 uppercase tracking-widest">
