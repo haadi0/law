@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -7,27 +6,27 @@ import { motion } from 'framer-motion';
 const sections = [
   {
     id: 'who-we-are',
-    label: 'Who We Are',
-    title: 'Precision in a Complex Market',
-    content: "G'Adroit Attorneys was founded to solve the structural gap between international investment requirements and the intricate local regulatory environment of Tanzania and the wider East African region."
+    label: 'Firm Overview',
+    title: 'Deep Roots. Global Expertise.',
+    content: "G'Adroit Attorneys is a Tanzania-based international law firm serving businesses and institutional investors across the East African region. We bridge the gap between global requirements and local regulatory precision."
   },
   {
-    id: 'stand-for',
-    label: 'What We Stand For',
-    title: 'Uncompromising Integrity',
-    content: "We represent a new era of African legal practice: one defined by predictive intelligence, absolute transparency, and a commitment to protecting the capital and reputations of our global clients."
+    id: 'positioning',
+    label: 'Positioning',
+    title: 'The Best of Both Worlds',
+    content: "G'Adroit Attorneys offers the best of both worlds—an elite Tanzania-based firm with global expertise and international standard practice protocols."
   },
   {
-    id: 'how-we-work',
-    label: 'How We Work',
-    title: 'The G&apos;Adroit Methodology',
-    content: "We don't just identify legal risks; we engineer their reduction. Our team operates as a strategic extension of your leadership, providing the local authority needed to execute complex cross-border transactions."
+    id: 'mission-vision',
+    label: 'Our Purpose',
+    title: 'Trusted Legal Partners',
+    content: "Our mission is to help businesses and investors thrive by providing comprehensive, predictive legal solutions. Our vision is to be the most trusted legal partner for businesses and investors in East Africa and globally."
   },
   {
-    id: 'tanzania-based',
-    label: 'Why Tanzania-Based',
-    title: 'The Strategic Hub',
-    content: "Our presence in Dar es Salaam is a choice. We are positioned at the gateway of East African trade, providing a bridge for investors to navigate one of the continent&apos;s most dynamic and regulated economies."
+    id: 'tanzania-advantage',
+    label: 'Why Tanzania Matters',
+    title: 'Strategic Hub Presence',
+    content: "Our presence in Dar es Salaam is strategic. We provide deep local knowledge, regulatory familiarity, and the regional coordination required for successful cross-border expansion."
   }
 ];
 

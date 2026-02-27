@@ -1,14 +1,11 @@
-
 'use client';
 
 import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 import { 
   FileEdit, 
   Search, 
   ShieldCheck, 
-  ChevronRight, 
   Phone
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -27,9 +24,9 @@ import {
 } from 'recharts';
 
 const statsData = [
-  { name: 'Won', value: 755, color: '#002147' }, // Navy
-  { name: 'Running', value: 55, color: '#D4AF37' }, // Gold
-  { name: 'Others', value: 35, color: '#e5e7eb' }, // Grey
+  { name: 'Won', value: 755, color: '#002147' }, 
+  { name: 'Running', value: 55, color: '#D4AF37' }, 
+  { name: 'Others', value: 35, color: '#e5e7eb' }, 
 ];
 
 const milestones = [
@@ -52,7 +49,7 @@ const milestones = [
 
 export default function FirmNarrative() {
   return (
-    <section className="py-16 md:py-24 bg-white overflow-hidden">
+    <section className="py-16 md:py-24 bg-white overflow-hidden border-b">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           
@@ -66,7 +63,7 @@ export default function FirmNarrative() {
                 <div className="h-[1px] w-12 bg-accent/40"></div>
               </div>
               <p className="text-sm md:text-base text-muted-foreground font-light leading-relaxed">
-                Since our inception, G&apos;Adroit Attorneys has been defined by a commitment to absolute regulatory clarity. We provide the legal lubrication required for high-stakes investment in East Africa, ensuring every transaction is built on a foundation of total compliance and strategic foresight.
+                G&apos;Adroit Attorneys represents a new era of legal practice in East Africa—one defined by predictive intelligence, absolute transparency, and a commitment to protecting the capital and reputations of global institutional investors.
               </p>
             </div>
 
@@ -91,13 +88,13 @@ export default function FirmNarrative() {
                 <h3 className="text-xl font-headline font-bold text-accent">Get Confidential Briefing</h3>
                 <div className="h-[1px] w-12 bg-accent/30"></div>
                 <p className="text-xs text-muted-foreground font-light leading-relaxed italic">
-                  &quot;We provide institutional investors with a free and confidential strategic evaluation of their market entry or dispute status.&quot;
+                  &quot;Providing institutional investors with a confidential strategic evaluation of their market entry or regional dispute status.&quot;
                 </p>
               </div>
               
               <div className="flex flex-col sm:flex-row items-center gap-6">
                 <Button asChild className="w-full sm:w-auto bg-primary text-white hover:bg-accent h-12 px-8 rounded-none text-[10px] font-bold tracking-widest uppercase transition-all shadow-xl">
-                  <Link href="/contact">Free Consultation</Link>
+                  <Link href="/contact">Request Consultation</Link>
                 </Button>
                 <div className="flex items-center gap-3 text-accent">
                   <Phone className="w-4 h-4" />
@@ -110,7 +107,7 @@ export default function FirmNarrative() {
           {/* 2. Milestones Column */}
           <div className="lg:col-span-4 space-y-10">
             <div className="space-y-4">
-              <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">Our History.</h2>
+              <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">Firm Evolution.</h2>
               <div className="flex items-center gap-1">
                 <div className="h-[1px] w-12 bg-accent/40"></div>
                 <span className="text-accent italic font-headline text-lg">//</span>
@@ -134,7 +131,6 @@ export default function FirmNarrative() {
 
           {/* 3. Stats & Carousel Column */}
           <div className="lg:col-span-3 space-y-8">
-            {/* Visual Panel */}
             <div className="bg-secondary/10 border border-primary/5 overflow-hidden">
               <Carousel className="w-full">
                 <CarouselContent>
@@ -154,7 +150,6 @@ export default function FirmNarrative() {
                 </CarouselContent>
               </Carousel>
 
-              {/* Chart Stage */}
               <div className="p-6 flex flex-col items-center">
                 <div className="h-[200px] w-full">
                   <ResponsiveContainer width="100%" height="100%">
@@ -172,9 +167,9 @@ export default function FirmNarrative() {
                           <Cell key={`cell-${index}`} fill={entry.color} />
                         ))}
                         <Label
-                          value="845 Case"
+                          value="845 Matters"
                           position="center"
-                          className="font-headline font-bold fill-primary text-sm"
+                          className="font-headline font-bold fill-primary text-xs"
                         />
                       </Pie>
                     </PieChart>
@@ -184,15 +179,15 @@ export default function FirmNarrative() {
                 <div className="grid grid-cols-3 gap-4 w-full pt-4 border-t border-primary/5">
                   <div className="text-center">
                     <div className="text-sm font-headline font-bold text-primary">755</div>
-                    <div className="text-[7px] uppercase tracking-widest font-bold text-primary/40">Won</div>
+                    <div className="text-[7px] uppercase tracking-widest font-bold text-primary/40">Resolved</div>
                   </div>
                   <div className="text-center">
                     <div className="text-sm font-headline font-bold text-accent">55</div>
-                    <div className="text-[7px] uppercase tracking-widest font-bold text-primary/40">Running</div>
+                    <div className="text-[7px] uppercase tracking-widest font-bold text-primary/40">Active</div>
                   </div>
                   <div className="text-center">
                     <div className="text-sm font-headline font-bold text-muted-foreground">35</div>
-                    <div className="text-[7px] uppercase tracking-widest font-bold text-primary/40">Won 35</div>
+                    <div className="text-[7px] uppercase tracking-widest font-bold text-primary/40">Strategic</div>
                   </div>
                 </div>
               </div>

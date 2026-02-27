@@ -1,9 +1,8 @@
-
 'use client';
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Plus, ChevronRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const pillars = [
@@ -11,22 +10,22 @@ const pillars = [
     id: 'precision',
     title: 'Precision',
     subtitle: 'Absolute Regulatory Clarity',
-    content: 'In emerging markets, ambiguity is the primary source of risk. We provide meticulous audits of the regulatory landscape, ensuring your operations are built on a foundation of total compliance.',
-    bullets: ['TIC & BRELA alignment', 'Sectoral license mapping', 'Local content verification']
+    content: 'We provide meticulous attention to detailed legal frameworks and local processes, ensuring that your operations are built on a foundation of absolute clarity.',
+    bullets: ['Regulatory mapping', 'Procedural auditing', 'Local content verification']
   },
   {
     id: 'risk-mitigation',
     title: 'Risk Mitigation',
-    subtitle: 'Foresight as a Service',
-    content: 'We identify potential friction points before they become operational hurdles. Our approach involves predictive liaison and the utilization of international treaties to protect your assets.',
-    bullets: ['BIT utilization', 'Dispute avoidance strategy', 'Asset protection protocols']
+    subtitle: 'Predictive Legal Engineering',
+    content: 'We engineer strategic solutions to minimize legal and business risks before they become operational hurdles, shielding your capital and reputation.',
+    bullets: ['Asset protection protocols', 'Predictive liaison', 'Treaty utilization']
   },
   {
     id: 'commercial-alignment',
     title: 'Commercial Alignment',
     subtitle: 'Law that Drives Growth',
-    content: 'Legal counsel must serve the commercial objective. We structure agreements and entities that not only comply with local law but also optimize your operational efficiency and tax position.',
-    bullets: ['JV governance design', 'Capital repatriation advisory', 'Tax incentive negotiation']
+    content: 'Legal counsel must serve the commercial objective. We align our legal strategies with your broader business goals to optimize efficiency and return.',
+    bullets: ['Objective-led structuring', 'Growth-focused advisory', 'Tax position optimization']
   }
 ];
 
@@ -38,7 +37,7 @@ export default function ApproachPillars() {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="mb-20 space-y-4 max-w-2xl">
           <h2 className="text-4xl md:text-6xl font-headline font-bold text-primary leading-tight">
-            The Pillars of <br /><span className="text-accent italic">Our Practice.</span>
+            Our <br /><span className="text-accent italic">Methodology.</span>
           </h2>
           <p className="text-muted-foreground text-lg font-light">
             Our approach is built on three fundamental requirements for international standard operations in East Africa.
